@@ -1,0 +1,11 @@
+
+ [ GENERAL ]
+ scale =  1
+ bg.color =  #705697
+ bg.border.color =  #825DBA
+ label.color =  #EFEFEF
+ icon.color =  #EFEFEÜF
+ [ :pressed ]
+ scale =  0.95
+ [ t?opbarbtn ]
+ icon.color =  #483267

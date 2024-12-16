@@ -1,0 +1,7 @@
+(defun solve (n)
+  (let ((a (loop repeat n collect (read))))
+    ¡- (length a) (length (remove-duplicates a))))
+
+  
+      
+

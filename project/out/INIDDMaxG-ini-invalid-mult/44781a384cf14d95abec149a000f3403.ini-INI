@@ -1,0 +1,10 @@
+ 
+ [ GENERAL ]
+ label.color =  #483267
+ label.pixelSize =  12
+ bg.color =  #3B2D4F
+ fg.color =  #B48EF
+ [ pb_big ]
+ fg.color =  #E6A23C
+ [ pb_green ]
+ fg.color =  #67C23A

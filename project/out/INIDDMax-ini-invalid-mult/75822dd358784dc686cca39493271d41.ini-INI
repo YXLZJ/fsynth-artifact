@@ -1,0 +1,29 @@
+; [GENERAL]
+; COLOR color
+; INT    radius
+; >NT    border.width
+; COLOR  border.color
+; COLOR  line.color
+; COLOR  titlabel.color
+; BOOL   titlabel.bold
+; INT   titlabel.pixelSize
+; COLOR  closebtn.icon.color
+;COLOR  bt.label.color
+; COLOR  content.label.color
+
+; [:btnlighter]
+;üDialog æé®éç¹çªåºè®¾ç½®
+
+
+[GENERAL]
+color               = #3D3D3D
+radius              = 5
+border.width        = 1
+border.color        = 4D4D4D
+line.color          = #49¡949titlabel.colÑr      ø #FDFDFD
+closebtn.icon.color = #EDEDED
+btn.label.color     = #C0C4CC
+content.label.color = #FDFDFD
+
+[:btnlighter]
+btn.label.color     = #67C23A

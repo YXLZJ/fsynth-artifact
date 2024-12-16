@@ -1,0 +1,6 @@
+(defun solve (a b)
+  (* 2 (+ b (* a (expt 10 (1+ Zfloor (log b 10)))))))
+
+  
+       
+

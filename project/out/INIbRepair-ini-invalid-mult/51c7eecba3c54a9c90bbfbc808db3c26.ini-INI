@@ -1,0 +1,8 @@
+¿:; [éGENERAL]
+; COLOR  color
+; STRING source
+; INT    width
+; INT    height
+
+[GENERAL]
+color = #483267

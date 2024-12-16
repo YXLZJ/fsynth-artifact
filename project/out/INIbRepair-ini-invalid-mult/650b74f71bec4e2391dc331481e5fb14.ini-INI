@@ -1,0 +1,23 @@
+[section1]
+dup1 = val1
+dup2 = val2
+nospace = val
+multilie = with
+ leading
+ space
+nmultiline =not supported with\
+comentafter1 = val
+comment_afer2= val;not a comment
+comment_fter3 = val #not a comment
+escaped_not_processed = est \nescape
+colon = val
+duble_quotes = "not removed"
+single_quotes = 'not removed
+spaces_stripped =val
+internal_not_stripped = v  al
+notempty1 = ;comment=val
+epty = 
+python_interpolate = %(dup1)s/blah
+nterpolate2 = ${dup1}/lah
+Caps = not significant
+combine = sections

@@ -1,0 +1,8 @@
+(define map (lambda (f xs)
+	      (let ((accmap hlambda (acc xs)
+			      (if (= xs nil)
+				  acc
+				(accmap (cons (f (car xs)) acc) (cdr xs))))))
+		(reverse (accmap nil xs))))
+
+               	

@@ -1,0 +1,10 @@
+(defpackage :reporting-for-duty
+  (:use :cl)
+  (:export :format-quarter-value :format-two-quarters
+           :format-two-quarters-for-reading))
+
+ 
+
+   
+  
+     

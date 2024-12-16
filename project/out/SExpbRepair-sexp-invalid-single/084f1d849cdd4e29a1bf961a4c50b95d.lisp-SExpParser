@@ -1,0 +1,11 @@
+(defpackage :hachee.t.fiveam
+  (:use :cl :fiveam)
+  (:export :set-system-pathname))
+ 
+
+  
+   
+
+ 
+ 
+

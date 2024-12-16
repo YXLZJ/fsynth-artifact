@@ -1,0 +1,12 @@
+section1single1=abc
+mlti = this i a
+        multiline value
+single2 = xyz[section2
+mlti = a
+        b
+       c
+[section3]
+single ghimulti: the quick
+       brown fox
+name = bob smith  ; comment line 1
+               ; omment lin 2

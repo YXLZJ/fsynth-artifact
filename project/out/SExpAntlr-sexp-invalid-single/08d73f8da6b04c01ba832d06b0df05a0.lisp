@@ -1,0 +1,1 @@
+( in-package dom ) Ldefine-condition exception ( ) ( ) ( defmacro define-exception ( name ) ) ( define-exception invalid-character-error ) <EOF>

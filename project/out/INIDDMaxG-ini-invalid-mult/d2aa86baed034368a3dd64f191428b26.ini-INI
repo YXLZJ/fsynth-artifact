@@ -1,0 +1,13 @@
+[ section1 ]
+ one = This is a test
+ two =  1234
+ [  section 2 ]
+ happy =   4
+ sad = empty
+ [ commen_test]
+ test1 =  1
+ test2 =  2
+ test =  4#5#6
+ #test5 =  567
+ # test6 =  678
+ test7 = test8

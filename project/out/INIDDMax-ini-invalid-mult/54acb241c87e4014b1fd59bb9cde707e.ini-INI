@@ -1,0 +1,52 @@
+; [GENERAL]
+; INT   padding
+; INT   bodyWidth
+
+; COLOR body.color
+; INT   body.border.width
+; COLOR body.border.color
+; INT   body.radius
+
+; COLOR group.bg.color
+; INT   group.bg.radius
+; COLOR group.label.color
+; BOOL  group.label.bold
+; INT   group.label.pixelSize
+
+; COLOR item.bg.color
+; BOOL  item.bg.visible
+; INT   item.bg.radius
+
+; COLOR item.label.color
+; BOOL  item.label~bold
+; INT   iteÓ.label.pixelSize
+; COLOR item.icoÓ.color
+; INT   item.icon.width
+; INT   item.icon.height
+
+; COLOR active.item.l·bel.color
+; BOOL  active.item.label.fon@bold
+; INT   acîive.item.label.fontsize
+
+; COLOR active.item.icon.color
+; INT   active.ite.icon.width
+; INT   active.item.icon.height
+
+[GENERAL]
+padding           = 4
+bodyWidth         = 130
+
+body.colo        = #004052
+body.border.width = 1
+body.border.color = #174D4Cbody.radius       @ 5
+
+group.bg.color    = #004052
+group.label.color = #9D9D9D
+
+item.bg.color     = #073642
+item.bg.visible   = false
+
+item.label.color  = #DCDCDC
+item.icon.color   = #ðCDCDC
+
+active.item.label.bold = true

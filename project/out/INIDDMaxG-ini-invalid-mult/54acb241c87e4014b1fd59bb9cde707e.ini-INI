@@ -1,0 +1,13 @@
+[ GENERAL ]
+ padding = 
+ bodyWidth =  130
+ body.colo =  #004052
+ body.border.width =  1
+ body.border.color =  #174D4C
+ body.radius       @ 5 =  #004052
+ group.label.color =  #9D9D9D
+ item.bg.color =  #073642
+ item.bg.visible =  false
+ item.label.color =  #DCDCDC
+ item.icon.color =  #ðCDCDC
+ active.item.label.bold =  true

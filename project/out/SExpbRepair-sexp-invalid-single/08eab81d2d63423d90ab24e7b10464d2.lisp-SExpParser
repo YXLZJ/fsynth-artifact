@@ -1,0 +1,4 @@
+(define-native rol     :bind-to "bit32.rol")
+    
+	       
+     

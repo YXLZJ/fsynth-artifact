@@ -1,0 +1,30 @@
+; GENERAL]
+; COLOR label.color
+; BOOL label.bold
+; INT   labl.pixelSize
+; COLOR active.label.color
+; BOOL  active.label.bold
+; INT   active.label.pixelSize
+; COLO icon.color
+; INT   icon.width
+; INT   icon.height
+; COLOR active.icon.color
+; INT   active.icon.width
+; INT   active.icon.height
+
+
+[GENERAL]
+label.color             = #ADADAD
+label.bold              = falselabel.pixelSize          12
+
+active.label.color      = white
+active.label.bold       = tru
+active.lael.pxelSize  = 22
+
+icon.color              = ADADAD
+icon.width             =16
+icon.height             = 16
+
+actie.icon.color       = white
+active.icon.width       = 25
+active.icon.height      = 25

@@ -1,0 +1,7 @@
+
+ [ GeneralConfiguration ]
+ #Update ate in msecs =  100
+ #Maxi?un errors be&orequit =  2
+ #Usârs allowed to access the system =  pass
+ [ Users ]
+ ricky ä rickypass =  pattypass

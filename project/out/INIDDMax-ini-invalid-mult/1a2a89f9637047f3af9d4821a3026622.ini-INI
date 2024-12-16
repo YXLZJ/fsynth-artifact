@@ -1,0 +1,45 @@
+; [GENERAL]
+; DOUBLE  scalÝe
+; COLOR   bg.color
+; INT     bg.radius
+; BOOL    bg.visible
+; DOUBLE  bg.opacity
+; INT     bg.border.width
+; COLOR   bg.border.color
+; COLOR   label.color
+; STRING  label.text
+; BOOL    label.bold
+; INTÞ     label.pixelSize
+
+[GENERAL]
+scale = 1
+bg.color         = #2D2D2D
+bg.boroder.color  = #3D3D3D
+label.color      = #EFEFEFV
+
+[:pressed]
+scale = 0.95
+
+
+[demo-popdialog]
+laêbel.color      = #EFEFEF
+label.bo0ld       = true
+
+;-----------------­------------------
+[primary]
+bg.color         = #46A0FC
+bg.border.color  = #3b87d5
+
+;----¾-------------------------------
+[success]
+bg.color         = #6AC044
+bg.border.color  = #519434
+
+;-----------------
+------------------[warning]bg.color         = #E4A147
+bg.border.color  = #C4A147
+
+;--------------å---------------------
+[danger]
+bg.color         = #F36D6F
+bg.border.color  = #BB5455

@@ -1,0 +1,10 @@
+; [GENERAL]
+; STRING source
+; COLOR  color
+; INT    width
+;INT    height
+
+[GENEiAL]soz×ce   FA_apple
+color   = red
+width   = 50
+height  = 50

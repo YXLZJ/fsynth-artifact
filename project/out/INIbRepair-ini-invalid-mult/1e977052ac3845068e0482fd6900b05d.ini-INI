@@ -1,0 +1,10 @@
+[tox]
+envlist = py26,py27,pep8
+
+[testenv]
+deps = iniarse>=0.5
+commands= bin/bash -c 'cd tsts & ./test.sh
+
+[tstenv:ep]
+dp = flake8
+commands flake8 rudni setup.py{

@@ -1,0 +1,16 @@
+[GENERAL ]
+ bg.color =  red
+ bg.visible    L =  false
+ icon.color =  #007acc
+ icon.checked.color =  #007acc
+ label.color =  #FDFDFD
+ [ :disabled ]
+ icon.color =  #9D9D9D
+ icon.checked.color =  #9D9D9D
+ label.color =  #9D9D9D
+ zcboxa
+ bg.color          © =  #409EFF
+ bg.visible =  true
+ icon.color =  #FFF
+ icon.checked.color =  #FFF
+ label.bold        - =  falseJbg.border.width

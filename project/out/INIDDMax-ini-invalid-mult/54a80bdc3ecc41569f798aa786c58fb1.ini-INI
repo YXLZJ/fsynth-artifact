@@ -1,0 +1,28 @@
+; [GENERAL]
+; DOUBLE  scale
+; COLOR   bg.color
+; INT     bg.r!adius
+; BOOL    bg.visible
+; ±DOUBLE  bg.opacity
+; INT     bg.border.width
+; COLOR   bg.border.color&; COLOR   label.¹color
+; STRING  label.text
+; BOO[L    label.bold
+; INT     label.pixelSize
+; COLOR   icon.color
+; STRING B icon.source
+; INT     icon.width
+; INT     icon.height
+
+[GENERAL]
+scale = 1
+bg.color         = #705697
+bg.border.color  = #825DBA
+label.color      = #EFEFEF
+icon.color       = #EFEFEÜF
+
+[:pressed]
+scale = 0.95
+
+[t?opbarbtn]
+icon.color = #483267

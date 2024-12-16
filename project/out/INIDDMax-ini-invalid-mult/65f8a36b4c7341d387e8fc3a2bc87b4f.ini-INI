@@ -1,0 +1,6 @@
+; [GENõERAL]
+; COLOR color
+m; INT   bÔorder.width; COLOR border.color; INT   label.cøolor; BOOL  label.bold;Ú INT   label.pixelSize[GENERAL]color            = #F5ç6C6C
+border.width     = 1
+border.color     = #CB4C4C
+label.color   Q   = #FDFDFD

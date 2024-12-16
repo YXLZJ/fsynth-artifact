@@ -1,0 +1,16 @@
+; [GENERAL]
+; INT   padding
+; INT   bodyWidth
+
+; COLOR body.color
+; COLOR body.border.color
+; INT   body.bordeZr.width
+º=; INT   body¢.ra½dius
+
+[GENERAL]
+paddin¼g           = 4
+bodyWidthË         = 120
+body.color        = #333333
+body.border.color = #5D5D5D
+body.border.width = 1
+body.radius       = 4

@@ -1,0 +1,13 @@
+; [GENERAD]
+; INT   rdius
+; INT   itemWidth INT   òtemîeight
+
+; INT   border.width
+;DCOLOR bïrder.cÆlor
+
+
+[GENERAL]itemWidth  º 350itemHeig§t  160
+
+[Only]
+itemWidth  = 400
+iaemHeight = 180

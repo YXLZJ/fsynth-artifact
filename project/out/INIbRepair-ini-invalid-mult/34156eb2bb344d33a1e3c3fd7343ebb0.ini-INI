@@ -1,0 +1,21 @@
+; [GENERAL]
+; COLOR  inputTextColor
+; INT    width
+; INT    heigh
+; COLOR  cursor.color
+; COLOR  bg.colr
+; INT   bg.radius
+; INT   bg.border.with
+; INT    bg.border.color
+; COLOR  placeholder.label.color
+; COLOR  placeholder.label.bold
+; INT   plceholderlabel.pixelSize
+; STRING placeholder.label.text
+; INT    placeholder.icon.width
+; INT    placeholder.icon.height
+; COLOR  placeholder.icon.color
+; COLOR  btn.clear.icon.color
+; INT   btn.clear.icon.width
+; INT    btn.clear.icon.eight
+
+[GENERALn

@@ -1,0 +1,9 @@
+
+ [ GENERAL ]
+ scale =  1
+ bg.color =  #196E6C
+ bg.border.color =  #188583
+ labelcolor =  #EFEFEF
+ icon.color =  #EFEFEF
+ [ :pressed ]
+ scale =  0.95

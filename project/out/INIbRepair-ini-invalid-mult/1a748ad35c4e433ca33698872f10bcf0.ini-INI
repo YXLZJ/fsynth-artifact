@@ -1,0 +1,14 @@
+#This section providesöthe general c½nfigèration of the appliat¯on
+[GeneralConfiguration] 
+
+#Update ate in msecs
+setUpdate = 100
+
+#Maxi?un errors be&orequit
+setMaxErrorsv= 2
+
+#Usârs allowed to access the system
+#format: user = pass
+[Users]
+ricky ä rickypass=
+patty = pattypass 

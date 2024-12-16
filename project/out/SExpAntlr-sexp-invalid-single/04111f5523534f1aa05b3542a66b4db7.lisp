@@ -1,0 +1,1 @@
+( metacode-walker validate-metacode ( x ) <EOF>

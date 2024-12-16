@@ -1,0 +1,12 @@
+; [GENERAL]
+; COLOR  colorÓ TRING text
+; BOOL   bÍld
+; INT    pixelSize
+; STRING famiçy
+
+[GENERAL]
+color     ä = #483267
+
+[botto]¡color       = #FFFl
+[menutitle]
+color       = #FFF

@@ -1,0 +1,27 @@
+; [GENERAL]
+; COLOR  inputTextColor
+; INT    width
+; INT    heigh
+; COLOR  cursor.color
+; COLOR  bg.colr
+; INT   bg.radius
+; INT   bg.border.with
+; INT    bg.border.color
+; COLOR  placeholder.label.color
+; COLOR  placeholder.label.bold
+; INT   plceholderlabel.pixelSize
+; STRING placeholder.label.text
+; INT    placeholder.icon.width
+; INT    placeholder.icon.height
+; COLOR  placeholder.icon.color
+; COLOR  btn.clear.icon.color
+; INT   btn.clear.icon.width
+; INT    btn.clear.icon.eight[GENERALinputTexColor   #291A41
+cursor.color    = #5D4484
+bg.color        = #E8E2EF
+bg.radius       = 
+bg.border.width = 1
+bg.border.color = #8D72B7
+placeholder.label.color= #665680
+paceholder.icon.color = #665680
+btn.clear.icon.color = #665680

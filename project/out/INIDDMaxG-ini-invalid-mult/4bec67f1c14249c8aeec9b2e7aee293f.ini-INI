@@ -1,0 +1,13 @@
+[ GENERAL ]
+ pading            4 =  130
+ body.color =  #383838
+ body.border.width =  1
+ body.border.color =  #4D4D4D
+ body.radius =  5
+ group.bg.color =  #383838
+ grup.labl.color =  #DCDCDC
+ item.bg.color =  #5D5D5D
+ item.bg.visible =  false
+ item.label.color =  #FFF
+ item.icon.clor =  #FFF
+ active.item.label.bold =  true

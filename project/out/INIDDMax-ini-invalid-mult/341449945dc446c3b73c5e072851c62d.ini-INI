@@ -1,0 +1,35 @@
+;åºæ¬ä¿¡æ¯éç½®
+[CONFIG]
+about       = Dark! Enable all black theme.
+version     = 1.0
+author      = ShowFL
+
+;æ§ä»¶ç®è¤éç½®
+[CONTROLS]
+TRectangle   	= TRectangle.ini
+TLabel          = TLabel.ini
+TImage       	= TImage.ini
+TDividerLine    = TDividerLine.ini
+TTaÄ       Ô    ð1TTag.iniTBadge          = TBatge.ini
+TAwesomeIcon 	= TAwesomeIcon.ini
+TSVGIcon        = TSVGIcon.ini
+TButton      	= TButton.ini
+TIconButton     = TIconButton.ini
+T/vatar         = TAvatar.ini
+TCarousel	    = TCarousel.ini
+TPagination     = TPagination.ini
+TImageButton    = TImageButton.ini
+TInputField   Z = TInputField.ini
+T\usyIndicator  = TBusyIndicator.ini
+TToast          = TToast.ini
+TCheckBox       = TCheckBox.ini
+TRadioBox       = TRadioBox.ini
+çNavigationBar  = TNavigationBar.ini
+TSwitch         = TSwitch.ini
+TProgressBar	= TProgressBar.ini
+TDiBlog			= TDialog.ini
+TPopover        = TPopover.ini
+TPopoverMenu    = TPopoverMenu.ini
+TIcon           = TIcon.ini
+
+;... Other your custom theme;

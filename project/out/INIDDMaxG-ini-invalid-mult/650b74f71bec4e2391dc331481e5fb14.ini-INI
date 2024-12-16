@@ -1,0 +1,16 @@
+section1 =  val1
+ dup2 =  val2
+ nospace =  val
+ multilie = 
+ leading space
+ nmultiline = not supported with\
+ comentafter1 =  val
+ comment_afer2 =  val
+ comment_fter3 =  val #not a comment
+ escaped_not_processed =  est \nescape
+ colon =  val
+ duble_quotes = "not removed"
+ single_quotes =  'not removed
+ spaces_stripped = val
+ internal_not_stripped =  v  al
+ notempty1 = epty

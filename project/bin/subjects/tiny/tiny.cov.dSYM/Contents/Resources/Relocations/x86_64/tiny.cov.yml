@@ -1,0 +1,38 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     tiny.cov
+relocations:
+  - { offset: 0x717, size: 0x8, addend: 0x0, symName: _llvm_gcda_start_file, symObjAddr: 0x0, symBinAddr: 0x1000030B0, symSize: 0x3E0 }
+  - { offset: 0x805, size: 0x8, addend: 0x0, symName: _llvm_gcda_emit_function, symObjAddr: 0x3E0, symBinAddr: 0x100003490, symSize: 0x210 }
+  - { offset: 0x914, size: 0x8, addend: 0x0, symName: _llvm_gcda_emit_arcs, symObjAddr: 0x5F0, symBinAddr: 0x1000036A0, symSize: 0x480 }
+  - { offset: 0xA66, size: 0x8, addend: 0x0, symName: _llvm_gcda_summary_info, symObjAddr: 0xA70, symBinAddr: 0x100003B20, symSize: 0x3E0 }
+  - { offset: 0xC7E, size: 0x8, addend: 0x0, symName: _llvm_gcda_end_file, symObjAddr: 0xE50, symBinAddr: 0x100003F00, symSize: 0x170 }
+  - { offset: 0xCCD, size: 0x8, addend: 0x0, symName: _llvm_register_writeout_function, symObjAddr: 0xFC0, symBinAddr: 0x100004070, symSize: 0x60 }
+  - { offset: 0xCFC, size: 0x8, addend: 0x0, symName: _llvm_writeout_files, symObjAddr: 0x1020, symBinAddr: 0x1000040D0, symSize: 0x40 }
+  - { offset: 0xD1D, size: 0x8, addend: 0x0, symName: _llvm_writeout_and_clear, symObjAddr: 0x1060, symBinAddr: 0x100004110, symSize: 0xD0 }
+  - { offset: 0xD65, size: 0x8, addend: 0x0, symName: _llvm_register_reset_function, symObjAddr: 0x1130, symBinAddr: 0x1000041E0, symSize: 0x60 }
+  - { offset: 0xD94, size: 0x8, addend: 0x0, symName: _llvm_delete_reset_function_list, symObjAddr: 0x1190, symBinAddr: 0x100004240, symSize: 0xA0 }
+  - { offset: 0xDC3, size: 0x8, addend: 0x0, symName: _llvm_reset_counters, symObjAddr: 0x1230, symBinAddr: 0x1000042E0, symSize: 0x40 }
+  - { offset: 0xDDE, size: 0x8, addend: 0x0, symName: ___gcov_fork, symObjAddr: 0x1270, symBinAddr: 0x100004320, symSize: 0x70 }
+  - { offset: 0xE19, size: 0x8, addend: 0x0, symName: _llvm_gcov_init, symObjAddr: 0x12E0, symBinAddr: 0x100004390, symSize: 0xD0 }
+  - { offset: 0xE95, size: 0x8, addend: 0x0, symName: ___gcov_dump, symObjAddr: 0x13B0, symBinAddr: 0x100004460, symSize: 0x40 }
+  - { offset: 0xEAA, size: 0x8, addend: 0x0, symName: ___gcov_reset, symObjAddr: 0x13F0, symBinAddr: 0x1000044A0, symSize: 0x33 }
+  - { offset: 0xEEA, size: 0x8, addend: 0x0, symName: ___llvm_profile_recursive_mkdir, symObjAddr: 0x0, symBinAddr: 0x100004500, symSize: 0x40 }
+  - { offset: 0xF01, size: 0x8, addend: 0x0, symName: ___llvm_profile_recursive_mkdir, symObjAddr: 0x0, symBinAddr: 0x100004500, symSize: 0x40 }
+  - { offset: 0xF2F, size: 0x8, addend: 0x0, symName: ___llvm_profile_get_dir_mode, symObjAddr: 0x40, symBinAddr: 0x100004540, symSize: 0x10 }
+  - { offset: 0xF44, size: 0x8, addend: 0x0, symName: ___llvm_profile_set_dir_mode, symObjAddr: 0x50, symBinAddr: 0x100004550, symSize: 0x10 }
+  - { offset: 0xF59, size: 0x8, addend: 0x0, symName: _lprofGetHostName, symObjAddr: 0x60, symBinAddr: 0x100004560, symSize: 0x70 }
+  - { offset: 0xF6E, size: 0x8, addend: 0x0, symName: _lprofLockFd, symObjAddr: 0xD0, symBinAddr: 0x1000045D0, symSize: 0x70 }
+  - { offset: 0xF83, size: 0x8, addend: 0x0, symName: _lprofUnlockFd, symObjAddr: 0x140, symBinAddr: 0x100004640, symSize: 0x70 }
+  - { offset: 0xF9E, size: 0x8, addend: 0x0, symName: _lprofLockFileHandle, symObjAddr: 0x1B0, symBinAddr: 0x1000046B0, symSize: 0x80 }
+  - { offset: 0xFD2, size: 0x8, addend: 0x0, symName: _lprofUnlockFileHandle, symObjAddr: 0x230, symBinAddr: 0x100004730, symSize: 0x80 }
+  - { offset: 0x1000, size: 0x8, addend: 0x0, symName: _lprofOpenFileEx, symObjAddr: 0x2B0, symBinAddr: 0x1000047B0, symSize: 0xC0 }
+  - { offset: 0x102E, size: 0x8, addend: 0x0, symName: _lprofGetPathPrefix, symObjAddr: 0x370, symBinAddr: 0x100004870, symSize: 0x80 }
+  - { offset: 0x1043, size: 0x8, addend: 0x0, symName: _lprofApplyPathPrefix, symObjAddr: 0x3F0, symBinAddr: 0x1000048F0, symSize: 0x90 }
+  - { offset: 0x1058, size: 0x8, addend: 0x0, symName: _lprofFindFirstDirSeparator, symObjAddr: 0x480, symBinAddr: 0x100004980, symSize: 0x10 }
+  - { offset: 0x106D, size: 0x8, addend: 0x0, symName: _lprofFindLastDirSeparator, symObjAddr: 0x490, symBinAddr: 0x100004990, symSize: 0x10 }
+  - { offset: 0x1082, size: 0x8, addend: 0x0, symName: _lprofInstallSignalHandler, symObjAddr: 0x4A0, symBinAddr: 0x1000049A0, symSize: 0x50 }
+  - { offset: 0x1097, size: 0x8, addend: 0x0, symName: _lprofSuspendSigKill, symObjAddr: 0x4F0, symBinAddr: 0x1000049F0, symSize: 0x10 }
+  - { offset: 0x10AC, size: 0x8, addend: 0x0, symName: _lprofRestoreSigKill, symObjAddr: 0x500, symBinAddr: 0x100004A00, symSize: 0x10 }
+  - { offset: 0x10CD, size: 0x8, addend: 0x0, symName: _lprofReleaseMemoryPagesToOS, symObjAddr: 0x510, symBinAddr: 0x100004A10, symSize: 0x3F }
+...

@@ -1,0 +1,3 @@
+GENERAL inputTexColor   #291A41 cursor.color =  #5D4484
+ bg.color =  #E8E2EF
+ bg.radius = bg.border.width

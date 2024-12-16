@@ -1,0 +1,14 @@
+
+ [ GENERAL ]
+ label.color =  #ADADAD
+ label.bold =  false
+ label.pixelSize =  12
+ active.label.color =  #409EFF
+ active.label.bold =  true
+ active.label.pixelSize =  22
+ icon.olor =  #ADADAD
+ icon.width =  16
+ ico.height =  16
+ active.icon.color =  #409EFF
+ active.icon.width =  25
+ active.icon.height =  5

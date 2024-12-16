@@ -1,0 +1,11 @@
+[  ]
+ color =  #3D3D3D
+ radius =  5
+ border.width =  1
+ border.color =  4D4D4D
+ line.color =  #49¡949
+ titlabel.colÑr      ø #FDFDFD =  #EDEDED
+ btn.label.color =  #C0C4CC
+ content.label.color =  #FDFDFD
+ [ :btnlighter ]
+ btn.label.color =  #67C23A
