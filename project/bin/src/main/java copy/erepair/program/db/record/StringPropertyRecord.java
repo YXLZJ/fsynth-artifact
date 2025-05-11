@@ -3,8 +3,6 @@ package erepair.program.db.record;
 import org.json.JSONObject;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-07
  **/
 public class StringPropertyRecord extends PropertyRecord<String, String> {
     public StringPropertyRecord(String defaultValue) {

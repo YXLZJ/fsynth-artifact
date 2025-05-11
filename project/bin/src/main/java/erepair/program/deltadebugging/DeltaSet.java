@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 /**
  * This class represents a set of intervals
  *
- * @author Lukas Kirschner
  */
 public class DeltaSet {
     private final TreeSet<DeltaInterval> intervalSet;

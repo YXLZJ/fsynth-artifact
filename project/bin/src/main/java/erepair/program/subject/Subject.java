@@ -22,8 +22,6 @@ import java.util.regex.Pattern;
 /**
  * An abstract subject that can be run to test a test file using its {@link Subject#run(String, String, ExecutionAction, ExecutionAction)} method.
  *
- * @author Lukas Kirschner
- * @since 2019-01-09
  */
 public abstract class Subject extends Loggable {
     static final Pattern LINEBREAK = Pattern.compile("\\n");

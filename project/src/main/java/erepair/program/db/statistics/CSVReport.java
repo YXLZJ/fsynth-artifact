@@ -12,8 +12,6 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-03-17
  **/
 public abstract class CSVReport extends StatisticsTable {
     private final Path outFile;

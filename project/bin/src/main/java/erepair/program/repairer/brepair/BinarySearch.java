@@ -5,8 +5,6 @@ import erepair.program.subject.SubjectStatus;
 import java.util.function.Function;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-09-07
  **/
 public class BinarySearch {
     /**

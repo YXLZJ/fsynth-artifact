@@ -9,8 +9,6 @@ import java.util.stream.IntStream;
 /**
  * This enum represents a character class, i.e., a set of similar characters that can usually be used interchangeably.
  *
- * @author Lukas Kirschner
- * @since 2021-09-07
  **/
 @SuppressWarnings({"HardcodedLineSeparator", "HardcodedFileSeparator"})
 enum CharacterClass implements Serializable, Iterable<Character> {

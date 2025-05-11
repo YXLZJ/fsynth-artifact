@@ -16,8 +16,6 @@ import java.util.logging.Level;
 
 /**
  * @param <T> Type of the elements that are minimized
- * @author Lukas Kirschner
- * @since 2020-05-21
  **/
 public abstract class DD<T> extends Loggable {
 

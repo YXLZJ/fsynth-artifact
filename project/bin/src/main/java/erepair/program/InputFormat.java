@@ -11,8 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-17
  **/
 public enum InputFormat implements JsonSerializableEnum {
     /**

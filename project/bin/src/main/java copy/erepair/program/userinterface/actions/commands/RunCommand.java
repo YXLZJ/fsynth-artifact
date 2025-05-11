@@ -25,8 +25,6 @@ import java.util.Objects;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @CliCommand
 public class RunCommand extends Command {

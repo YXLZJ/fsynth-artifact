@@ -45,7 +45,7 @@ First, you need to determine the target interpreter. You can use any interpreter
 Then run command:
 > `./erepair <PathtoIntepreter> <inputfile> <outputfile>`
 
-### Build your own "interpreter" at ease
+### Build your own "interpreter" as target
 
 You can also repair files whose grammar is defined by regular expressions. with [regex](https://pypi.org/project/regex/), for example:
 
@@ -400,4 +400,3 @@ DDMaxG         4800           569.04
 erepair        4660           897.31              
 ```
 
-## Shall we start?  Try it out.

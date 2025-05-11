@@ -3,8 +3,6 @@ package erepair.program.repairer;
 /**
  * A simple enum that signals whether an algorithm is capable of repairing binary or grammar-based file formats
  *
- * @author Lukas Kirschner
- * @since 2021-11-11
  */
 public enum IsBinaryEnum {
     /**

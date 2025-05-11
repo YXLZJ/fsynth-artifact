@@ -17,8 +17,6 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-28
  **/
 public abstract class ShellSubject extends Subject {
     /**
@@ -148,7 +146,6 @@ public abstract class ShellSubject extends Subject {
      *
      * @param commandLine Command line to run
      * @return null if the oracle succeeded, a reason if the oracle failed.
-     * @author Lukas Kirschner
      */
     SubjectStatus runShellSubject(ProcessBuilder commandLine) {
         boolean hasReport = false;

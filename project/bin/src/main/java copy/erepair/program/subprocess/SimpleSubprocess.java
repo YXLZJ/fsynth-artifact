@@ -10,8 +10,6 @@ import java.util.OptionalLong;
 import java.util.concurrent.*;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-01-14
  **/
 public class SimpleSubprocess {
     private SimpleSubprocess() {

@@ -15,8 +15,6 @@ import java.nio.file.Path;
 import java.util.Map;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-02-28
  **/
 @CliCommand
 public class RebuildFileSizesCommand extends Command {

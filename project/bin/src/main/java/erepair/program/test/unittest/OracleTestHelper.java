@@ -23,8 +23,6 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-09-14
  **/
 public abstract class OracleTestHelper extends TestHelper {
     private static HashMap<String, byte[]> testFileCache = new HashMap<>();

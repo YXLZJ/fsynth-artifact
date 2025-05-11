@@ -9,8 +9,6 @@ import java.util.Random;
 /**
  * Perform a random insertion.
  *
- * @author Lukas Kirschner
- * @since 2021-12-30
  **/
 @MutationModeImpl
 public class Insertion extends MutationMode {

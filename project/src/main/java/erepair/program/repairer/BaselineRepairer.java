@@ -6,8 +6,6 @@ import erepair.program.Algorithm;
 import java.nio.file.Path;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @ConcreteRepairer(algorithm = Algorithm.BASELINE, type = IsBinaryEnum.BOTH)
 public class BaselineRepairer extends Repairer {

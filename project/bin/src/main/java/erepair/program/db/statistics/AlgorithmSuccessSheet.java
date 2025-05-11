@@ -15,8 +15,6 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-14
  **/
 @BuildStatistics
 @ForEachAlgorithmStatistics

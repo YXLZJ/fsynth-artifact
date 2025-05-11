@@ -8,8 +8,6 @@ import java.util.stream.Stream;
 /**
  * System tests for the JSON Oracles Return Status
  *
- * @author Lukas Kirschner
- * @since 2021-06-29
  */
 public abstract class JsonOracleTests extends OracleTestHelper {
     /**

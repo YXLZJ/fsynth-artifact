@@ -10,8 +10,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-05-12
  **/
 @DisplayName("Unit Tests for the String Diff Utilities")
 public class StringDiffTest {

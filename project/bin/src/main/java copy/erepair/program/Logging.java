@@ -9,8 +9,6 @@ import java.util.logging.Logger;
 /**
  * Logging class that provides a global logging system.
  *
- * @author Lukas Kirschner
- * @since 2018-09-01
  */
 public class Logging {
     /**
@@ -81,8 +79,6 @@ public class Logging {
 /**
  * This class provides two more log levels
  *
- * @author Lukas Kirschner
- * @since 2019-01-06
  */
 class MoreLogLevels extends Level {
     /**

@@ -11,8 +11,6 @@ import java.lang.annotation.Target;
  * This annotation annotates a statistic class that should be instantiated for each subject.
  * The constructor MUST be a single-element constructor that takes a {@link Subjects} as argument
  *
- * @author Lukas Kirschner
- * @since 2020-05-26
  **/
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

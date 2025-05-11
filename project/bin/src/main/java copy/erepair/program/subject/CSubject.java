@@ -13,8 +13,6 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-12-05
  **/
 public abstract class CSubject extends ShellSubject {
 

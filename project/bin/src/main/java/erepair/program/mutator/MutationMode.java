@@ -15,8 +15,6 @@ import java.util.stream.Collectors;
  * Each Mutation Mode is designed as singleton that must be re-usable between mutations,
  * i.e. this class should not store any state data
  *
- * @author Lukas Kirschner
- * @since 2021-12-30
  **/
 public abstract class MutationMode extends Loggable {
     private final @Nonnull

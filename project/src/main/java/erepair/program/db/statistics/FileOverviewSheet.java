@@ -19,8 +19,6 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-14
  **/
 @SuppressWarnings({"HardcodedFileSeparator", "unused"})
 @BuildStatistics

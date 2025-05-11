@@ -6,8 +6,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
- * @author Lukas Kirschner
- * @since 2019-06-04
  **/
 public class ExecutionInfo {
     private final SubjectStatus status;

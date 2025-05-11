@@ -6,8 +6,6 @@ import erepair.program.visitor.SimpleTreeFlattener;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-21
  **/
 public class LexicalDDMax extends DDMax<String> {
     /**

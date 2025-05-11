@@ -12,8 +12,6 @@ import java.util.TreeSet;
  * This class describes a JSON-Serializable object that consists of sub-objects. The root object is a JSON Array
  * and each field can automatically be serialized in subclasses by adding the {@link JSONField} annotation.
  *
- * @author Lukas Kirschner
- * @since 2020-10-09
  **/
 public abstract class JSONRecord {
 

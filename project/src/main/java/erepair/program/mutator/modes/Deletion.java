@@ -9,8 +9,6 @@ import java.util.Random;
 /**
  * Performs a random deletion of a single byte.
  *
- * @author Lukas Kirschner
- * @since 2021-12-30
  **/
 @MutationModeImpl
 public class Deletion extends MutationMode {

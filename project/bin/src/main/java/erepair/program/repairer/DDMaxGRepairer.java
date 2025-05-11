@@ -12,8 +12,6 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @ConcreteRepairer(algorithm = Algorithm.DDMAXG, type = IsBinaryEnum.GRAMMARBASED)
 public class DDMaxGRepairer extends DDRepairer {

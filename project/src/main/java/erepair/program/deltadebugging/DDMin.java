@@ -11,8 +11,6 @@ import java.nio.file.Paths;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-21
  **/
 public class DDMin extends DD<String> {
 

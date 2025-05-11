@@ -12,7 +12,6 @@ import java.util.List;
 /**
  * This ANTLR Error Listener checks if an error occurred. It aims to report every ANTLR-reported error that can occur during parsing.
  *
- * @author Lukas Kirschner
  */
 public class ExplicitErrorListener extends BaseErrorListener {
     private boolean errorOccurred = false;

@@ -8,8 +8,6 @@ import java.util.stream.Stream;
 /**
  * System tests for the INI Oracles Return Status
  *
- * @author Lukas Kirschner
- * @since 2021-09-14
  */
 public abstract class INIOracleTests extends OracleTestHelper {
     /**

@@ -4,8 +4,6 @@ import erepair.program.userinterface.actions.Argument;
 import erepair.program.userinterface.actions.CliArgument;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-03-16
  **/
 @SuppressWarnings({"unused", "JavaDoc"})
 @CliArgument

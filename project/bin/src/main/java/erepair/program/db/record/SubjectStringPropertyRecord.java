@@ -4,8 +4,6 @@ import erepair.program.subject.Subjects;
 import org.json.JSONObject;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-07
  **/
 public class SubjectStringPropertyRecord extends PropertyRecord<Subjects, String> {
     public SubjectStringPropertyRecord(String defaultValue) {

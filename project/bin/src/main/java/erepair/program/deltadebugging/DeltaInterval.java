@@ -6,7 +6,6 @@ import java.util.Objects;
  * This class represents an immutable discrete interval.
  * We use it to obtain substrings from an input.
  *
- * @author Lukas Kirschner
  */
 public class DeltaInterval implements Comparable<DeltaInterval> {
     private final int inclusiveLowerBound;

@@ -31,8 +31,6 @@ import static java.lang.System.exit;
 /**
  * Main class
  *
- * @author Lukas Kirschner
- * @since 2018-04-14
  */
 @SuppressWarnings("ObjectAllocationInLoop")
 public class Main {

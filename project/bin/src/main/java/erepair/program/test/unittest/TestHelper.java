@@ -14,8 +14,6 @@ import java.util.List;
 /**
  * Test Helper class with commonly used testing functions
  *
- * @author Lukas Kirschner
- * @since 2021-06-29
  **/
 public abstract class TestHelper {
     private Path tempDir = null;

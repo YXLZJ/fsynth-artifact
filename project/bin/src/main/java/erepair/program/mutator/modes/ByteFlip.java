@@ -9,8 +9,6 @@ import java.util.Random;
 /**
  * A random byte flip
  *
- * @author Lukas Kirschner
- * @since 2021-12-30
  **/
 @MutationModeImpl
 public class ByteFlip extends MutationMode {

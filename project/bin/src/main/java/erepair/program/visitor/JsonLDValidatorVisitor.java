@@ -6,8 +6,6 @@ import erepair.program.generated.JSONVisitor;
 import java.util.Objects;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-04-30
  **/
 public class JsonLDValidatorVisitor extends ValidatorVisitor implements JSONVisitor<Boolean> {
     private JSONParser.ValueContext hasIdTag;

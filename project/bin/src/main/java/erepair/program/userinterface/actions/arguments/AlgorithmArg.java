@@ -8,8 +8,6 @@ import erepair.program.Algorithm;
 import java.util.stream.Collectors;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @CliArgument
 public class AlgorithmArg extends Argument {

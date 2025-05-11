@@ -6,8 +6,6 @@ import erepair.program.subject.Subject;
 import java.nio.file.Path;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 public abstract class DDRepairer extends Repairer {
     /**

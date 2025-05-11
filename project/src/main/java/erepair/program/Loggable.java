@@ -6,7 +6,6 @@ import java.util.logging.Level;
 /**
  * This class represents a base class for all classes that need to log something to a log.
  *
- * @author Lukas Kirschner
  */
 public abstract class Loggable implements Serializable {
     private static final long serialVersionUID = 7864971914003266409L;

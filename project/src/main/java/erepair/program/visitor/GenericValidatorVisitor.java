@@ -7,8 +7,6 @@ import org.antlr.v4.runtime.tree.RuleNode;
 /**
  * Simple visitor that returns false if there was an error node in the parse tree
  *
- * @author Lukas Kirschner
- * @since 2020-04-30
  **/
 public class GenericValidatorVisitor extends ValidatorVisitor implements ParseTreeVisitor<Boolean> {
 

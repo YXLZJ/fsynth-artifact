@@ -14,8 +14,6 @@ import java.util.Iterator;
 import java.util.Optional;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-11-12
  **/
 @ConcreteRepairer(algorithm = Algorithm.erepair, type = IsBinaryEnum.GRAMMARBASED)
 

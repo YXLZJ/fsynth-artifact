@@ -1,8 +1,6 @@
 package erepair.program.userinterface.actions;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 public abstract class CliObject {
     /**

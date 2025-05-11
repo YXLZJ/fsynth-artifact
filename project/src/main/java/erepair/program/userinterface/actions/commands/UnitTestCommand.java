@@ -9,8 +9,6 @@ import javax.annotation.Nullable;
 import java.util.Map;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @CliCommand
 public class UnitTestCommand extends Command {

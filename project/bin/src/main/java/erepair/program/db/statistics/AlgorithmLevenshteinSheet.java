@@ -13,8 +13,6 @@ import java.util.*;
 import java.util.stream.Stream;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-10-18
  **/
 @SuppressWarnings({"CodeBlock2Expr", "FinalMethodInFinalClass"})
 @BuildStatistics

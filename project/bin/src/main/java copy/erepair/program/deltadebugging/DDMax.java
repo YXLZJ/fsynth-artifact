@@ -5,8 +5,6 @@ import erepair.program.subject.Subject;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-21
  **/
 public abstract class DDMax<T> extends DD<T> {
 

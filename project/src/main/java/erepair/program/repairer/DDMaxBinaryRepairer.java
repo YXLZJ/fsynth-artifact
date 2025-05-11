@@ -12,8 +12,6 @@ import java.nio.file.Path;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @ConcreteRepairer(algorithm = Algorithm.DDMAX, type = IsBinaryEnum.BINARY)
 public class DDMaxBinaryRepairer extends Repairer {

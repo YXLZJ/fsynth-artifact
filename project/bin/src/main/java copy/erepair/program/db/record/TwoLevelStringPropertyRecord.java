@@ -5,8 +5,6 @@ import erepair.program.Algorithm;
 import org.json.JSONObject;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-07
  **/
 public class TwoLevelStringPropertyRecord extends TwoLevelPropertyRecord<Subjects, Algorithm, String> {
 

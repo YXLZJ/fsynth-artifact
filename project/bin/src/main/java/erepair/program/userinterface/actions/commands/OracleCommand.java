@@ -14,8 +14,6 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @CliCommand
 public class OracleCommand extends Command {

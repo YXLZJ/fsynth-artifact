@@ -7,8 +7,6 @@ import java.lang.annotation.*;
 /**
  * Marks a class as Repairer Class to be run in the evaluation.
  *
- * @author Lukas Kirschner
- * @since 2019-01-18
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

@@ -9,8 +9,6 @@ import erepair.program.Algorithm;
 import java.nio.file.Path;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @ConcreteRepairer(algorithm = Algorithm.DDMIN, type = IsBinaryEnum.GRAMMARBASED)
 public class DDMinRepairer extends DDRepairer {

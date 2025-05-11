@@ -10,8 +10,6 @@ import java.util.stream.IntStream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-08-30
  **/
 @SuppressWarnings("JavaDoc")
 @DisplayName("InputFormat Unit Tests")

@@ -58,8 +58,6 @@ class GBTuple<T> {
  * An abstract repairer that repairs an input file with a certain algorithm.
  * Must be subclassed with a concrete repairer that repairs using a certain algorithm.
  *
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @SuppressWarnings("ClassNamePrefixedWithPackageName")
 public abstract class Repairer extends DatabaseConnection {

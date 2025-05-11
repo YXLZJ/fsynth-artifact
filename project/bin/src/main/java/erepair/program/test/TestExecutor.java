@@ -17,8 +17,6 @@ import static org.junit.platform.engine.discovery.DiscoverySelectors.selectPacka
 
 
 /**
- * @author Lukas Kirschner
- * @since 2021-06-29
  **/
 public class TestExecutor {
     private SummaryGeneratingListener summaryGeneratingListener = new SummaryGeneratingListener();

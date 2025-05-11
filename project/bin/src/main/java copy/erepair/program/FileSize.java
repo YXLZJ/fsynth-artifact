@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-02-28
  **/
 public class FileSize {
     private FileSize() {

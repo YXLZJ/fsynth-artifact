@@ -8,8 +8,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-04
  **/
 public abstract class ValidatorVisitor implements ParseTreeVisitor<Boolean> {
     final Logger logger = Logging.antlrLogger;

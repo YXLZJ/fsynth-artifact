@@ -6,8 +6,6 @@ import java.util.stream.Collectors;
 /**
  * Represents an algorithm to repair a corrupted file.
  *
- * @author Lukas Kirschner
- * @since 2018
  */
 public enum Algorithm {
     /**

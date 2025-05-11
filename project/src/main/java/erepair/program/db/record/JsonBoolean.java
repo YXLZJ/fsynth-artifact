@@ -4,8 +4,6 @@ import erepair.program.db.JSONSerializable;
 import org.json.JSONObject;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-12-21
  **/
 public class JsonBoolean implements JSONSerializable {
     private boolean value;

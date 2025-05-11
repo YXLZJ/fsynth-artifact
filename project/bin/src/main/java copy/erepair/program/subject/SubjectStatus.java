@@ -3,8 +3,6 @@ package erepair.program.subject;
 import javax.annotation.Nonnull;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-05-18
  * This class represents the status of a subject program run
  **/
 public class SubjectStatus {

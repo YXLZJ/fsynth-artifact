@@ -11,8 +11,6 @@ import java.nio.file.Path;
  * Also implements collecting coverage via JaCoCo - This class should be the only one that uses JaCoCo for coverage,
  * since all subjects that are run via Java are BootstrapSubjects.
  *
- * @author Lukas Kirschner
- * @since 2019
  */
 public abstract class BootstrapSubject extends ShellSubject {
 

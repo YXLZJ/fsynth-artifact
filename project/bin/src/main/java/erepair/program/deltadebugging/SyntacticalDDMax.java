@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-21
  **/
 public class SyntacticalDDMax extends DDMax<List<String>> {
     /**

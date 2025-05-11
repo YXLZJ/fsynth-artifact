@@ -9,8 +9,6 @@ import java.util.List;
 /**
  * GeoJSON Validator Visitor implemented using https://geojson.org/geojson-spec.html
  *
- * @author Lukas Kirschner
- * @since 2020-04-30
  **/
 public class GeoJSONValidatorVisitor extends ValidatorVisitor implements JSONVisitor<Boolean> {
     private final List<String> geoJsonTypes = List.of(

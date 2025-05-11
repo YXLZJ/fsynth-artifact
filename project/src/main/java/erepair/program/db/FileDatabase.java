@@ -20,8 +20,6 @@ import java.util.stream.Stream;
 
 /**
  * The database class that stores all information about test runs, file attributes and other input file metadata.
- * @author Lukas Kirschner
- * @since 2020-05-07
  **/
 public class FileDatabase extends HashMap<Path, FileRecord> implements Saveable {
     /**

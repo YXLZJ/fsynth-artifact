@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-03-22
  **/
 @ConcreteRepairer(algorithm = Algorithm.PRETTYPRINT, type = IsBinaryEnum.GRAMMARBASED)
 public class AntlrRepairer extends Repairer {

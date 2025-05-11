@@ -4,8 +4,6 @@ import java.util.*;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-14
  **/
 public abstract class StatisticsTable extends Statistics {
     /**

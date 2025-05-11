@@ -14,8 +14,6 @@ import java.util.stream.Collectors;
 import static java.lang.System.exit;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @CliCommand
 public class MutateCommand extends Command {

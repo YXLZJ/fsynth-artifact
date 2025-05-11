@@ -31,8 +31,6 @@ import java.util.regex.Pattern;
 import static erepair.program.Main.TOKENS_DIRECTORY_PATH;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-14
  **/
 public abstract class GoogleSheet extends StatisticsTable {
     //Regex to check if a String can be parsed to a Double, as suggested from the Javadoc of Oracle Java SE 14

@@ -23,8 +23,6 @@ import java.util.logging.Level;
 import static java.lang.System.exit;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 @SuppressWarnings({"HardcodedLineSeparator", "ObjectAllocationInLoop"})
 @CliCommand

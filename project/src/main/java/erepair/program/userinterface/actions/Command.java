@@ -16,8 +16,6 @@ import java.util.Map;
 import java.util.function.Consumer;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-10-30
  **/
 public abstract class Command extends CliObject {
 

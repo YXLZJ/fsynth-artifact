@@ -20,8 +20,6 @@ import java.util.logging.Level;
 import java.util.stream.Stream;
 
 /**
- * @author Lukas Kirschner
- * @since 2022-03-03
  **/
 @SuppressWarnings("ObjectAllocationInLoop")
 @BuildStatistics

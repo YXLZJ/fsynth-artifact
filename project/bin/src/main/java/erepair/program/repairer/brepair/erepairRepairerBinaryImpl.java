@@ -16,8 +16,6 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-11-12
  **/
 @ConcreteRepairer(algorithm = Algorithm.erepair, type = IsBinaryEnum.BINARY)
 

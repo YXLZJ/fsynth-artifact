@@ -6,7 +6,6 @@ import java.util.Map;
 /**
  * This class represents a return value of a subprocess, which consists of the stdout, stderr and return value.
  *
- * @author Lukas Kirschner
  */
 public class ProcessReturnValue implements Map.Entry<String, String> {
     public final String stdout;

@@ -8,8 +8,6 @@ import java.util.function.Supplier;
 /**
  * This class represents a two-level property record
  *
- * @author Lukas Kirschner
- * @since 2020-05-07
  **/
 public abstract class TwoLevelPropertyRecord<T extends Serializable, U extends Serializable, V extends Serializable> extends PropertyRecord<T, PropertyRecord<U, V>> {
 

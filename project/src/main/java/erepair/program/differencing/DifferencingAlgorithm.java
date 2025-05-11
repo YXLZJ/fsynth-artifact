@@ -10,8 +10,6 @@ import java.util.logging.Level;
 /**
  * The base class for a Differencing Algorithm.
  *
- * @author Lukas Kirschner
- * @since 2019-01-17
  */
 public abstract class DifferencingAlgorithm<T extends Number> extends Loggable {
     public DifferencingAlgorithm(String loggingPrefix) {

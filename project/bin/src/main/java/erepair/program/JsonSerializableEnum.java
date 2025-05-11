@@ -1,8 +1,6 @@
 package erepair.program;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-17
  **/
 public interface JsonSerializableEnum {
     /**

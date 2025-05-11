@@ -8,8 +8,6 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * This annotation automatically sorts the subjects into their respective group.
  *
- * @author Lukas Kirschner
- * @since 2020-05-06
  **/
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SubjectGroup {

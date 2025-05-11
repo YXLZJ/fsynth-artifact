@@ -15,8 +15,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-05-14
  **/
 public abstract class Statistics extends Loggable {
     /**

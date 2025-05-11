@@ -5,7 +5,6 @@ import java.nio.file.Path;
 /**
  * This class is used to compare two paths, using the integer values of any numbers that are present in the file name.
  *
- * @author Lukas Kirschner
  */
 public final class PathNumericComparator implements java.util.Comparator<Path> {
     @Override

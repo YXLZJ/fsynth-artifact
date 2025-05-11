@@ -25,8 +25,6 @@ class FoundCorrectInput extends Exception {
 }
 
 /**
- * @author Lukas Kirschner
- * @since 2021-07-24
  **/
 public abstract class erepairRepairer<FileContent> extends Repairer {
     private static final Random random = new Random(0); // Seed the random generator
@@ -339,8 +337,6 @@ public abstract class erepairRepairer<FileContent> extends Repairer {
      * A change object that represents a possible change of a subject file.
      * The toString() method is overridden to give the generated file's content, to be tested with a subject program.
      *
-     * @author Lukas Kirschner
-     * @since 2021-07-24
      */
     public class Change extends Loggable implements Comparable<Change>, Serializable {
         public final FileContent current_prefix;

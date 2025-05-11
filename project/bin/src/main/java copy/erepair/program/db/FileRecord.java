@@ -25,8 +25,6 @@ import java.util.function.BiConsumer;
  * <li> Create a per-file hash (multi threaded?) to make sure that each file is treated uniquely</li>
  * </ul>
  *
- * @author Lukas Kirschner
- * @since 2019-01-05
  */
 public class FileRecord extends JSONRecord {
     /**

@@ -4,8 +4,6 @@ import erepair.program.generated.JSONParser;
 import erepair.program.generated.JSONVisitor;
 
 /**
- * @author Lukas Kirschner
- * @since 2020-04-30
  **/
 public class ApacheEChartValidatorVisitor extends ValidatorVisitor implements JSONVisitor<Boolean> {
     private JSONParser.ValueContext hasXAxisTag;

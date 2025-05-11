@@ -16,8 +16,6 @@ import java.nio.file.Paths;
 import java.util.logging.Level;
 
 /**
- * @author Lukas Kirschner
- * @since 2021-08-19
  **/
 public class AppendedGarbageDetector extends Loggable {
     private final Class<? extends Lexer> lexerClass;
