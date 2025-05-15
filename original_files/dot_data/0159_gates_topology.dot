@@ -1,0 +1,82 @@
+/* gates_topology.dot
+   Craig Riecke, CoSciN Developer/Analyst, June, 2015
+
+   GraphViz format graph for the Gates OpenFlow #4 instance topology.  Used in both the gates_mininet.py 
+   script and the learning_switch_app.py Frenetic app
+   */ 
+strict graph gates {
+  s_eor [ dpid=1125908103288861, core=true ]; 
+  s_r1  [ dpid=1125908103297789 ];
+  s_r2  [ dpid=1284990276223830 ];
+  s_r3  [ dpid=1284990276223836 ];
+  s_r4  [ dpid=1284990276224367 ];
+  s_r5  [ dpid=1284990276224415 ];
+  s_r6  [ dpid=1284990276223782 ];
+  s_r7  [ dpid=1284990276224424 ];
+  s_r8  [ dpid=1284990276224331 ];
+  s_r9  [ dpid=1284990276224418 ];
+  s_r10 [ dpid=1284990276224328 ];
+  s_r11 [ dpid=1284990276268919 ];
+  s_r12 [ dpid=1284990276224409 ];
+  s_r13 [ dpid=1284990276224322 ];
+  s_r14 [ dpid=1284990276224385 ];
+  s_r15 [ dpid=1284990276224421 ];
+  s_r16 [ dpid=1284990276230355 ];
+  /* s_r17 is not present */
+  s_r18 [ dpid=1284990276230274 ];
+  s_bdf [ dpid=1125908108270984, core=true ] ;
+  s_f1  [ dpid=1125908103260016 ] ;
+  s_f2  [ dpid=1125908103297849 ] ; 
+  s_f3a [ dpid=1125908103297804 ] ;
+  s_f3b [ dpid=1125908103297660 ] ;
+  s_f4  [ dpid=1125908103297765 ] ;
+  s_lab_eor [ dpid=1125908103289164, core=true ] ;
+  s_lab_r3  [ dpid=1284990276224316 ] ;
+  s_lab_r99 [ dpid=1284990276223788 ] ;
+  s_lab_r5  [ dpid=1284990276220716 ] ;
+  s_lab_r6  [ dpid=1284990276223779 ] ;
+  s_lab_r7  [ dpid=1284990276223785 ] ;
+  s_lab_r0  [ dpid=1284990276223803 ] ;
+  s_tplink  [ dpid=1 ];
+
+  /* Server room end-of-rack switch hooks the server room rack servers in a star */
+  s_eor -- s_r1  [ src_port = 1,  dport = 49 ];
+  s_eor -- s_r2  [ src_port = 3,  dport = 49 ];
+  s_eor -- s_r3  [ src_port = 5,  dport = 49 ];
+  s_eor -- s_r4  [ src_port = 7,  dport = 49 ];
+  s_eor -- s_r5  [ src_port = 9,  dport = 49 ];
+  s_eor -- s_r6  [ src_port = 11, dport = 49 ];
+  s_eor -- s_r7  [ src_port = 13, dport = 49 ];
+  s_eor -- s_r8  [ src_port = 15, dport = 49 ];
+  s_eor -- s_r9  [ src_port = 17, dport = 49 ];
+  s_eor -- s_r10 [ src_port = 19, dport = 49 ];
+  s_eor -- s_r11 [ src_port = 21, dport = 49 ];
+  s_eor -- s_r12 [ src_port = 23, dport = 49 ];
+  s_eor -- s_r13 [ src_port = 25, dport = 49 ];
+  s_eor -- s_r14 [ src_port = 27, dport = 49 ];
+  s_eor -- s_r15 [ src_port = 29, dport = 49 ];
+  s_eor -- s_r16 [ src_port = 31, dport = 49 ];
+  s_eor -- s_r18 [ src_port = 41; dport = 49 ];
+
+  /* Floor switches are connected in a star to s_bdf */
+  s_bdf -- s_f1  [ src_port = 9,  dport = 47 ];
+  s_bdf -- s_f2  [ src_port = 17, dport = 47 ];
+  s_bdf -- s_f3a [ src_port = 23, dport = 47 ];
+  s_bdf -- s_f3b [ src_port = 31, dport = 47 ];
+  s_bdf -- s_f4  [ src_port = 37, dport = 47 ];
+
+  /* Syslab switches are connected in a star to s_lab_eor */
+  s_lab_eor -- s_lab_r0  [ src_port = 9,  dport = 49 ];
+  s_lab_eor -- s_lab_r3  [ src_port = 21,  dport = 49 ];
+  s_lab_eor -- s_lab_r99 [ src_port = 19,  dport = 49 ];
+  s_lab_eor -- s_lab_r5  [ src_port = 41,  dport = 49 ];
+  s_lab_eor -- s_lab_r6  [ src_port = 29,  dport = 49 ];
+  s_lab_eor -- s_lab_r7  [ src_port = 31,  dport = 49 ];
+
+  /* Links between stars */
+  s_eor -- s_bdf  [ src_port = 47,  dport = 47 ];
+  s_bdf -- s_lab_eor [ src_port = 45, dport = 47 ];
+
+  /* The tplink is an odd duck, connected as its own star */
+  s_lab_r0 -- s_tplink [ src_port = 34, dport = 1 ];
+}

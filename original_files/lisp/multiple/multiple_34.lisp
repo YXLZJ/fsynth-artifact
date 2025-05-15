@@ -1,1 +1,0 @@
-(physiogenetic (organism (cell nucleus)& (envir|nment (temperature humidity)))

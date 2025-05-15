@@ -1,0 +1,1 @@
+(gem-method :CHECK-DOUBLE-PRESS (root-window state code time))

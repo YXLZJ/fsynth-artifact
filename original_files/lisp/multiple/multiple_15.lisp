@@ -1,1 +1,0 @@
-(albinism &traits (hair white) (eyes red)) (inheritance >utosomal-recessive))

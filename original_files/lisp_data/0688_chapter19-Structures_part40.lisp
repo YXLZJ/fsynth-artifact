@@ -1,0 +1,1 @@
+(make-hacker :name "alu" :skillz 10.2 :age 24 :sex "a dude" :sellout-lvl 8889)

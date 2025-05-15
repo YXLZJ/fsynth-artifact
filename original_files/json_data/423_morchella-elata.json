@@ -1,0 +1,31 @@
+{
+    "name": "morchella-elata",
+    "title": null,
+    "author": "Fr.",
+    "additional_info": {
+        "common_name": "Colmenilla cónica.",
+        "synonym": "Ninguno."
+    },
+    "taxonomy": {
+        "División": "Ascomycota",
+        "Subdivisión": "Ascomycotina",
+        "Clase": "Himenoascomycetes",
+        "Subclase": "Pezizomycetidae",
+        "Orden": "Pezizales",
+        "Familia": "Morchellaceae"
+    },
+    "edibility": "excelente-comestible-precaucion",
+    "characteristics": {
+        "cap": "Sombrero netamente cónico y con el ápice puntiagudo, que puede tener en su base 3 o 4 cm de diámetro, y que puede llegar a alcanzar una altura de 10 cm. Es hueco por dentro y está unido por su base al pie. Es de color marrón grisáceo, y está recorrido en toda su longitud por nervaduras longitudinales, cruzadas por otras horizontales que conforman los alvéolos.",
+        "hymenium": "Himenio dispuesto en la parte interior de las cavidades de los alvéolos. Los costillares exteriores son estériles y tienden pronto a ennegrecer.",
+        "stipe": "Pie de color carne pálido, rugoso, cubierto de granulaciones, puede ser cilíndrico aunque generalmente adopta un engrosamiento hacia arriba casi hasta la anchura del sombrero. Igual que el sombrero es hueco.",
+        "flesh": "Carne frágil de consistencia quebradiza, de sabor suave y buen olor."
+    },
+    "habitat": "Es una especie de seta exclusivamente primaveral que se localiza en los bosques, pero que también la podemos encontrar en parques o jardines, es por lo tanto bastante cosmopolita, sin embargo es una seta rara y poco frecuente.",
+    "observations": "Es un excelente comestible, pero debe ser cocida previamente como todas las Morchellas, ya que es tóxica en crudo. No es sencillo dar con esta especie que guarda mucha similitud con la Morchella cónica, especie que tiene el ápice obtuso y no puntiagudo, y cuya inserción del sombrero con el pie es menos notoria, sin embargo, muchos autores tienden a sinonimizarlas.",
+    "images": [
+        "https://www.fungipedia.org/images/galerias/morchella_elata/morchella_elata1.jpg",
+        "https://www.fungipedia.org/images/galerias/morchella_elata/morchella_elata2.jpg",
+        "https://www.fungipedia.org/images/galerias/morchella_elata/morchella_elata3.jpg"
+    ]
+}

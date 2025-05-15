@@ -1,0 +1,5 @@
+(defun p5-line (&key x1 y1 z1 x2 y2 z2)
+  (fly-to :x x1 :y y1)
+  (with-tool-down (*p5-depth*)
+    (mill-abs :x x2 :y y2))
+  )

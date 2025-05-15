@@ -1,0 +1,29 @@
+#GRAPHVIZ_OUTPUT 
+digraph{ 
+rankdir=LR; 
+splines=ortho; 
+RFP[shape=none,label="RFP\n   51.00\n1010101010101010"]; 
+GFP[shape=none,label="GFP\n   14.74\n0010001000100010"]; 
+BFP[shape=none,label="BFP\n   19.21\n0000000010101010"]; 
+YFP[shape=none,label="YFP\n  304.88\n0000111100001111"]; 
+fadD[shape=none,label="INPUT fadD 0\n  304.88\n0101010101010101"]; 
+pLuxStar[shape=none,label="INPUT pLuxStar 0\n   12.40\n0011001100110011"]; 
+pBAD[shape=none,label="INPUT pBAD -1\n  304.88\n0000111100001111"]; 
+galEP2[shape=none,label="INPUT galEP2 0\n  304.88\n0000000011111111"]; 
+R1_PsrA[shape=box,style=filled,fillcolor=gray100,label="NOR R1_PsrA 2\n   19.21\n0000000010101010"]; 
+F1_AmeR[shape=box,style=filled,fillcolor=gray100,label="NOR F1_AmeR 2\n   14.74\n0010001000100010"]; 
+H1_HlyIIR[shape=box,style=filled,fillcolor=gray100,label="NOT H1_HlyIIR 1\n   34.24\n1111111100000000"]; 
+P1_PhlF[shape=box,style=filled,fillcolor=gray100,label="NOT P1_PhlF 1\n  254.75\n1100110011001100"]; 
+A1_AmtR[shape=box,style=filled,fillcolor=gray100,label="NOT A1_AmtR 1\n   51.00\n1010101010101010"]; 
+pBAD->YFP; 
+R1_PsrA->BFP; 
+fadD->R1_PsrA; 
+H1_HlyIIR->R1_PsrA; 
+galEP2->H1_HlyIIR; 
+F1_AmeR->GFP; 
+fadD->F1_AmeR; 
+P1_PhlF->F1_AmeR; 
+pLuxStar->P1_PhlF; 
+A1_AmtR->RFP; 
+fadD->A1_AmtR; 
+} 

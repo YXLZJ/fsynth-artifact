@@ -1,0 +1,62 @@
+[ 
+	{
+		"Artist": "Sixteen Stone",
+		"Title": "Glycerine",
+		"Genre": "Rock",
+		"Released": 2014
+	}, 	
+	{
+		"Artist": "Kanye West",
+		"Title": "Coldest Winter",
+		"Genre": "Rap/Hip Hop",
+		"Released": 2008
+	}, 	
+	{
+		"Artist": "John Denver",
+		"Title": "Take Me Home, Country Roads",
+		"Genre": "Country",
+		"Released": 1971
+	},	
+	{
+		"Artist": "Tame Impala",
+		"Title": "Boarderline",
+		"Genre": "Rock",
+		"Released": 2019
+	}, 	
+	{
+		"Artist": "Billie Eilish",
+		"Title": "Bury a friend",
+		"Genre": "Alternative",
+		"Released": 2019
+	}, 	
+	{
+		"Artist": "Foo Fighters",
+		"Title": "Iron Rooster",
+		"Genre": "Rock",
+		"Released": 2015
+	},	
+	{
+		"Artist": "21 Savage",
+		"Title": "Bank Account",
+		"Genre": "Rap/Hip Hop",
+		"Released": 2017
+	}, 	
+	{
+		"Artist": "Drake",
+		"Title": "Know Yourself",
+		"Genre": "Rap/Hip Hop",
+		"Released": 2015
+	}, 	
+	{
+		"Artist": "Duran Duran",
+		"Title": "Rio",
+		"Genre": "New Wave",
+		"Released": 1982
+	}, 	
+	{
+		"Artist": "Simon & Garfunkel",
+		"Title": "Mrs. Robinson",
+		"Genre": "Rock",
+		"Released": 1968
+	} 	
+ ]

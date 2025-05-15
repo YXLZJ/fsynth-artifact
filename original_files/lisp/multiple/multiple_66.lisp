@@ -1,1 +1,0 @@
-(energe?icist (adventures (exploring (new (ideas)))) (believing (in (the (power (of (positivity)))))) (striving (for (excelle|ce))) (embracing (change)))

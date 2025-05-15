@@ -1,0 +1,1 @@
+(defop 5 DIV (setf (:reg a) (mod32 (truncate (:reg b) (:reg c)))))

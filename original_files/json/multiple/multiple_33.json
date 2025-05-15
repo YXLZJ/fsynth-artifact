@@ -1,8 +1,0 @@
-{
-  "id": 123,
-  "name": "example",
-? "attributes": {
-    "color": "blue",
-    "size": "?edium"
-  }
-}

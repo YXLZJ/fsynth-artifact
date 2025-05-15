@@ -108,6 +108,8 @@ Once you have been satisfied all steps above, you can also have your own benchma
 
 #### Start evaluation
 
+You can set up your own dataset with data_fetch.py with can automatically download files with specific formats from the Github 
+
 ##### Single mutation
 
 > `python3 benchmark_single.py`
@@ -132,7 +134,7 @@ Example:
 erepair-artifact % python '/Users/jack/erepair-artifact/report.py'
 ----------------Table 4-5(General)------------------------------------
 
-Processing database: result1_multiple.db
+Processing database: multiple.db
 
 Metrics for result1_multiple.db
 ----------------------------------------------------------------------------------------------------------------------------------

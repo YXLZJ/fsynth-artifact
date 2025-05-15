@@ -1,0 +1,196 @@
+{
+    "label": "Macros PF2e",
+    "entries": [
+        {
+            "id": "Lie: Deception",
+            "name": "Mentir : Duperie (Lie: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Pick a Lock: Thievery",
+            "name": "Crocheter une serrure : Vol (Pick a Lock: Thievery)",
+            "description": ""
+        },
+        {
+            "id": "Coerce: Intimidation",
+            "name": "Contraindre : Intimidation (Coerce: Intimidation)",
+            "description": ""
+        },
+        {
+            "id": "Bon Mot: Diplomacy",
+            "name": "Bon mot : Diplomatie (Bon Mot: Diplomacy)",
+            "description": ""
+        },
+        {
+            "id": "Craft: Crafting",
+            "name": "Fabriquer : Artisanat (Craft: Crafting)",
+            "description": ""
+        },
+        {
+            "id": "Balance: Acrobatics",
+            "name": "Garder l'équilibre : Acrobaties (Balance: Acrobatics)",
+            "description": ""
+        },
+        {
+            "id": "Gather Information: Diplomacy",
+            "name": "Recueillir des informations : Diplomatie (Gather Information: Diplomacy)",
+            "description": ""
+        },
+        {
+            "id": "Long Jump: Athletics",
+            "name": "Saut en longueur : Athlétisme (Long Jump: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Make an Impression: Diplomacy",
+            "name": "Faire bonne impression : Diplomatie (Make an Impression: Diplomacy)",
+            "description": ""
+        },
+        {
+            "id": "Impersonate: Deception",
+            "name": "Se déguiser : Duperie (Impersonate: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Encouraging Words",
+            "name": "Paroles encourageantes (Encouraging Words)",
+            "description": ""
+        },
+        {
+            "id": "Shove: Athletics",
+            "name": "Pousser : Athlétisme (Shove: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Treat Poison: Medicine",
+            "name": "Soigner un empoisonnement : Médecine (Treat Poison: Medicine)",
+            "description": ""
+        },
+        {
+            "id": "Request: Diplomacy",
+            "name": "Solliciter : Diplomatie (Request: Diplomacy)",
+            "description": ""
+        },
+        {
+            "id": "Create a Diversion - Trick: Deception",
+            "name": "Créer une diversion - Astuce: Duperie (Create a Diversion - Trick: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Create a Diversion - Distracting Words: Deception",
+            "name": "Créer une diversion - Paroles de diversion : Duperie (Create a Diversion - Distracting Words: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Maneuver in Flight: Acrobatics",
+            "name": "Manœuvre en vol : Acrobaties (Maneuver in Flight: Acrobatics)",
+            "description": ""
+        },
+        {
+            "id": "High Jump: Athletics",
+            "name": "Saut en hauteur : Athlétisme (High Jump: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Sense Motive: Perception",
+            "name": "Deviner les intentions : Perception (Sense Motive: Perception)",
+            "description": ""
+        },
+        {
+            "id": "Steel Your Resolve",
+            "name": "Puiser dans votre résolution (Steel Your Resolve)",
+            "description": ""
+        },
+        {
+            "id": "Climb: Athletics",
+            "name": "Grimper : Athlétisme (Climb: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Trip: Athletics",
+            "name": "Croc-en-jambe : Athlétisme (Trip: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Athletics: Arcane Slam",
+            "name": "Athlétisme : Plaquege arcanique (Athletics: Arcane Slam)",
+            "description": ""
+        },
+        {
+            "id": "Swim: Athletics",
+            "name": "Nager : Athlétisme (Swim: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Sneak: Stealth",
+            "name": "Être furtif : Discrétion (Sneak: Stealth)",
+            "description": ""
+        },
+        {
+            "id": "Seek: Perception",
+            "name": "Chercher : Perception (Seek: Perception)",
+            "description": ""
+        },
+        {
+            "id": "Exploration: Avoid Notice",
+            "name": "Exploration : Passer inaperçu (Exploration: Avoid Notice)",
+            "description": ""
+        },
+        {
+            "id": "Whirling Throw: Athletics",
+            "name": "Projection en rotation : Athlétisme (Whirling Throw: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Squeeze: Acrobatics",
+            "name": "Se serrer : Acrobaties (Squeeze: Acrobatics)",
+            "description": ""
+        },
+        {
+            "id": "Disarm: Athletics",
+            "name": "Désarmer : Athlétisme (Disarm: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Raise a Shield",
+            "name": "Lever un bouclier (Raise a Shield)",
+            "description": ""
+        },
+        {
+            "id": "Feint: Deception",
+            "name": "Feinter : Duperie (Feint: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Force Open: Athletics",
+            "name": "Ouvrir de force : Athlétisme (Force Open: Athletics)",
+            "description": ""
+        },
+        {
+            "id": "Demoralize: Intimidation",
+            "name": "Démoraliser : Intimidation (Demoralize: Intimidation)",
+            "description": ""
+        },
+        {
+            "id": "Hide: Stealth",
+            "name": "Se cacher : Discrétion (Hide: Stealth)",
+            "description": ""
+        },
+        {
+            "id": "Tumble Through: Acrobatics",
+            "name": "Déplacement acrobatique : Acrobaties (Tumble Through: Acrobatics)",
+            "description": ""
+        },
+        {
+            "id": "Create a Diversion - Gesture: Deception",
+            "name": "Créer une diversion - Geste : Duperie (Create a Diversion - Gesture: Deception)",
+            "description": ""
+        },
+        {
+            "id": "Grapple: Athletics",
+            "name": "Saisir : Athlétisme (Grapple: Athletics)",
+            "description": ""
+        }
+    ],
+    "mapping": {}
+}

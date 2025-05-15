@@ -1,0 +1,5 @@
+(defun rw-unlock (rw-lock)
+  (bordeaux-threads:with-lock-held ((rw-lock-mutex rw-lock))
+    (aif (rw-lock-write-lock rw-lock)
+         (setf it nil)
+         (decf (rw-lock-read-count rw-lock)))))

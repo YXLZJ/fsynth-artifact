@@ -1,1 +1,0 @@
-{ k=48; l=36; m=92; while (k-l) if (k<l) l=l-k; el

@@ -1,0 +1,7 @@
+(defun v*c (vector constant)
+  (let* ((n (length vector))
+	 (res (make-vector n)))
+    (dotimes (i n)
+      (setf (aref res i)
+	    (* constant (aref vector i))))
+    res))

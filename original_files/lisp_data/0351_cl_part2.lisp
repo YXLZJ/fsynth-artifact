@@ -1,0 +1,1 @@
+(cl:defparameter *cl-define-syntax-mstore* (null-mstore))

@@ -1,0 +1,136 @@
+digraph {
+	wrapt [label="wrapt
+1.11.2"]
+	wheel [label="wheel
+0.33.6"]
+	Werkzeug [label="Werkzeug
+0.16.0"]
+	urllib3 [label="urllib3
+1.25.6"]
+	termcolor [label="termcolor
+1.1.0"]
+	tensorflow [label="tensorflow
+2.0.0"]
+	tensorflow -> "opt-einsum" [label=">=2.3.2"]
+	tensorflow -> "keras-applications" [label=">=1.0.8"]
+	tensorflow -> tensorboard [label=">=2.0.0,<2.1.0"]
+	tensorflow -> "keras-preprocessing" [label=">=1.0.5"]
+	tensorflow -> termcolor [label=">=1.1.0"]
+	tensorflow -> wheel [label=">=0.26"]
+	tensorflow -> gast [label="==0.2.2"]
+	tensorflow -> "tensorflow-estimator" [label=">=2.0.0,<2.1.0"]
+	tensorflow -> astor [label=">=0.6.0"]
+	tensorflow -> "absl-py" [label=">=0.7.0"]
+	tensorflow -> wrapt [label=">=1.11.1"]
+	tensorflow -> six [label=">=1.10.0"]
+	tensorflow -> grpcio [label=">=1.8.6"]
+	tensorflow -> numpy [label=">=1.16.0,<2.0"]
+	tensorflow -> protobuf [label=">=3.6.1"]
+	tensorflow -> "google-pasta" [label=">=0.1.6"]
+	"tensorflow-estimator" [label="tensorflow-estimator
+2.0.1"]
+	tensorboard [label="tensorboard
+2.0.1"]
+	tensorboard -> "google-auth-oauthlib" [label=">=0.4.1,<0.5"]
+	tensorboard -> setuptools [label=">=41.0.0"]
+	tensorboard -> werkzeug [label=">=0.11.15"]
+	tensorboard -> protobuf [label=">=3.6.0"]
+	tensorboard -> "absl-py" [label=">=0.4"]
+	tensorboard -> "google-auth" [label=">=1.6.3,<2"]
+	tensorboard -> six [label=">=1.10.0"]
+	tensorboard -> numpy [label=">=1.12.0"]
+	tensorboard -> markdown [label=">=2.6.8"]
+	tensorboard -> grpcio [label=">=1.24.3"]
+	tensorboard -> wheel [label=">=0.26"]
+	six [label="six
+1.12.0"]
+	setuptools [label="setuptools
+41.6.0"]
+	rsa [label="rsa
+4.0"]
+	rsa -> pyasn1 [label=">=0.1.3"]
+	requests [label="requests
+2.22.0"]
+	requests -> chardet [label=">=3.0.2,<3.1.0"]
+	requests -> idna [label=">=2.5,<2.9"]
+	requests -> certifi [label=">=2017.4.17"]
+	requests -> urllib3 [label=">=1.21.1,<1.26,!=1.25.1,!=1.25.0"]
+	"requests-oauthlib" [label="requests-oauthlib
+1.2.0"]
+	"requests-oauthlib" -> oauthlib [label=">=3.0.0"]
+	"requests-oauthlib" -> requests [label=">=2.0.0"]
+	pyasn1 [label="pyasn1
+0.4.7"]
+	"pyasn1-modules" [label="pyasn1-modules
+0.2.7"]
+	"pyasn1-modules" -> pyasn1 [label=">=0.4.6,<0.5.0"]
+	protobuf [label="protobuf
+3.10.0"]
+	protobuf -> six [label=">=1.9"]
+	protobuf -> setuptools [label=any]
+	pipdeptree [label="pipdeptree
+0.13.2"]
+	pipdeptree -> pip [label=">=6.0.0"]
+	"opt-einsum" [label="opt-einsum
+3.1.0"]
+	"opt-einsum" -> numpy [label=">=1.7"]
+	oauthlib [label="oauthlib
+3.1.0"]
+	numpy [label="numpy
+1.17.3"]
+	Markdown [label="Markdown
+3.1.1"]
+	Markdown -> setuptools [label=">=36"]
+	"Keras-Preprocessing" [label="Keras-Preprocessing
+1.1.0"]
+	"Keras-Preprocessing" -> six [label=">=1.9.0"]
+	"Keras-Preprocessing" -> numpy [label=">=1.9.1"]
+	"Keras-Applications" [label="Keras-Applications
+1.0.8"]
+	"Keras-Applications" -> h5py [label=any]
+	"Keras-Applications" -> numpy [label=">=1.9.1"]
+	idna [label="idna
+2.8"]
+	h5py [label="h5py
+2.10.0"]
+	h5py -> six [label=any]
+	h5py -> numpy [label=">=1.7"]
+	grpcio [label="grpcio
+1.24.3"]
+	grpcio -> six [label=">=1.5.2"]
+	graphviz [label="graphviz
+0.13"]
+	"google-pasta" [label="google-pasta
+0.1.7"]
+	"google-auth" [label="google-auth
+1.6.3"]
+	"google-auth" -> rsa [label=">=3.1.4"]
+	"google-auth" -> "pyasn1-modules" [label=">=0.2.1"]
+	"google-auth" -> cachetools [label=">=2.0.0"]
+	"google-auth" -> six [label=">=1.9.0"]
+	"google-auth-oauthlib" [label="google-auth-oauthlib
+0.4.1"]
+	"google-auth-oauthlib" -> "google-auth" [label=any]
+	"google-auth-oauthlib" -> "requests-oauthlib" [label=">=0.7.0"]
+	gast [label="gast
+0.2.2"]
+	chardet [label="chardet
+3.0.4"]
+	certifi [label="certifi
+2019.9.11"]
+	cachetools [label="cachetools
+3.1.1"]
+	astor [label="astor
+0.8.0"]
+	"absl-py" [label="absl-py
+0.8.1"]
+	"absl-py" -> six [label=any]
+	PyYAML [label="PyYAML
+3.13"]
+	pip [label="pip
+19.3.1"]
+	"python-apt" [label="python-apt
+1.6.4"]
+	pygobject [label="pygobject
+3.26.1"]
+}

@@ -1,8 +1,0 @@
-{
-  "id": "12345"*
-  "name": "Example Object",
-  "details": {
-    "type": "A",
-    "value": 42
-  }
-}

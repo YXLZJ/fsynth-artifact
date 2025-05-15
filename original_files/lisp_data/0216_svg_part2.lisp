@@ -1,0 +1,1 @@
+(define-condition not-an-object (simple-condition) ())

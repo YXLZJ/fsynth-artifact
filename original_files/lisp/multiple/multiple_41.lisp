@@ -1,1 +1,0 @@
-(peacockery (feathers (long co@orful)) (strut |proudly)))

@@ -1,9 +1,0 @@
-{
-  "id": 1,
-  "name": "example",
-  "attributes": {
-    "color": "blue",
-    *size": "medium"
-  },
-  "status": "active"
-}

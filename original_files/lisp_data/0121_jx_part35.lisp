@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_MakePersistent" make-persistent) :boolean (value :pointer))

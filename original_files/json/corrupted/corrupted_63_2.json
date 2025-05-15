@@ -1,9 +1,0 @@
-{
-  "name": "naebody",
-  "age": 2*,
-  "address": {
-    "city": "Springfield",
-    "state": "Illinois"
-  },
-  "interests": ["music", "travel", "reading"]
-}

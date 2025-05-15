@@ -1,0 +1,7 @@
+(defun compute-abc (s m k)
+  (let* ((d (/ (/ s 2) (* k m)))
+         (n (- k m))
+         (a (* d (- (* m m) (* n n))))
+         (b (* 2 d n m))
+         (c (* d (+ (* m m) (* n n)))))
+    (list a b c)))

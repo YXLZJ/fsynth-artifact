@@ -1,6 +1,0 @@
-{
-  "unjogging": {
-    "status": "inactive",
-    *reason": "休息中"
-  }
-}

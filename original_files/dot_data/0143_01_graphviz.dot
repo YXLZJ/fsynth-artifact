@@ -1,0 +1,7 @@
+# graphviz示例文件
+
+digraph G {
+    a -> b;
+    a -> c;
+    a -> d;
+}

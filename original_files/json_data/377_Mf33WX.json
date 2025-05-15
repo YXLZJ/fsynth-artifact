@@ -1,0 +1,45 @@
+{
+    "Shader": {
+        "info": {
+            "date": "1712181100",
+            "description": "This shader draws the logo of the Swedish demogroup \"TBL\" (The Black Lotus).\n\nMore logos: https://www.shadertoy.com/playlist/NX3yzf",
+            "flags": 0,
+            "hasliked": 0,
+            "id": "Mf33WX",
+            "likes": 3,
+            "name": "Greetings, TBL",
+            "published": 3,
+            "tags": [
+                "demoscene",
+                "logo"
+            ],
+            "usePreview": 0,
+            "username": "Zavie",
+            "viewed": 133
+        },
+        "renderpass": [
+            {
+                "code": "/*\n\nThis shader draws the logo of the Swedish demoscene group \"The Black Lotus\".\n\nTBL:\n > https://tbl.nu/\n > https://www.youtube.com/watch?v=i1O4_58HVIg\n\n--\nZavie / Ctrl-Alt-Test\n\n*/\n\nfloat TBLLogo(vec2 p)\n{\n    p *= 7.;\n    if (abs(p.x) < 4.5 && abs(p.y) < 1.5)\n    {\n        vec2 ip = floor(p + 0.5);\n        bool skip = false;\n        if (ip != vec2(-4, 1) &&\n            ip != vec2(-4, -1) &&\n            ip != vec2(-2, 1) &&\n            ip != vec2(-2, -1) &&\n            ip != vec2(0, 1) &&\n            ip != vec2(1, 1) &&\n            (ip.x < 3. || ip.y < 0.))\n        {\n            p = mod(p + 0.5, 1.) - 0.5;\n        }\n    }\n    return (length(p) - 0.5) / 6.;\n}\n\nvoid mainImage( out vec4 fragColor, in vec2 fragCoord )\n{\n\tvec2 uv = fragCoord.xy / iResolution.y;\n\n    float d = TBLLogo(uv - vec2(0.9, 0.5));\n\n    fragColor = vec4(draw(iResolution, d), 1.0);\n}\n",
+                "description": "",
+                "inputs": [],
+                "name": "Image",
+                "outputs": [
+                    {
+                        "channel": 0,
+                        "id": 37
+                    }
+                ],
+                "type": "image"
+            },
+            {
+                "code": "#define DEBUG_DISTANCE 0\n\n// See: https://www.shadertoy.com/view/XcVGRR\nvec3 debugDistance(vec3 iResolution, float d, vec3 color)\n{\n    float refWidth = iResolution.y / 1080.;\n\n    float dd1 = fwidth(d);\n    float width1 = 2.5 * dd1 * refWidth;\n    float iso1 = smoothstep(1. - width1 - dd1, 1. - width1 + dd1, abs(fract(d) * 2. - 1.));\n\n    float dd5 = fwidth(5. * d);\n    float width5 = 0.75 * dd5 * refWidth;\n    float iso5 = smoothstep(1. - width5 - dd5, 1. - width5 + dd5, abs(fract(5.*d) * 2. - 1.));\n\n    float dd0 = fwidth(d);\n    float width0 = 3. * dd0 * refWidth;\n    float iso0 = smoothstep(1. - width0 - dd0, 1. - width0 + dd0, 1. - abs(d));\n\n    float isoLines = max(iso0, max(iso1, iso5));\n\n    vec3 background = (d > 0. ? vec3(1.) : mix(vec3(0.8), color, 0.1));\n    vec3 lineColor = mix(color * (d > 0. ? 1. : 0.8), vec3(0.), iso0);\n\n    return mix(background, lineColor, isoLines);\n}\n\nvec3 draw(vec3 iResolution, float d)\n{\n#if DEBUG_DISTANCE\n    return debugDistance(iResolution, 10.*d, vec3(0.8, 0.5, 1.));\n#else\n    float dd = fwidth(d);\n    return vec3(1. - smoothstep(-dd / 2., dd / 2., d));\n#endif\n}\n",
+                "description": "",
+                "inputs": [],
+                "name": "Common",
+                "outputs": [],
+                "type": "common"
+            }
+        ],
+        "ver": "0.1"
+    }
+}

@@ -1,0 +1,101 @@
+// Generate and preview PNG image with: dot -Tpng erd.dot
+// You'll need Graphviz installed
+
+digraph G {
+	rankdir=LR
+	node [shape=none] 
+
+	Videos [label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">videos</td></tr>
+			<tr><td align="left">ROWID</td></tr>			    
+			<tr><td align="left" port="id">id INTEGER PRIMARY KEY AUTOINCREMENT</td></tr>
+			<tr><td align="left" port="name">name TEXT NOT NULL UNIQUE</td></tr>
+			<tr><td align="left">device TEXT</td></tr>
+			<tr><td align="left">video_app TEXT</td></tr>
+			<tr><td align="left">camera_options TEXT</td></tr>
+			<tr><td align="left">location_app TEXT</td></tr>
+			<tr><td align="left">notes TEXT</td></tr>
+			<tr><td align="left">lens TEXT</td></tr>
+			<tr><td align="left">camera_mount TEXT</td></tr>
+			<tr><td align="left">vehicle TEXT</td></tr>
+			<tr><td align="left">camera_mount_position TEXT</td></tr>
+			<tr><td align="left">camera_orientation TEXT</td></tr>
+			<tr><td align="left">horizontal_angle FLOAT</td></tr>
+			<tr><td align="left">vertical_angle FLOAT</td></tr>
+			<tr><td align="left">exif JSON</td></tr>
+        	</table>
+		>]
+
+//	Tracks [label=<
+//		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+//            		<tr><td bgcolor="lightblue">tracks</td></tr> 
+//			<tr><td align="left">id INTEGER PRIMARY KEY AUTOINCREMENT</td></tr>
+//			<tr><td align="left" port="name">name TEXT NOT NULL UNIQUE</td></tr>
+//			<tr><td align="left">geometry LINESTRING</td></tr>
+//         	</table>
+//    	>]
+ 
+	Frames [label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">frames</td></tr> 
+			<tr><td align="left">ROWID</td></tr>
+			<tr><td align="left" port="id">id INTEGER PRIMARY KEY AUTOINCREMENT</td></tr>
+			<tr><td align="left" port="video_id">video_id INTEGER</td></tr>
+			<tr><td align="left">frame_number INTEGER NOT Null</td></tr>
+			<tr><td align="left">time TEXT</td></tr>
+			<tr><td align="left" port="geometry">geometry POINT</td></tr>
+         	</table>
+    		>]
+
+	Trees [label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">trees</td></tr> 
+			<tr><td align="left" port="ROWID">ROWID</td></tr>
+			<tr><td align="left">id INTEGER PRIMARY KEY AUTOINCREMENT</td></tr>
+			<tr><td align="left" port="frame_id">frame_id INTEGER</td></tr>
+			<tr><td align="left" port="damage_index">damage_index INTEGER NOT NULL</td></tr>
+			<tr><td align="left">geometry MULTIPOINT</td></tr>
+         	</table>
+    		>]
+
+	Vcuts [label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">vcuts</td></tr> 
+			<tr><td align="left" port="ROWID">ROWID</td></tr>
+			<tr><td align="left">id INTEGER PRIMARY KEY AUTOINCREMENT</td></tr>
+			<tr><td align="left" port="frame_id">frame_id INTEGER</td></tr>
+			<tr><td align="left">geometry POLYGON</td></tr>			 
+         	</table>
+    		>]
+
+
+	Trees_view[label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">trees_view</td></tr> 
+			<tr><td align="left" port="ROWID">ROWID</td></tr>
+			<tr><td align="left" port="damage_index">damage_index</td></tr>
+			<tr><td align="left" port="geometry">geometry</td></tr>
+		</table>
+		>]
+
+		
+	Vcuts_view[label=<
+		<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+            		<tr><td bgcolor="lightblue">vcuts_view</td></tr> 
+			<tr><td align="left" port="ROWID">ROWID</td></tr>
+			<tr><td align="left" port="geometry">geometry</td></tr>
+		</table>
+		>]
+
+
+//	Videos:name -> Tracks:name
+	Videos:id -> Frames:video_id
+	Frames:id -> Trees:frame_id
+	Frames:id -> Vcuts:frame_id
+	Trees:ROWID -> Trees_view:ROWID [style=dashed]
+	Trees:damage_index -> Trees_view:damage_index [style=dashed]
+	Frames:geometry -> Trees_view:geometry [style=dashed]
+	Frames:geometry -> Vcuts_view:geometry [style=dashed]
+	Vcuts:ROWID -> Vcuts_view:ROWID [style=dashed]	
+}

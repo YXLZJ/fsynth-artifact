@@ -1,0 +1,309 @@
+{
+    "orgRecordClass": "RC1",
+    "Name": "BIRCHES HEAD MEDICAL CTR.",
+    "Date": {
+        "Type": {
+            "value": "Operational"
+        },
+        "Start": {
+            "value": "1974-04-01"
+        }
+    },
+    "OrgId": {
+        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+        "assigningAuthorityName": "HSCIC",
+        "extension": "M83123"
+    },
+    "Status": {
+        "value": "Active"
+    },
+    "LastChangeDate": {
+        "value": "2024-07-15"
+    },
+    "GeoLoc": {
+        "Location": {
+            "AddrLn1": "DIANA ROAD",
+            "AddrLn2": "BIRCHES HEAD",
+            "Town": "STOKE-ON-TRENT",
+            "County": "STAFFORDSHIRE",
+            "PostCode": "ST1 6RS",
+            "Country": "ENGLAND",
+            "UPRN": "3455124121"
+        }
+    },
+    "Contacts": {
+        "Contact": {
+            "type": "tel",
+            "value": "0844 3878989"
+        }
+    },
+    "Roles": {
+        "Role": [
+            {
+                "id": "RO76",
+                "uniqueRoleId": "187231",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2014-04-15"
+                    }
+                },
+                "Status": {
+                    "value": "Active"
+                }
+            },
+            {
+                "id": "RO177",
+                "uniqueRoleId": "112467",
+                "primaryRole": "true",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "1974-04-01"
+                    }
+                },
+                "Status": {
+                    "value": "Active"
+                }
+            }
+        ]
+    },
+    "Rels": {
+        "Rel": [
+            {
+                "id": "RE4",
+                "uniqueRelId": "267146",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2002-04-01"
+                    },
+                    "End": {
+                        "value": "2006-09-30"
+                    }
+                },
+                "Status": {
+                    "value": "Inactive"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "5ME"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO179",
+                        "uniqueRoleId": "32973"
+                    }
+                }
+            },
+            {
+                "id": "RE4",
+                "uniqueRelId": "267147",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2006-10-01"
+                    },
+                    "End": {
+                        "value": "2013-03-31"
+                    }
+                },
+                "Status": {
+                    "value": "Inactive"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "5PJ"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO179",
+                        "uniqueRoleId": "101196"
+                    }
+                }
+            },
+            {
+                "id": "RE4",
+                "uniqueRelId": "267148",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2000-10-01"
+                    },
+                    "End": {
+                        "value": "2002-03-31"
+                    }
+                },
+                "Status": {
+                    "value": "Inactive"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "5CT"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO179",
+                        "uniqueRoleId": "109684"
+                    }
+                }
+            },
+            {
+                "id": "RE4",
+                "uniqueRelId": "267149",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "1999-04-01"
+                    },
+                    "End": {
+                        "value": "2000-09-30"
+                    }
+                },
+                "Status": {
+                    "value": "Inactive"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "4VX02"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO171",
+                        "uniqueRoleId": "137221"
+                    }
+                }
+            },
+            {
+                "id": "RE4",
+                "uniqueRelId": "267150",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2013-04-01"
+                    }
+                },
+                "Status": {
+                    "value": "Active"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "05W"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO98",
+                        "uniqueRoleId": "161339"
+                    }
+                }
+            },
+            {
+                "id": "RE6",
+                "uniqueRelId": "456488",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2013-04-01"
+                    }
+                },
+                "Status": {
+                    "value": "Active"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "05W"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO98",
+                        "uniqueRoleId": "161339"
+                    }
+                }
+            },
+            {
+                "id": "RE8",
+                "uniqueRelId": "613294",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2019-10-01"
+                    }
+                },
+                "Status": {
+                    "value": "Active"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "U87255"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO272",
+                        "uniqueRoleId": "388519"
+                    }
+                }
+            },
+            {
+                "id": "RE10",
+                "uniqueRelId": "727693",
+                "Date": {
+                    "Type": {
+                        "value": "Operational"
+                    },
+                    "Start": {
+                        "value": "2021-03-24"
+                    },
+                    "End": {
+                        "value": "2024-07-15"
+                    }
+                },
+                "Status": {
+                    "value": "Inactive"
+                },
+                "Target": {
+                    "OrgId": {
+                        "root": "2.16.840.1.113883.2.1.3.2.4.18.48",
+                        "assigningAuthorityName": "HSCIC",
+                        "extension": "U87255"
+                    },
+                    "PrimaryRoleId": {
+                        "id": "RO272",
+                        "uniqueRoleId": "388519"
+                    }
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "org_id": "M83123",
+        "status": "Active",
+        "role_id": "RO177",
+        "post_code": "ST1 6RS",
+        "uprn": "3455124121"
+    }
+}

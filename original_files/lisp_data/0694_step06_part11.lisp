@@ -1,0 +1,6 @@
+(defmethod call ((func <function>) input)
+  (let* ((x (@data input))
+         (y (forward func x))
+         (output (<variable> y)))
+    (setf (@input func) input)
+    output))

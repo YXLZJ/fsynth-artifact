@@ -1,0 +1,60 @@
+{
+  "navigation": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "projects": "Projects",
+    "menu": "Menu"
+  },
+  "page": {
+    "home": {
+      "name": "Rohitha Rathnayake",
+      "tag": "Full stack developer & tech enthusiast.",
+      "description": "Hi, I'm Rohitha Rathnayake, a software engineer who loves to create amazing things using code. Besides coding, I'm a curious explorer who loves to learn about different cultures and languages.",
+      "repoStars": " Repository Stars",
+      "repos": "Repositories",
+      "blogViews": "Total Blog Views"
+    },
+    "about": {
+      "title": "About Me",
+      "tag": "Just a quick glimpse.",
+      "description1": "Hello world, I'm Rohitha!",
+      "description2": "I have a passion for full-stack development and am constantly looking for ways to incorporate it into my engineering work.",
+      "description3": "In addition to coding, I'm a curious explorer who enjoys learning about other cultures and languages.",
+      "description4": "When I'm not at my desk, you might find me traveling, shopping, or partying with friends :)",
+      "connect": "Connect",
+      "connectDescription": "Have a question or want to work with me? Feel free to",
+      "work": "Work",
+      "workDescription1": " years of professional development experience.",
+      "workDescription2": "Leveraging my passion for cutting-edge technology, I began my career as a freelancer, gaining valuable experience and honing my skills. ",
+      "workDescription3": "I then transitioned to Kapruka, one of Sri Lanka's largest e-commerce platforms, where I served as a full-stack developer. I played a key role in building their new cargo-based platform, honing my skills in full-stack development, API development, and project management.",
+      "workDescription4": "Subsequently, I joined Dbeeta, an Italian startup, as a full-stack engineer. There, I tackled diverse projects across ERP, CRM, and LMS systems, significantly deepening my full stack development skills and gaining expertise in multiple tech stacks.",
+      "education": "Education",
+      "eduDescription": "I graduated from Horizon Campus with a Bachelor of Information Technology (Hons) in Networking and Mobile Computing."
+    },
+    "blog": {
+      "title": "Blog",
+      "tag": " posts about code, tech, more ...",
+      "allBlog": "All Blogs"
+    },
+    "project": {
+      "title": "Projects",
+      "tag": "Here are some of the projects I've worked on.",
+      "visitProject": "Visit Project",
+      "Tags": "Tags",
+      "connect": "Need more project details, or interested in working together? Reach out to me directly at",
+      "connect1": ". I'd be happy to connect!",
+      "allProject": "All Projects"
+    },
+    "links": {
+      "description": "Software engineer who loves building cool things with code. I also enjoy reading the latest tech news and learning new things."
+    },
+    "assets": {
+      "emailMe": "Email Me",
+      "moreWays": "More ways to connect",
+      "latestPost": "Latest Posts",
+      "noPosts": "No posts found",
+      "seeAll": "See All"
+    }
+  }
+}

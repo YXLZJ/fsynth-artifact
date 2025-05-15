@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsDouble" is-double) :boolean (result :pointer))

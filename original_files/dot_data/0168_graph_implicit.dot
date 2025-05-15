@@ -1,0 +1,20 @@
+digraph G {
+    node [penwidth=2 fontsize=10 shape=rectangle target="_graphviz"];
+    edge [tailport=e penwidth=2];
+    compound=true;
+    rankdir=LR;
+    newrank=true;
+    ranksep="1.5";
+    quantum="0.5";
+    "sandbox/di/cmd" [label="sandbox/di/cmd\l16 / 261B\l" href="https://pkg.go.dev/sandbox/di/cmd" color="#799107b2"];
+    "sandbox/di/service1" [label="sandbox/di/service1\l56 / 1.0KB\l" href="https://pkg.go.dev/sandbox/di/service1" color="#917c07b2"];
+    "sandbox/di/service2" [label="sandbox/di/service2\l35 / 625B\l" href="https://pkg.go.dev/sandbox/di/service2" color="#07914db2"];
+    "sandbox/di/service3" [label="sandbox/di/service3\l35 / 597B\l" href="https://pkg.go.dev/sandbox/di/service3" color="#913107b2"];
+    "sandbox/di/cmd" -> "sandbox/di/service1" [color="#917c07b2"];
+    "sandbox/di/cmd" -> "sandbox/di/service2" [color="#07914db2"];
+    "sandbox/di/cmd" -> "sandbox/di/service3" [color="#913107b2"];
+    "sandbox/di/service1" -> "sandbox/di/service2" [color="#07914db2"];
+    "sandbox/di/service1" -> "sandbox/di/service3" [color="#913107b2"];
+    "sandbox/di/service2" -> "sandbox/di/service3" [color="#913107b2"];
+    "sandbox/di/service3" -> "sandbox/di/service2" [color="#7c0791b2" style="dotted"];
+}

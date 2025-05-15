@@ -1,0 +1,6 @@
+(function call_closure (closure x)
+  (set! args (array))
+  (inline "foreach($x as $key=>$value) $args[$closure[1][$key]] = $value")
+  (set! t (inline "$closure[0] == null"))
+  (set! w (if (env t) (array) (get closure 0)))
+  (call_user_func (get closure 2) (array_merge w args)))

@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsError" is-error) :boolean (result :pointer))

@@ -1,0 +1,55 @@
+digraph G {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ dot -Tpng:cairo obp-lovpy-flow_v9.09.3.dot -o obp-lovpy-flow.png
+*/
+    graph [label="开放图书工程图谱 by ZQ[090901 24:38]",
+        labeljust="l",labelloc="t",
+        fontsize=12.0,
+        fontname="VeraSansYuanTi-Regular.ttf",        
+        center=1,        size="20,15",
+        ranksep=0.4,
+        ratio=compress,
+        rankdir=LR,
+        ];
+
+    node[fontsize=10.0,
+        style=filled,fillcolor=snow,
+        color=darkolivegreen,fontcolor=darkolivegreen,
+        height=0.1,
+        shape=plaintext,
+        ];
+    /*dir=both,color=yellowgreen,*/
+    edge [fontsize=9.0,
+        fontcolor=gray25,
+        color=gray30,
+		arrowhead=vee,
+		arrowtail=none,
+        ];
+
+    /*图元声明
+    */
+    start       [label="开始",shape=point];
+    end         [label="结稿",shape=point,fillcolor=red];
+    brew        [label="酝酿阶段",shape=box3d];
+    design      [label="创意阶段",shape=box3d];
+    stuff       [label="草稿阶段",shape=box3d];
+    booking     [label="成书阶段",shape=box3d];
+    editing     [label="编辑阶段",shape=box3d];
+    fixing       [label="校对阶段",shape=box3d];
+    
+    published   [label="出版",shape=box];
+    losted      [label="消失",shape=box];
+    canceled    [label="放弃",shape=box];
+
+    
+
+    /*流程关系
+    */
+    start->brew->design->stuff->booking->editing->fixing->published->end    [color=yellowgreen,arrowhead=normal,style="setlinewidth(4)"];
+        brew->losted->end   [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        design->canceled    [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        stuff->canceled     [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        canceled->end       [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+
+}
+

@@ -1,0 +1,55 @@
+digraph "setuptools.command.install_egg_info.install_egg_info.copytree"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="setuptools.command.install\l_egg_info.install_egg_info.copytree",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="_pytest._code.code.Code.source",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class__pytest_1_1__code_1_1code_1_1_code.html#a22f60644a8fa658ab754ddca0bcb31fd",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="django.db.models.query.Query\lSet.raw",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#abce199e3993658459fb2f7c2719daa45",tooltip="PUBLIC METHODS THAT RETURN A QUERYSET SUBCLASS #."];
+  Node3 -> Node4 [id="edge3_Node000003_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="django.db.models.manager.\lBaseManager.db",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1manager_1_1_base_manager.html#ad6c30d1033fbe64ca4ac1d2bf0162a8a",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="django.contrib.postgres.fields.array.\lArrayField.model",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field.html#a4402eef4c4784e00671c9f229481f4c1",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="pip._vendor.truststore.\l_api.SSLContext.__class__",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classpip_1_1__vendor_1_1truststore_1_1__api_1_1_s_s_l_context.html#a530861514f31eabaa3f513557d6e66de",tooltip=" "];
+  Node4 -> Node7 [id="edge6_Node000004_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="django.contrib.postgres.fields.array.\lArrayField.model",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1fields_1_1array_1_1_array_field.html#a50a2796de85f960ca282b56ef2d9446c",tooltip=" "];
+  Node4 -> Node8 [id="edge7_Node000004_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="django.contrib.postgres.fields.ranges.\lRangeField.model",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1fields_1_1ranges_1_1_range_field.html#aa38c2bbd1bad0c8f9b0315ee468867a2",tooltip=" "];
+  Node8 -> Node6 [id="edge8_Node000008_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node9 [id="edge9_Node000004_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="django.contrib.postgres.fields.ranges.\lRangeField.model",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1postgres_1_1fields_1_1ranges_1_1_range_field.html#a91b36827f010affd1ff89569cf40d1af",tooltip=" "];
+  Node4 -> Node10 [id="edge10_Node000004_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="django.contrib.sessions.backends.db.\lSessionStore.model",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sessions_1_1backends_1_1db_1_1_session_store.html#af52cfb4371af389c8bd4a6780274c403",tooltip=" "];
+  Node10 -> Node11 [id="edge11_Node000010_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="django.contrib.sessions.backends.db.\lSessionStore.get_model_class",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1contrib_1_1sessions_1_1backends_1_1db_1_1_session_store.html#a5e2d862e271e8f9173021bcaa61305ad",tooltip=" "];
+  Node3 -> Node12 [id="edge12_Node000003_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="django.db.models.query.Query\lSet.db",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1query_1_1_query_set.html#a6ff7e94dd4e7293da5fb86f6349ce9b8",tooltip=" "];
+  Node12 -> Node5 [id="edge13_Node000012_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node7 [id="edge14_Node000012_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node8 [id="edge15_Node000012_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node9 [id="edge16_Node000012_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node10 [id="edge17_Node000012_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node13 [id="edge18_Node000003_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="django.db.models.query.Raw\lQuerySet.db",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classdjango_1_1db_1_1models_1_1query_1_1_raw_query_set.html#a1f352bf15faf0aa43e22709fde8f7564",tooltip=" "];
+  Node13 -> Node5 [id="edge19_Node000013_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node7 [id="edge20_Node000013_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node8 [id="edge21_Node000013_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node9 [id="edge22_Node000013_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node10 [id="edge23_Node000013_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node5 [id="edge24_Node000003_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node7 [id="edge25_Node000003_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node8 [id="edge26_Node000003_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node9 [id="edge27_Node000003_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node3 -> Node10 [id="edge28_Node000003_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node14 [id="edge29_Node000001_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="graphviz.base.Base.source",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgraphviz_1_1base_1_1_base.html#a5eb46caf8c88716e5741b7b2404d4c75",tooltip=" "];
+  Node1 -> Node15 [id="edge30_Node000001_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="graphviz.graphs.BaseGraph.source",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_base_graph.html#a8aad62397887cb67daf6812db5328f6b",tooltip=" "];
+  Node1 -> Node16 [id="edge31_Node000001_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="graphviz.sources.Source.source",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classgraphviz_1_1sources_1_1_source.html#a3e4b80b77671f18910b3f30a89f93a14",tooltip=" "];
+}

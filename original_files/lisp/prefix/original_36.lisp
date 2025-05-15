@@ -1,1 +1,0 @@
-(postbronchial (treatment (medication aspirin) (duration weeks)) (diagnosis (test x-ray) (resul

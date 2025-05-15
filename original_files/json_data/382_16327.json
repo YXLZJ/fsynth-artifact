@@ -1,0 +1,151 @@
+{
+  "number": 16327,
+  "title": "Déclaration d'exercice de l'activité de négoce ou courtage de déchets",
+  "description": "Ce formulaire en ligne permet au responsable légal de l'entreprise de déposer son dossier de déclaration pour l'exercice de l'activité de négoce ou de courtage de déchets, conformément à l’arrêté du 9 septembre 1998.\r\n\r\nLe dossier de déclaration est adressé au préfet du département où se trouve le siège social ou, à défaut, le domicile du pétitionnaire.",
+  "tags": [
+
+  ],
+  "zones": [
+
+  ],
+  "datePublication": "2019-07-26T00:35:14+02:00",
+  "service": {
+    "nom": "DEAL Martinique / SREC",
+    "organisme": "Ministère de la Transition Ecologique et Solidaire",
+    "typeOrganisme": "service_deconcentre_de_l_etat"
+  },
+  "demarcheUrl": "https://www.demarches-simplifiees.fr/commencer/negoce_coutage_dechets",
+  "dpoUrl": null,
+  "noticeUrl": null,
+  "siteWebUrl": "http://www.deal-martinique.gouv.fr",
+  "cadreJuridiqueUrl": "https://www.legifrance.gouv.fr/affichCode.do?cidTexte=LEGITEXT000006074220",
+  "logo": {
+    "filename": "procedure-b9e9880c-7f64-4a94-ae19-ddbf93eb4eb0.jpg",
+    "checksum": "IWa7VWevX6NSJD8xfh8iPg==",
+    "byteSize": "5560",
+    "contentType": "image/jpeg"
+  },
+  "notice": null,
+  "deliberation": null,
+  "dossiersCount": 16,
+  "revision": {
+    "champDescriptors": [
+      {
+        "__typename": "TextChampDescriptor",
+        "label": "Nom et prénom du responsable légal de l’entreprise ou de son représentant",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "HeaderSectionChampDescriptor",
+        "label": "Coordonnées du siège social :",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "AddressChampDescriptor",
+        "label": "Adresse",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "PhoneChampDescriptor",
+        "label": "Téléphone",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "PhoneChampDescriptor",
+        "label": "Fax",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "EmailChampDescriptor",
+        "label": "Courriel :",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "MultipleDropDownListChampDescriptor",
+        "label": "Nature de l'activité",
+        "description": "(Sélectionner les champs correspondants)",
+        "required": true,
+        "options": [
+          "négoce,",
+          "courtage,"
+        ]
+      },
+      {
+        "__typename": "MultipleDropDownListChampDescriptor",
+        "label": "Types des déchets pris en charge",
+        "description": "(Sélectionner les champs correspondants)",
+        "required": true,
+        "options": [
+          "déchets dangereux,",
+          "déchets non dangereux,"
+        ]
+      },
+      {
+        "__typename": "TextChampDescriptor",
+        "label": "Nature(s) des déchets pris en charge",
+        "description": "Précisez la nature des différents types de déchets : ordures ménagères, cartons, bois, déchets du BTP, etc ...",
+        "required": true
+      },
+      {
+        "__typename": "HeaderSectionChampDescriptor",
+        "label": "Coordonnées de la personne à contacter en cas d'accident ou d'incident",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "TextChampDescriptor",
+        "label": "Nom",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "TextChampDescriptor",
+        "label": "Prénom",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "PhoneChampDescriptor",
+        "label": "Téléphone",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "PhoneChampDescriptor",
+        "label": "Fax",
+        "description": "",
+        "required": false
+      },
+      {
+        "__typename": "PhoneChampDescriptor",
+        "label": "Téléphone portable",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "HeaderSectionChampDescriptor",
+        "label": "Je m’engage à :",
+        "description": null,
+        "required": false
+      },
+      {
+        "__typename": "CheckboxChampDescriptor",
+        "label": "orienter les déchets vers des entreprises de transport par route déclarées ou autorisées  au titre du décret n° 98­679 du 30 juillet 1998 relatif au transport par route, au négoce et au courtage de déchets",
+        "description": "",
+        "required": true
+      },
+      {
+        "__typename": "CheckboxChampDescriptor",
+        "label": "à traiter ou faire traiter les déchets dans des installations conformes  à la loi du 19 juillet 1976 modifiée relative aux installations classées pour la protection de l’environnement",
+        "description": "",
+        "required": true
+      }
+    ]
+  }
+}

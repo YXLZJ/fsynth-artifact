@@ -1,0 +1,63 @@
+{
+    "agential": [
+        "コンシン",
+        "美濃部",
+        "倉知"
+    ],
+    "canvas": "https://eiichi.shibusawa.or.jp/denkishiryo-bekkan/api/presentations/iiif/2/canvas/1251",
+    "category": {
+        "lvl0": "DKB02 渋沢栄一伝記資料. 別巻第2 日記 (大正4年-昭和5年), 集会日時通知表",
+        "lvl1": "DKB02 渋沢栄一伝記資料. 別巻第2 日記 (大正4年-昭和5年), 集会日時通知表 > DKB20019m 大正六年 1917"
+    },
+    "category_lvl0": "DKB02 渋沢栄一伝記資料. 別巻第2 日記 (大正4年-昭和5年), 集会日時通知表",
+    "category_lvl1": "DKB20019m 大正六年 1917",
+    "date": {
+        "lvl0": "1917",
+        "lvl1": "1917 > 1917-11",
+        "lvl2": "1917 > 1917-11 > 1917-11-13"
+    },
+    "date_lvl0": "1917",
+    "date_lvl1": "1917-11",
+    "date_lvl2": "1917-11-13",
+    "description": "\n\n\n           十三日\n          \n          （火）\n         \n\n\n\n\n             午前九時\n            \n            早稲田大学維持員会（同大学）\n           \n\n\n\n\n             午前十一時\n            \n\n             東京\n            \n            市養育院ノ件ニ付府知事ト御会見\n           \n\n\n\n\n             引続\n            \n            養育院ヘ御出向\n           \n\n\n\n\n             午後四時\n            \n\n\n              コン\n             \n\n              シン\n             \n\n            氏、\n            \n\n              美濃部\n             \n\n            、\n            \n\n              倉知\n             \n\n            三氏ト御会\n            \n            見ノ約（日露協会）\n           \n\n\n",
+    "label": "十三日                    （火）",
+    "manifest": "https://eiichi.shibusawa.or.jp/denkishiryo-bekkan/api/presentations/iiif/2/manifest",
+    "next": "DKB20019m-0294",
+    "objectID": "DKB20019m-0293",
+    "prev": "DKB20019m-0292",
+    "sort": "DKB20019m-0293",
+    "source": "https://shibusawa-dlab.github.io/lab1/tei/DKB02.xml",
+    "spatial": [
+        "東京"
+    ],
+    "temporal": "1917-11-13",
+    "texts": [
+        "DKB20020m-0208",
+        "DKB20025m-0247",
+        "DKB20021m-0100",
+        "DKB20020m-0191",
+        "DKB20026m-0013",
+        "DKB20027m-0170",
+        "DKB20020m-0158",
+        "DKB20021m-0221",
+        "DKB20024m-0019",
+        "DKB20016m-0039",
+        "DKB20021m-0006",
+        "DKB20022m-0234",
+        "DKB20032m-0066",
+        "DKB20026m-0045",
+        "DKB20022m-0013",
+        "DKB20020m-0168",
+        "DKB20031m-0117",
+        "DKB20024m-0174",
+        "DKB20030m-0074",
+        "DKB20019m-0301"
+    ],
+    "time": {
+        "09:00:00": "<div><time when=\"09:00:00\">\n             午前九時\n            </time>\n            早稲田大学維持員会（同大学）</div>"
+    },
+    "type": "day",
+    "xml": "<div type=\"day\" xml:id=\"DKB20019m-0293\">\n<head>\n<date when=\"1917-11-13\">\n           十三日\n          </date>\n          （火）\n         </head>\n<listEvent>\n<event>\n<p>\n<time when=\"09:00:00\">\n             午前九時\n            </time>\n            早稲田大学維持員会（同大学）\n           </p>\n</event>\n<event>\n<p>\n<time when=\"11:00:00\">\n             午前十一時\n            </time>\n<placeName corresp=\"#place_東京\">\n             東京\n            </placeName>\n            市養育院ノ件ニ付府知事ト御会見\n           </p>\n</event>\n<event>\n<p>\n<time>\n             引続\n            </time>\n            養育院ヘ御出向\n           </p>\n</event>\n<event>\n<p>\n<time when=\"16:00:00\">\n             午後四時\n            </time>\n<persName corresp=\"#pers_コンシン\">\n<surname>\n              コン\n             </surname>\n<forename>\n              シン\n             </forename>\n</persName>\n            氏、\n            <persName corresp=\"#pers_美濃部\">\n<surname>\n              美濃部\n             </surname>\n</persName>\n            、\n            <persName corresp=\"#pers_倉知\">\n<surname>\n              倉知\n             </surname>\n</persName>\n            三氏ト御会\n            <pb corresp=\"#pageB2412\" facs=\"https://eiichi.shibusawa.or.jp/denkishiryo-bekkan/api/images/iiif/1251/full/max/0/default.jpg\" n=\"B2412\" source=\"#pageB2412\"/>\n            見ノ約（日露協会）\n           </p>\n</event>\n</listEvent>\n</div>",
+    "year": "1917",
+    "yearAndMonth": "1917-11"
+}

@@ -1,0 +1,20 @@
+/*
+  Record-based Nodes
+  http://www.graphviz.org/content/node-shapes#record
+  dot -Tpng class.dot -o class.png
+*/
+
+graph db_blog {
+  node [shape=box];
+  users [label="users"]
+  articles [label="articles"]
+  comments [label="comments"]
+
+  node [shape=diamond];
+  has0 [label="create"]
+  has1 [label="has"]
+  has2 [label="create"]
+
+  users -- has0 -- articles -- has1 -- comments
+  users -- has2 -- comments
+}

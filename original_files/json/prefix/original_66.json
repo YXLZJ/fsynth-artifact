@@ -1,9 +1,0 @@
-{
-  "id": 12345,
-  "name": "John Doe",
-  "address": {
-    "street": "123 Main St",
-    "city": "Anytown"
-  },
-  "contact": {
-    "email": "john

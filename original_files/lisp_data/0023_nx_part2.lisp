@@ -1,0 +1,1 @@
+(setf *features* (delete :sb-core-compression *features*))

@@ -1,0 +1,33 @@
+//  Generated using GraphViz 2.38.0
+//  Command:  dot classes.dot -T png >classes.png
+digraph classes {
+  bitbuffer -> common;
+  bitio -> bitbuffer;
+  bitio -> common;
+  block_statistics -> common;
+  external_software -> common;
+  huffman -> bitbuffer;
+  huffman -> bitio;
+  huffman -> common;
+  huffman -> interpolative;
+  interpolative -> bitbuffer;
+  interpolative -> bitio;
+  qscores_settings -> bitbuffer;
+  qscores_settings -> bitio;
+  qscores_settings -> common;
+  qscores_settings -> qscores_single;
+  qscores_single -> bitbuffer;
+  qscores_single -> bitio;
+  qscores_single -> block_statistics;
+  qscores_single -> common;
+  qscores_single -> interpolative;
+  qscores -> common;
+  qscores -> external_software;
+  qscores -> block_statistics;
+  qscores -> bitbuffer;
+  qscores -> bitio;
+  qscores -> huffman;
+  qscores -> interpolative;
+  qscores -> qscores_single;
+  qscores -> qscores_settings;
+}

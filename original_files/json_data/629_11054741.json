@@ -1,0 +1,35 @@
+{
+    "pmcid": "11054741",
+    "qa_pairs": {
+        "What advantage do nanobodies have over traditional antibodies in targeting the spike protein of SARS-CoV-2?": [
+            "Their small size and ability to bind to cryptic epitopes",
+            "Their ability to induce a stronger immune response",
+            "Their longer half-life in the bloodstream",
+            "Their ability to be produced in larger quantities"
+        ],
+        "What is the primary target of the engineered nanobodies discussed in the study?": [
+            "The receptor-binding domain (RBD) of the SARS-CoV-2 spike protein",
+            "The nucleocapsid protein of SARS-CoV-2",
+            "The membrane protein of SARS-CoV-2",
+            "The envelope protein of SARS-CoV-2"
+        ],
+        "What mechanism allows multivalent nanobodies to enhance neutralization efficacy against SARS-CoV-2 variants?": [
+            "Simultaneous binding to multiple RBDs",
+            "Inhibition of viral replication",
+            "Blocking of viral RNA synthesis",
+            "Disruption of viral assembly"
+        ],
+        "What was the geometric mean IC50 of the most potent multivalent nanobody, B13-B13-B13, against all tested pseudoviruses?": [
+            "20.83 ng/mL",
+            "50.12 ng/mL",
+            "10.45 ng/mL",
+            "35.67 ng/mL"
+        ],
+        "Which nanobody demonstrated broad-spectrum neutralization against multiple Omicron subvariants including BQ.1.1 and XBB.1?": [
+            "A14",
+            "B13",
+            "C21",
+            "D5"
+        ]
+    }
+}

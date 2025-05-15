@@ -1,0 +1,1 @@
+(defvar-javascript (dw *inserter*) ($ (lambda () (setf (@ dw *inserter*)  (make-element-inserter :prepend ($ "body"))))))

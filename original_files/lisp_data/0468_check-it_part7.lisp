@@ -1,0 +1,1 @@
+(defparameter *check-it-output* *standard-output*)

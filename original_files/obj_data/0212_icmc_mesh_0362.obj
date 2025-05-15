@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'icmc_mesh_0362.obj'
+
+# Vertices (Count = 4)
+v -224 -176 0
+v -240 -176 0
+v -240 -160 0
+v -224 -160 0
+
+# Texture cooridinates (Count = 4)
+vt 0.125 0.7172093
+vt 0.25 0.7172093
+vt 0.25 0.7209302
+vt 0.125 0.7209302
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g icmc_mesh_0362
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+

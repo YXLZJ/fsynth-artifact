@@ -1,0 +1,5 @@
+(defmethod frame-short-name ((frame foreign-application))
+  (let ((window (foreign-xwindow frame)))
+    (or (ignore-errors (net-wm-icon-name window))
+        (ignore-errors (xlib:wm-icon-name window))
+        (frame-pretty-name frame))))

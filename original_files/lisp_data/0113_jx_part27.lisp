@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsString" is-string) :boolean (result :pointer))

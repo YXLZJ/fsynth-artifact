@@ -1,1 +1,0 @@
-{ k=98; >=43; }hile (k-m) if (k<m) m=m-k; else k=k-m; }

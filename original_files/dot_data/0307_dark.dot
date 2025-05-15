@@ -1,0 +1,48 @@
+# http://www.graphviz.org/content/cluster
+digraph G {
+
+	subgraph cluster_1 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		w1_1888_jun_27 -> w1_1888_sep_21 -> w1_1888_sep_22 -> w1_1890_g
+        -> w1_1904_g -> w1_1910_g -> w1_1911_g -> w1_1920_g -> w1_1921_jun_21
+        -> w1_1921_jun_24 -> w1_1921_jun_25 -> w1_1921_jun_27
+        -> w1_1953_g -> w1_1953_nov_9 -> w1_1953_nov_10 -> w1_1953_nov_11
+        -> w1_1953_nov_12 -> w1_1954_jun_23 -> w1_1954_jun_26  -> w1_1954_sep_24
+        -> w1_1986_jun_21 -> w1_1986_nov_5 -> w1_1986_nov_8 -> w1_1986_nov_9
+        -> w1_1986_nov_12 -> w1_1987_jun_22 -> w1_1987_jun_23 -> w1_1987_jun_25
+        -> w1_1987_jun_26 -> w1_1987_jun_27 -> w1_1987_sep_21 -> w1_1987_sep_22
+        -> w1_1987_sep_23 -> w1_2019_jun_20 -> w1_2019_jun_21 -> w1_2019_nov_4
+        -> w1_2019_nov_5 -> w1_2019_nov_7 -> w1_2019_nov_8 -> w1_2019_nov_11
+        -> w1_2019_nov_12 -> w1_2020_jun_21 -> w1_2020_jun_25 -> w1_2020_jun_26
+        -> w1_2020_jun_27 -> w1_2020_sep_22 -> w1_2020_sep_23 -> w1_2020_sep_24
+        -> w1_2023_g -> w1_2040_g -> w1_2041_g -> w1_2052_g -> w1_2052_nov_12
+        -> w1_2053_nov_g;
+		label = "Adam's World";
+	}
+
+	subgraph cluster_2 {
+		node [style=filled];
+		w2_1986_jun_21 -> w2_2019_nov_4 -> w2_2019_nov_5 -> w2_2019_nov_6 -> w2_2019_nov_7
+        -> w2_2040_g -> w2_2052_nov_6 -> w2_2052_nov_7 -> w2_2053_sep_22 -> w2_2053_sep_23
+        -> w2_2053_sep_24;
+		label = "Eva's world";
+		color=blue
+	}
+
+    subgraph cluster_3 {
+        label = "Original World";
+        o_1971_aug_8 -> o_1974_g -> o_1986_jun_21 -> o_2019_g;
+    }
+
+	o_1986_jun_21 -> w1_1986_jun_21
+    o_1986_jun_21 -> w2_1986_jun_21;
+    w1_2019_nov_4 -> w2_2019_nov_4;
+    w1_2019_nov_5 -> w2_2019_nov_5;
+    w1_2019_nov_7 -> w2_2019_nov_7;
+    w1_2040_g -> w2_2040_g;
+
+	// start [shape=Mdiamond];
+	// end [shape=Msquare];
+}

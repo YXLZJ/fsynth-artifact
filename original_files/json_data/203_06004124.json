@@ -1,0 +1,65 @@
+{
+    "cancelStatus": "1",
+    "cancelDate": "1988-04-08",
+    "cancelReason": [
+        "830",
+        "829"
+    ],
+    "licid": "06004124",
+    "validDate": "1991-01-25 00:00:00.000",
+    "issueDate": "1986-01-25 00:00:00.000",
+    "licKind": "09",
+    "oldLicid": null,
+    "certNo": "DHA00600412401",
+    "prodNameC": "輸液點滴套",
+    "prodNameE": "\"AVON\" SOLUTION SET",
+    "indicationsName": [],
+    "does": null,
+    "packageUnit": [],
+    "medMCode": null,
+    "maMedCode": null,
+    "medDCode": null,
+    "ingredientsDesc": [],
+    "restraintItemsCode": [
+        "R02"
+    ],
+    "applicantName": "明惠貿易有限公司",
+    "applicantAddr": "台北巿中山北路二段２６巷１０號",
+    "medClass": null,
+    "efficacy": " ",
+    "mdFormat": null,
+    "productAnnotation": null,
+    "mdKind": [
+        {
+            "mdKindMCode": "1301",
+            "mdKindMCodeName": "1301 輸液套",
+            "mdKindDCode": ".",
+            "mdKindDCodeName": null,
+            "checkChange": "N"
+        }
+    ],
+    "monitorDate": null,
+    "licidNew": null,
+    "licidOld": null,
+    "factoryDtoList": [
+        {
+            "factoryCode": "1",
+            "factoryName": "AVON MEDICALS LIMITED",
+            "factoryAddr": "MOONS MOAT DRIVE,MOONS MOAT INDUSTRIAL ESTATE,REDDITCH,WORCESTERSHIRE B98 9HA ENGLAND",
+            "factoryCompanyAddr": null,
+            "countryCode": "GB",
+            "processCode": [],
+            "processCodeStr": null,
+            "factoryKind": "M",
+            "factoryNo": "MGB0070000",
+            "factoryInfo": "1",
+            "qsd": null
+        }
+    ],
+    "ingredientsDtoList": [],
+    "authDtoList": [],
+    "iomDtoList": [],
+    "changeDtoList": [],
+    "atcList": [],
+    "licBaseId": "997D4F77-062C-4749-99A5-CA8CFA3C17BA"
+}

@@ -1,0 +1,118 @@
+digraph UML
+{
+	splines=ortho
+
+	Date
+	[
+		label =
+			"{
+				Date
+			|
+				+ hour     : int\l
+		    	+ minute   : int\l
+		    	+ second   : int\l
+		    	+ timeZone : int\l
+		    	+ day      : int\l
+		    	+ year     : int\l
+		    	+ month    : string\l
+			|
+				+ getHour()     : int\l
+				+ operator =()  : Date\l
+				+ operator \<\<() : Date\l
+			}",
+		shape=record
+	]
+
+	Read
+	[
+		label =
+			"{
+				Read
+			|
+				+ file : ifstream\l
+			|
+				+ hasNextLog()  : bool\l
+				+ readNextLog() : Log\l
+			}",
+		shape=record
+	]
+
+	Log
+	[
+		label =
+			"{
+				Log
+			|
+				+ date   : Date\l
+				+ root   : string\l
+				+ target : string\l
+
+			|
+				+ getDate()   : Date\l
+				+ getRoot()   : string\l
+				+ getTarget() : string\l
+			}",
+		shape=record
+	]
+
+	Graph1
+	[
+		label =
+			"{
+				Graph
+			|
+				+ optVisual  : bool \l
+				+ optExclude : bool\l
+				+ optHour    : bool\l
+				+ hour       : int\l
+				+ graph      : map\l
+				+ data       : Read\l
+			|
+				+ insertData()  : void\l
+				+ print()       : void\l
+				+ operator \<\< : ostream\l
+			}",
+		shape=record
+	]
+
+	GraphVizConverter
+	[
+		label =
+			"{
+				GraphVizConverter
+			|
+				+ optColor : bool \l
+				+ color    : string\l
+				+ shape    : string\l
+				+ doPNG    : bool\l
+			|
+				+ convert()     : void\l
+				+ modifyParam() : void\l
+				+ showParam()   : void\l
+				+ operator \<\< : ostream\l
+			}",
+		shape=record
+	]
+
+	Log -> Read
+	[
+		arrowhead=diamond,
+		taillabel=1,
+		headlabel="1 "
+	]
+
+	Read -> Graph1
+	[
+		arrowhead=diamond,
+		taillabel=1,
+		headlabel="1 "
+	]
+
+	GraphVizConverter -> Graph1
+	[
+		arrowhead=vee,
+		taillabel="1",
+		headlabel="N ",
+		style=dashed
+	]
+}

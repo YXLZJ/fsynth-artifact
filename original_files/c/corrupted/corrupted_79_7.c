@@ -1,1 +1,0 @@
-{ a=94; b=38; whil* (a-b) if (a<b) b=b-a; else a=a-b; }

@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_GetString" get-string) :string (result :pointer))

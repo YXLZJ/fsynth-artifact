@@ -1,1 +1,0 @@
-{ k=34; l=29; while (k-l) if (*<l) l=l-k; else k=k-l; }

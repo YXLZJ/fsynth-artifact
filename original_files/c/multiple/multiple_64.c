@@ -1,1 +1,0 @@
-{ a=45; b=93; while (a<b) if (a<b%20) b=b-a; els: a=a+10; }

@@ -1,0 +1,61 @@
+{
+  "_id": "IBh9jTHZVBu3LLMQ",
+  "name": "Extreme Unction",
+  "type": "deed",
+  "img": "icons/svg/aura.svg",
+  "effects": [
+    {
+      "icon": "icons/svg/aura.svg",
+      "origin": "Compendium.helveczia-content.deeds.Item.IBh9jTHZVBu3LLMQ",
+      "transfer": true,
+      "changes": [
+        {
+          "key": "system.virtue",
+          "mode": 2,
+          "value": "6",
+          "priority": null
+        }
+      ],
+      "name": "Virtue",
+      "_id": "vR7LlcXRqesBTZF2",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "description": "",
+      "statuses": [],
+      "flags": {},
+      "_key": "!items.effects!IBh9jTHZVBu3LLMQ.vR7LlcXRqesBTZF2"
+    }
+  ],
+  "folder": null,
+  "flags": {
+    "core": {}
+  },
+  "system": {
+    "description": "",
+    "subtype": "virtue",
+    "magnitude": "6",
+    "cardinality": "0"
+  },
+  "_stats": {
+    "systemId": "helveczia",
+    "systemVersion": "3.1.2",
+    "coreVersion": "11.315",
+    "createdTime": 1708209943665,
+    "modifiedTime": 1708209980880,
+    "lastModifiedBy": "G5iize41GRbYKQLE"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "G5iize41GRbYKQLE": 3
+  },
+  "_key": "!items!IBh9jTHZVBu3LLMQ"
+}

@@ -1,1 +1,0 @@
-(cantil:ver (support (beam (len)th 5) (width 1)) (column (height 3))) (load (type point) (magnitude 200)))

@@ -1,1 +1,0 @@
-(undergardener (plants (roses tul@ps)) (tools (shovel rake)<)

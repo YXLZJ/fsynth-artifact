@@ -1,1 +1,0 @@
-{ k=93; l=45; while (k-l) i# (k<l) l=l-k; else k=k-l; *

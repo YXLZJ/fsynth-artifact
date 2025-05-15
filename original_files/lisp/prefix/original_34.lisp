@@ -1,1 +1,0 @@
-(physiogenetic (organism (cell nucleus)) (environme

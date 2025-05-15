@@ -1,0 +1,29 @@
+#GRAPHVIZ_OUTPUT 
+digraph{ 
+rankdir=LR; 
+splines=ortho; 
+out1[shape=none,label="out1\n1010101010101010"]; 
+out2[shape=none,label="out2\n0010001000100010"]; 
+out3[shape=none,label="out3\n0000000010101010"]; 
+out4[shape=none,label="out4\n0000111100001111"]; 
+in4[shape=none,label="INPUT in4 0\n0101010101010101"]; 
+in3[shape=none,label="INPUT in3 0\n0011001100110011"]; 
+in2[shape=none,label="INPUT in2 -1\n0000111100001111"]; 
+in1[shape=none,label="INPUT in1 0\n0000000011111111"]; 
+g5[shape=box,style=filled,fillcolor=gray100,label="NOT g5 1\n1010101010101010"]; 
+g4[shape=box,style=filled,fillcolor=gray100,label="NOT g4 1\n1100110011001100"]; 
+g3[shape=box,style=filled,fillcolor=gray100,label="NOR g3 2\n0010001000100010"]; 
+g2[shape=box,style=filled,fillcolor=gray100,label="NOT g2 1\n1111111100000000"]; 
+g1[shape=box,style=filled,fillcolor=gray100,label="NOR g1 2\n0000000010101010"]; 
+in2->out4; 
+g1->out3; 
+in4->g1; 
+g2->g1; 
+in1->g2; 
+g3->out2; 
+in4->g3; 
+g4->g3; 
+in3->g4; 
+g5->out1; 
+in4->g5; 
+} 

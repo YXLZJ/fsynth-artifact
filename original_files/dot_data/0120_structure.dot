@@ -1,0 +1,50 @@
+digraph G {
+    #########
+    # STYLE #
+    #########
+
+    # draw edges behind nodes (not working for subgraphs)
+    outputorder=edgesfirst;
+
+    # allow compound nides
+    compound=true;
+
+    # layout from left to right
+    rankdir="LR";
+
+    # specify font for graph
+    fontname = "Sans";
+
+    edge [color="#106DF1"];
+
+    node [color="#106DF1",
+          fillcolor="#F4F3EA",
+          fontcolor="#106DF1",
+          style="filled",
+          shape="rectangle"];
+
+    ###################
+    # GROUPS OF NODES #
+    ###################
+
+    # Google: "graphviz subgraph"
+
+    ################
+    # SINGLE NODES #
+    ################
+    start [label="Start"];
+    end [label="Ende"];
+
+    teil_1 [label="Teilaufgabe #1"];
+    teil_2 [label="Teilaufgabe #2"];
+    teil_3 [label="Teilaufgabe #3"];
+
+    #########
+    # EDGES #
+    #########
+    start -> teil_1 -> teil_2;
+    start -> teil_3;
+
+    teil_2 -> end;
+    teil_3 -> end;
+}

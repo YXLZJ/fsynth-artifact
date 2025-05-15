@@ -1,0 +1,21 @@
+{
+    "description": "Tous les jours, mon entreprise collecte des tonnes de données sans vraiment savoir ce qu'elles représentent.Ce matin, mon équipe marketing m'a demandé de leur développer un moyen pour mieux comprendre quels sont nos clients, comment ils utilisent nos services et ce qu'ils en pensent sur Twitter.Ils m'ont donné 3 mois.J'ai mis Elasticsearch, Logstash et Kibana et j'ai fini en 30 minutes ! Je ne leur ai rien dit et j'ai gardé le temps restant pour buller^H^H^H^H^H^H contribuer à des projets open source.Venez écouter mon histoire...\n\n\nAuthors:\nDavid Pilato\nTombé dans l'informatique à 7 ans grâce à un magnifique ZX81 et son 1ko de RAM \nEcole Nationale d’Ingénieurs de Brest – Promo 1994\n3 ans en SSII, bon à tout faire\n3 ans chez Cegetel/SFR, touche à tout\n4 ans chez e-Brands, startup internet des années 2000, chef de projets\nDepuis 2005, DGDDI (Douane), mouton à 5 pattes\n- Projet de déclaration de douane en ligne (entreprises)\n- Projet de gestion des contrôles de la douane (douaniers)\n40 ans tout pile depuis quelques semaines.\nDavid utilise Elasticsearch depuis un an pour répondre aux besoins habituels de recherche de données dans les systèmes d'information. A l'origine du groupe français pour Elasticsearch (@elasticsearchfr), il est également l'auteur du plugin River RSS pour Elasticsearch ainsi que d'une factory Spring pour Elasticsearch.\nTwitter : @dadoonet et @elasticsearchfr\nGithub : https://github.com/dadoonet\n\n\n Colin Surprenant\nsoftware engineer @elasticsearch. open source software developer, self-starter/entrepreneur, distributed/realtime data/stream processing. rock climbing.",
+    "favorite": "0",
+    "length": "31:55",
+    "likes": "0",
+    "recorded": "2015-04-08",
+    "speakers": [
+        "david-pilato",
+        "colin-surprenant"
+    ],
+    "tags": [],
+    "thumbnail_url": "https://i.ytimg.com/vi/e88Q0TRWqjQ/hqdefault.jpg",
+    "title": "Elles ressemblent à quoi mes données ?",
+    "videos": [
+        {
+            "code": "e88Q0TRWqjQ",
+            "type": "youtube"
+        }
+    ],
+    "views": "144"
+}

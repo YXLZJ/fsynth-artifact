@@ -1,1 +1,0 @@
-(riot (action speak) (actor person1) *content "It's getting out of hand!"))

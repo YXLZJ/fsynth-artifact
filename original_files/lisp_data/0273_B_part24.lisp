@@ -1,0 +1,6 @@
+                 ((eq (car (/type-of obj)) :cons)
+                  (format t "(")
+                  (%unparse (/par obj))
+                  (format t " . ")
+                  (%unparse (/pdr obj))
+                  (format t ")"))

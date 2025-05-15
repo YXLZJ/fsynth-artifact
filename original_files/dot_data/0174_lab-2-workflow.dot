@@ -1,0 +1,44 @@
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee", style=dashed];
+
+  bgcolor=transparent;
+
+  subgraph cluster_1 {
+    node [style=filled];
+    label = "*Implementation*";
+    viewfunctions[shape=square, label="View Functions \n (a.k.a. Controllers) \n (UI + Business Logic)"]
+    models[shape=square, label="Models \n (DB Interaction)"]
+    fontsize = 20;
+    color=dodgerblue3
+  }
+
+
+  subgraph cluster_2 {
+    node [style=filled];
+    integration[shape=square, label="Integration Tests \n (using rspec + \ncapybara\nand selenium)"]
+    controllertests[shape=square, label="Controller Tests \n (using rspec\n and rack-test)"]
+    modeltests[shape=square, label="Model Tests \n (using rspec)"]
+    label = "*Tests*";
+    fontsize = 20;
+    color=darkslateblue
+  }
+
+  // ci_process[label="CI/CD service",shape=diamond]
+  // local_main -> github_main [label = "git push origin main"]
+
+    integration -> viewfunctions
+    integration -> controllertests [style=invis]
+    controllertests -> viewfunctions
+    controllertests -> modeltests [style=invis]
+    viewfunctions -> controllertests
+    viewfunctions -> modeltests
+    viewfunctions -> models [style=invis]
+    modeltests -> models
+}
+
+
+

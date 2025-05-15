@@ -1,1 +1,0 @@
-{ a=93; b=46; while (a-[) if&(a<b) b=b-a; else a=a-b; }

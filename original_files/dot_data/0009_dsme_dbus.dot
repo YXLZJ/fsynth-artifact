@@ -1,0 +1,92 @@
+/* -*- mode: c -*- */
+
+/* This is high level control flow diagram for functionality implemented
+ * in the dsme_dbus.c module.
+ *
+ * Graphviz tools can be used to transform this into viewable image types.
+ *
+ * For example PNG image can be generated via:
+ *   dot -Tpng dsme_dbus.dot -o dsme_dbus.png
+ */
+
+digraph dsme_dbus
+{
+  node[fontsize=8];
+  node[shape=box];
+  node[style=filled];
+  node[width=0.001];
+  node[height=0.001];
+
+  edge[fontsize=7];
+  edge[arrowsize=0.4];
+  edge[color=grey30];
+
+  /* - - - - - - - - - - - - - - - - - - - *
+   * DSME NODES
+   * - - - - - - - - - - - - - - - - - - - */
+
+  node[fillcolor=yellow];
+
+  module_t;
+  Dispatch;
+  Dispatcher;
+  DispatcherList;
+  Filter;
+  Service;
+  Server [label="Server\n(singleton)\n"];
+  Client [label="Client\n(singleton)\n"];
+  FilterMessageHandler;
+
+  /* - - - - - - - - - - - - - - - - - - - *
+   * DBUS NODES
+   * - - - - - - - - - - - - - - - - - - - */
+
+  node[fillcolor=wheat];
+
+  DBusDaemon;
+  DBusConnection;
+  well_known_name;
+  interface;
+  member;
+
+  /* - - - - - - - - - - - - - - - - - - - *
+   * CONTROL EDGES
+   * - - - - - - - - - - - - - - - - - - - */
+
+  node[fillcolor=pink];
+
+  module_t   -> Server               [label="bind_methods()"];
+  module_t   -> Client               [label="bind_signals()"];
+
+  Server     -> Service              [label="owns N"];
+
+  Service    -> Filter               [label="owns 1"];
+  Service    -> well_known_name      [label="has"];
+  Service    -> DispatcherList       [label="owns 1"];
+
+  Client     -> Filter               [label="owns 1"];
+  Client     -> DispatcherList;
+
+  Filter     -> DBusConnection       [label="has"];
+  Filter     -> FilterMessageHandler [label="has"];
+
+  DispatcherList -> Dispatcher       [label="owns N"];
+
+  Dispatcher -> Dispatch             [label="has"];
+  Dispatcher -> interface            [label="has"];
+  Dispatcher -> member               [label="has"];
+
+  /* - - - - - - - - - - - - - - - - - - - *
+   * FEEDBACK EDGES
+   * - - - - - - - - - - - - - - - - - - - */
+
+  edge[style=dotted];
+
+  DBusDaemon -> DBusConnection;
+  DBusConnection -> FilterMessageHandler;
+
+  FilterMessageHandler -> Service;
+  FilterMessageHandler -> Client;
+
+  Dispatch -> module_t [label="notify(msg)"];
+}

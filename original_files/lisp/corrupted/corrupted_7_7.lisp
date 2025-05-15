@@ -1,1 +1,0 @@
-(cantilever (support (beam (length 5) (width 1)* (column (height 3))) (load (type point) (magnitude 200)))

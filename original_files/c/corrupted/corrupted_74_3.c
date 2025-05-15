@@ -1,1 +1,0 @@
-{ a=43; b=9*; while (a-b) if (a<b) b=b-a; else a=a-b; }

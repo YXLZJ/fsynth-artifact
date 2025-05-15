@@ -1,0 +1,56 @@
+digraph G {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ dot -Tpng:cairo eb-env_v9.09.3.dot -o eb-env.png -Tcmapx -o eb-env.map
+        size="30,30",
+*/
+    graph [label="EB:恶狼战役工程环境图谱 by ZQ[091009 19:17]",
+        labeljust="l",labelloc="t",
+        fontsize=12.0,
+        fontname="VeraSansYuanTi-Regular.ttf",        
+        center=1,
+        ranksep=0.7,
+        ratio=compress,
+        rankdir=TB,
+        ];
+
+    node[fontsize=11.0,
+        style=filled,fillcolor=snow,
+        color=darkolivegreen,fontcolor=darkolivegreen,
+        height=0.3,
+        shape=plaintext,
+        ];
+    /*dir=both,color=yellowgreen,*/
+    edge [fontsize=10.0,
+        fontcolor=darkolivegreen,
+        color=gray30,
+		arrowhead=vee,
+		arrowtail=vee,
+        ];
+
+    /*图元声明
+    */
+    
+    ebpsite     [label="EB:工程空间",shape=component,URL="http://code.google.com/p/erlbattle/"];
+        ebpwiki     [label="EB:工程维基",shape=component,URL="http://code.google.com/p/erlbattle/wiki/EbIndex"];
+        ebpsvn      [label="EB:版本仓库",shape=component,URL="http://erlbattle.googlecode.com/svn/trunk/LovelyPython/"];
+        ebpissue    [label="EB:提案追踪",shape=component,URL="http://code.google.com/p/erlbattle/issues/list"];
+    ebpml        [label="EB:邮件列表",shape=component,URL="http://groups.google.com/group/erlbattle"];
+    ggerlc       [label="erlang-china",shape=component,URL="http://groups.google.com/group/openbookproject"];
+    ggecug       [label="ECUG",shape=component,URL="http://groups.google.com/group/ecug"];
+
+
+    /*流程关系
+    */
+    subgraph clusterG {
+        label="Google 提供的服务s"; color=blue;fontcolor=blue;
+        ebpsite->ebpwiki    [label=""];
+            ebpsite->ebpsvn     [label=""];
+            ebpsite->ebpissue   [label=""];
+            ebpsite->ebpml      [label=""];
+        ebpsvn->ebpml       [label="自动通告"];
+        ebpissue->ebpml     [label="自动通告"];
+        ggecug;
+        ggerlc;
+      }
+}
+

@@ -1,1 +1,0 @@
-(hemadrometer (red-cells (count 5) (shape round)) (plasma (col|r yellow) (components (proteins albumin) (glucose))) (wh]te-cells (neutrophils (percentage 60)) (lymphocytes (percentage 30))))

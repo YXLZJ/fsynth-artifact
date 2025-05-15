@@ -1,0 +1,424 @@
+{
+  "addresses": [
+    {
+      "hnrlbls": [
+        "1"
+      ], 
+      "housenumber": "1", 
+      "lat": 50.707201285242, 
+      "lon": 4.381629260196, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "10"
+      ], 
+      "housenumber": "10", 
+      "lat": 50.706989035676, 
+      "lon": 4.381469802547, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "12"
+      ], 
+      "housenumber": "12", 
+      "lat": 50.706965880466, 
+      "lon": 4.381525405653, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "14"
+      ], 
+      "housenumber": "14", 
+      "lat": 50.706937691131, 
+      "lon": 4.381579209291, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "15"
+      ], 
+      "housenumber": "15", 
+      "lat": 50.706843524119, 
+      "lon": 4.3824702658, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "16"
+      ], 
+      "housenumber": "16", 
+      "lat": 50.706907631084, 
+      "lon": 4.381639906901, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "17"
+      ], 
+      "housenumber": "17", 
+      "lat": 50.706766975747, 
+      "lon": 4.382687003198, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "18"
+      ], 
+      "housenumber": "18", 
+      "lat": 50.706877463371, 
+      "lon": 4.38169852329, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "19"
+      ], 
+      "housenumber": "19", 
+      "lat": 50.706642045076, 
+      "lon": 4.382821683949, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "20"
+      ], 
+      "housenumber": "20", 
+      "lat": 50.706848455746, 
+      "lon": 4.381753473221, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "23"
+      ], 
+      "housenumber": "23", 
+      "lat": 50.706546711866, 
+      "lon": 4.383142766068, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "25"
+      ], 
+      "housenumber": "25", 
+      "lat": 50.706444094692, 
+      "lon": 4.383405446489, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "27"
+      ], 
+      "housenumber": "27", 
+      "lat": 50.706349824211, 
+      "lon": 4.383565050916, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "28"
+      ], 
+      "housenumber": "28", 
+      "lat": 50.706668028115, 
+      "lon": 4.38199583395, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "29"
+      ], 
+      "housenumber": "29", 
+      "lat": 50.706260471492, 
+      "lon": 4.383720607425, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "3"
+      ], 
+      "housenumber": "3", 
+      "lat": 50.707076624122, 
+      "lon": 4.381775681458, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "30"
+      ], 
+      "housenumber": "30", 
+      "lat": 50.706627618026, 
+      "lon": 4.38207762203, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "31"
+      ], 
+      "housenumber": "31", 
+      "lat": 50.706122968057, 
+      "lon": 4.38388316907, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "32"
+      ], 
+      "housenumber": "32", 
+      "lat": 50.706590883668, 
+      "lon": 4.382168146026, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "34"
+      ], 
+      "housenumber": "34", 
+      "lat": 50.706280147119, 
+      "lon": 4.382703741583, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "36"
+      ], 
+      "housenumber": "36", 
+      "lat": 50.706136715319, 
+      "lon": 4.382909511576, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "38"
+      ], 
+      "housenumber": "38", 
+      "lat": 50.706075758814, 
+      "lon": 4.38309268378, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "4"
+      ], 
+      "housenumber": "4", 
+      "lat": 50.70706013836, 
+      "lon": 4.381293592925, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "5"
+      ], 
+      "housenumber": "5", 
+      "lat": 50.707047058301, 
+      "lon": 4.381837356117, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "5A"
+      ], 
+      "housenumber": "5A", 
+      "lat": 50.70701983019, 
+      "lon": 4.381895761057, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "6"
+      ], 
+      "housenumber": "6", 
+      "lat": 50.707043346184, 
+      "lon": 4.381365493019, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "66"
+      ], 
+      "housenumber": "66", 
+      "lat": 50.70579420028, 
+      "lon": 4.383753254149, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "68"
+      ], 
+      "housenumber": "68", 
+      "lat": 50.705674664033, 
+      "lon": 4.383941132606, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "7"
+      ], 
+      "housenumber": "7", 
+      "lat": 50.706989114573, 
+      "lon": 4.381949294803, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "70"
+      ], 
+      "housenumber": "70", 
+      "lat": 50.705609668059, 
+      "lon": 4.384134564019, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "72"
+      ], 
+      "housenumber": "72", 
+      "lat": 50.705521886863, 
+      "lon": 4.384296785409, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "74"
+      ], 
+      "housenumber": "74", 
+      "lat": 50.705448093718, 
+      "lon": 4.384458359847, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "76"
+      ], 
+      "housenumber": "76", 
+      "lat": 50.705405022237, 
+      "lon": 4.384784078323, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "8"
+      ], 
+      "housenumber": "8", 
+      "lat": 50.707019346044, 
+      "lon": 4.381420529711, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }, 
+    {
+      "hnrlbls": [
+        "9"
+      ], 
+      "housenumber": "9", 
+      "lat": 50.706965499745, 
+      "lon": 4.382236821653, 
+      "municipality": "Waterloo", 
+      "pcode": "1410", 
+      "source": "7704454", 
+      "street": "Rue Ma Campagne"
+    }
+  ]
+}

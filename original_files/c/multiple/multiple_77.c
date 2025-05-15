@@ -1,1 +1,0 @@
-{ o=x=y=a=l=2; whil" <o<x) { a=a+l; x=x-1; } }

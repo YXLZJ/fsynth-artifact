@@ -1,0 +1,10 @@
+(defmethod free ((obj instance-light-volume))
+  (with-slots (otr-src otr-dst str-src str-dst gar-src gar-dst tfs-src tfs-dst) obj
+    (free str-src)
+    (free str-dst)
+    (free otr-src)
+    (free otr-dst)
+    (free gar-src)
+    (free gar-dst)
+    (setf tfs-src nil)
+    (setf tfs-dst nil)))

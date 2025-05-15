@@ -1,0 +1,1 @@
+(defop 6 NAND (setf (:reg a) (mod32 (lognand (:reg b) (:reg c)))))

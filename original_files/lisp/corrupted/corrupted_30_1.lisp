@@ -1,1 +1,0 @@
-((whereout (apple* (banana)) (orange))

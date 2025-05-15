@@ -1,1 +1,0 @@
-{ t=98; e=r=r=y=34; while (t-e) i

@@ -1,0 +1,5 @@
+(define (make-joint acc ori-pw new-pw)
+  (lambda (input-pw func)
+    (if (eq? new-pw input-pw)
+	(acc ori-pw func)
+	(error "Wrong password"))))

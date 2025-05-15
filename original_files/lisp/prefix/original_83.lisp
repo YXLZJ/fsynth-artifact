@@ -1,1 +1,0 @@
-(whaling (ships (count 5)

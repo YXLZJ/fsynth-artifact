@@ -1,0 +1,7 @@
+(defun ip (v w &optional (start 0))
+  (let ((l (length v))
+	(ax 0.0d0))
+    (dotimes (i (- l start))
+      (incf ax (* (aref v (+ i start))
+		  (aref w (+ i start)))))
+    ax))

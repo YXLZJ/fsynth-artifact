@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "luckeereporting",
+  "private_key_id": "8d46db762e84c4929dcfd07e2f6ca137e3208607",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDbUsHl3ZvKtq46\n3jZC2T3yDWeMhqzbOt2SAb41k7mdMpUOTEiSTTbQjE7tuLec58EDYKhLn+RsHDrJ\nNtuAkitQoj2FWsm2DCALkCh68PV4LRiJF9HlvXGWi987YxW0wEU9wFGUd0yTrMhI\nYJQrGWQuI8AI8hY/Pl8kacmprhQqEeCaWa9XCddysOdjh2Rs/x1unV6MRLsS0SoM\n6IEA7LfxjbST5Fkr/xe+nca1vfoFl6VCbzmxrwFf48NmZp9VmH6LHlWIh8cbD1lD\nMmmJy8RwuRrJT+Zncjua1ZsKBZp8CJchK/X/iAVbBbGQSrwwSNikvp8icCXNugix\nx24BTtwHAgMBAAECggEBAMogFM4xU9iYTy21iLBG4Y3nyJx7qWZJc9WRgaiCwjcb\nXL9WkjMysee0xzDSYXVbKEhilfdMHgl8Yrj5s4VkMEMZojT6HJeHySie7I+Q7ciZ\nVtlReIGP+9TQhySGBoUUBTwJt6Vp5MrcG6CIUUT/G5JiJCKaaOJUKv6198JGyhKR\nvjKxnuoJRwA5u20A4/3ravBvAgmtyQ4NnuPRR680yHZU9wLUlrLepSVqdPOoY+ip\nO9AAy7MUd1y+nJdAwaaXhNUxPw7VNUD88/9n+I73WYdzQmYzucKnl44SHcxxdpWL\nlA8W6xF55hRVUKxoYIbE70s9uVfSD5St8AxFG7vlmkECgYEA9ZUKOXDfbFi8W6lm\nBV2/S+oeQYV9Hev/x6P/a9dnkWKqqxhkH0WM1D9Ljk/HeCN9cSAAKi1mTGERt0pG\njyFy2Ln4cf0VbUbsBn5XS2MZkAUW+TvXz6+vx8oEhX8qQLxSG+//XuzBQRg3/nSI\nUDf1au9UF7s0x2Us7BV1zI5n4lcCgYEA5KCNZVptp4LmD1blZECqMaYGERz9kUjM\nvCaaFAQGH2YUnSmy0/cfoyTsTG3f9clCdZs9CdrERp5PDa/q9XpopzZy8/+ZS1lU\nTu1kwI0vRhmsYWm0JARLKWe15g0i1WiXy7jC43NK6NsJskDgUQiNqFGPXjCDxjUW\nudfQk0MrpdECgYB4rAqBHSh76cJsW/nIiz8zg0/orDpFmLBvnfMlP4whkVUBi5Ov\nFhLUPGHZBPSj4PSDwNCz6OkKgOwen326WRpAymj9QfnkX2Qc8LneTkzCSu31++TY\npaB/UJIWMt1FQAQsvCpEr5tqbAcfno1YtZZ/PCibHJ8bl2iSfR0MLbF4MwKBgAri\nWdjpZS8EXE9+o40SRwf2D3PhHXE9NgH/FHa/ekskYPbadVkB+s+ZgmZhFLhuzGss\n6Mr/TzjNcJYGOflVyoWrYe2bzYB40Dqxsoo4Lnf34O0CS0ErsyhVd6NsHKxsPk3E\njgKmCnrrcpq52/P/pD7PIzQoux1EicBvNc7M89cBAoGBAMVOomDoAzisgg3sjf3a\nFH+E4lQ2vnVoQg8P/9sYEjGDd2NR3Ozk/YBTmbDB0VWZvfdLgdtgN9LUp25iL4cz\n9uA+A28aZyl94iGThAkKhncAxqfbh+BE7mJTPVfQ8jUtRsYVfoeupsCwnjy9Ib6s\nGQuCzDjdYrkSS5af8T8JvwvJ\n-----END PRIVATE KEY-----\n",
+  "client_email": "luckeedata2@luckeereporting.iam.gserviceaccount.com",
+  "client_id": "114077243207436825785",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/luckeedata2%40luckeereporting.iam.gserviceaccount.com"
+}

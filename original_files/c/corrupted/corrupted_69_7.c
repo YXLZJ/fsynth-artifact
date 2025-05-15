@@ -1,1 +1,0 @@
-{ k=98; l=63; while (k-l) if (k<l) l=l-k; els* k=k-l; }

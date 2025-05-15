@@ -1,0 +1,100 @@
+/*
+
+   dot -T pdf -o dependencies.pdf dependencies.dot
+   dot -T svg -o dependencies.svg dependencies.dot 
+
+   See:
+     http://www.graphviz.org/content/cluster
+
+   NODE_A   enables   NODE_B;
+   serve      ->      display;
+*/
+
+digraph huviz_plan {
+	node [ style = filled ];
+	randkdir=LR;
+
+	subgraph qp {
+		 color=lightgrey;
+		 style=filled;
+		 label="NQuad parser";
+		 rdfquads;
+		 smurpquads;
+		 greenturtle;
+	}
+
+        rdfquads[label="debug\nrdfquads\nin browser"];
+	smurpquads[label="smurp\nwrites\nquadparser"];
+
+	smurpquads -> quadpars;
+	rdfquads -> quadpars;
+	quadpars[label="NQuad\nparser\nin browser"];
+	greenturtle[label="restore\ngreenturtle",color=darkseagreen4];
+	greenturtle -> workdata;
+	
+	workdata[label="Working\nData",color=darkseagreen4];
+	start[shape=Mdiamond,color=darkseagreen4];
+	pickpath[label="choose",shape=diamond,color=darkseagreen4];
+	start -> pickpath;
+	pickpath -> smurpquads;
+	pickpath -> rdfquads;
+	pickpath -> greenturtle;
+	quadpars -> workdata;
+
+	trigparser[label="Trig\nParser"];
+	trigparser -> servsnip;
+	quadpars -> servsnip;
+
+	node [shape = circle];
+	dg[label="Debug\nGraph",color=darkseagreen4];
+        testing[label="Automated\nTesting",color=darkseagreen4];
+        essential[color=darkseagreen4,shape=rect];
+	helpful[shape=rect];
+	optional[shape=rect];
+        
+	essential -> deliverable;
+	optional -> deliverable;
+	dispsnip -> optional;
+	
+	workdata -> dg;
+
+	servsnip -> dispsnip;
+	
+	dispsnip[label="Display\nSnippets"];
+    	servsnip[label="Serve\nSnippets"];
+	me[label="Multiple\nEdges"];
+        dbgall[label="debug all.ttl"];
+
+        dbgall -> essential;
+	dg -> essential;
+	me -> optional;
+	runcom[label="run\ncommands",color=darkseagreen4];
+	runcom -> dispcom;
+        runcom -> testing;
+        testing -> helpful;
+	helpful -> dispsnip;
+        helpful -> dg;
+
+	treepicklegend[label="put legend\nin treepicker"];
+        treepicklegend -> optional;
+
+	dispcom[label="display\ncommands",color=darkseagreen4];
+
+	clkcom[label="clicking\nmakes\ncommands",color=darkseagreen4];
+	dispcom -> clkcom;
+
+	txtedcom[label="textually\nedit\ncommands"];
+        dispcom -> txtedcom;
+
+	gredcom[label="graphically\ncreate\ncommands",color=darkseagreen4];
+	dispcom -> gredcom;
+	
+	fliplabels[label="flip\nlabels",color=darkseagreen4];
+        fliplabels  -> optional;
+
+	dispcom -> optional;
+	txtedcom -> optional;
+	gredcom -> optional;
+	clkcom -> optional;
+
+}

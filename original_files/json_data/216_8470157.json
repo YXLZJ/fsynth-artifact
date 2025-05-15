@@ -1,0 +1,177 @@
+{
+	"attackInfo": [
+		{
+			"hits": 8,
+			"id": "1",
+			"target": "AOE"
+		}
+	],
+	"bfmtMetadata": {
+		"createdAt": "2016-11-11T05:06:36.000Z",
+		"updatedAt": "2017-06-14T11:43:33.000Z"
+	},
+	"damage frames": [
+		{
+			"effect delay time(ms)/frame": "16.7/1",
+			"frame times": [
+				20,
+				24,
+				28,
+				32,
+				50,
+				54,
+				58,
+				62
+			],
+			"hit dmg% distribution": [
+				15,
+				12,
+				12,
+				11,
+				15,
+				12,
+				12,
+				11
+			],
+			"hit dmg% distribution (total)": 100,
+			"hits": 8,
+			"proc id": "1"
+		}
+	],
+	"desc": "MST_SKILLS_8470157_DESCRIPTION",
+	"drop check count": 1,
+	"id": "8470157",
+	"levels": [
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		},
+		{
+			"bc cost": 15,
+			"effects": [
+				{
+					"bb atk%": 110,
+					"effect delay time(ms)/frame": "16.7/1",
+					"params": "110,0,0,0,0,0",
+					"proc id": "1",
+					"target area": "aoe",
+					"target type": "enemy"
+				}
+			]
+		}
+	],
+	"name": "Thorn Stab"
+}

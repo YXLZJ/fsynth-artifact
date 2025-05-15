@@ -1,0 +1,45 @@
+[
+    {
+        "Name": "Creating Digital Images",
+        "MyCatalogId": null,
+        "Children": [
+            {
+                "Name": "Resources",
+                "MyCatalogId": 1,
+                "Children": [
+                    {
+                        "Name": "Primary Sources",
+                        "MyCatalogId": 2,
+                        "Children": []
+                    },
+                    {
+                        "Name": "Secondary Sources",
+                        "MyCatalogId": 2,
+                        "Children": []
+                    }
+                ]
+            },
+            {
+                "Name": "Evidence",
+                "MyCatalogId": 1,
+                "Children": []
+            },
+            {
+                "Name": "Graphic Products",
+                "MyCatalogId": 1,
+                "Children": [
+                    {
+                        "Name": "Process",
+                        "MyCatalogId": 4,
+                        "Children": []
+                    },
+                    {
+                        "Name": "Final Product",
+                        "MyCatalogId": 4,
+                        "Children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

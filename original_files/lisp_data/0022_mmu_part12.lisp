@@ -1,0 +1,6 @@
+(defun cpu-to-cart-read (n)
+  (lambda (addr)
+          (declare ((unsigned-byte 16) addr) (nes n))
+          (let ((prg (NES-cartridge:cartridge-prg-rom (nes-cart n))))
+            (declare ((simple-array (unsigned-byte 8) 1) prg))
+            (aref prg (mod addr (array-dimension prg 0))))))

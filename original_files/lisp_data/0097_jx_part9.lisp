@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_InitializeOnce" initialize-once) :void (home-folder :string))

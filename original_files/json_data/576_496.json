@@ -1,0 +1,215 @@
+{
+    "alt-version(s)": [],
+    "name": "Servine",
+    "Servine": {
+        "pokedex_data": {
+            "National No.": "0496",
+            "Type": [
+                "Grass"
+            ],
+            "Species": "Grass Snake Poke\u0301mon",
+            "Height": "0.8 m (2\u203207\u2032\u2032)",
+            "Weight": "16.0 kg (35.3 lbs)",
+            "Abilities": {
+                "Overgrow": {
+                    "href": "/ability/overgrow",
+                    "effect": "Powers up Grass-type moves in a pinch.",
+                    "hidden": false
+                },
+                "Contrary": {
+                    "href": "/ability/contrary",
+                    "effect": "Makes stat changes have an opposite effect.",
+                    "hidden": true
+                }
+            }
+        },
+        "training_data": {
+            "EV yield": "2 Speed",
+            "Catch rate": "45",
+            "BaseFriendship": "50",
+            "Base Exp.": "145",
+            "Growth Rate": "Medium Slow"
+        },
+        "breeding_data": {
+            "Gender": "87.5% male,12.5% female"
+        },
+        "base_stats": {
+            "HP": {
+                "Base": "60",
+                "Min": "230",
+                "Max": "324"
+            },
+            "Attack": {
+                "Base": "60",
+                "Min": "112",
+                "Max": "240"
+            },
+            "Defense": {
+                "Base": "75",
+                "Min": "139",
+                "Max": "273"
+            },
+            "Sp. Atk": {
+                "Base": "60",
+                "Min": "112",
+                "Max": "240"
+            },
+            "Sp. Def": {
+                "Base": "75",
+                "Min": "139",
+                "Max": "273"
+            },
+            "Speed": {
+                "Base": "83",
+                "Min": "153",
+                "Max": "291"
+            },
+            "Total": "413"
+        },
+        "defense_stats": {
+            "default": {
+                "Fire": "super-effective",
+                "Water": "not very effective",
+                "Electric": "not very effective",
+                "Grass": "not very effective",
+                "Ice": "super-effective",
+                "Poison": "super-effective",
+                "Ground": "not very effective",
+                "Flying": "super-effective",
+                "Bug": "super-effective"
+            }
+        }
+    },
+    "evo_stats": [
+        [
+            {
+                "from": {
+                    "name": "Snivy",
+                    "nationalNo": "#0495",
+                    "type": [
+                        "Grass"
+                    ],
+                    "nickname": null
+                },
+                "to": {
+                    "name": "Servine",
+                    "nationalNo": "#0496",
+                    "type": [
+                        "Grass"
+                    ],
+                    "nickname": null
+                },
+                "requirement": "(Level 17)",
+                "shed": null
+            },
+            {
+                "from": {
+                    "name": "Servine",
+                    "nationalNo": "#0496",
+                    "type": [
+                        "Grass"
+                    ],
+                    "nickname": null
+                },
+                "to": {
+                    "name": "Serperior",
+                    "nationalNo": "#0497",
+                    "type": [
+                        "Grass"
+                    ],
+                    "nickname": null
+                },
+                "requirement": "(Level 36)",
+                "shed": null
+            }
+        ]
+    ],
+    "attacks_data": {
+        "moves": {
+            "Leer": "4",
+            "Tackle": "1",
+            "Vine Whip": "7",
+            "Wrap": "10",
+            "Growth": "13",
+            "Leaf Tornado": "16",
+            "Leech Seed": "20",
+            "Mega Drain": "24",
+            "Slam": "28",
+            "Leaf Blade": "32",
+            "Coil": "36",
+            "Giga Drain": "40",
+            "Wring Out": "44",
+            "Gastro Acid": "48",
+            "Leaf Storm": "52"
+        },
+        "egg": {
+            "Captivate": null,
+            "Glare": null,
+            "Grassy Terrain": null,
+            "Iron Tail": null,
+            "Magical Leaf": null,
+            "Mean Look": null,
+            "Mirror Coat": null,
+            "Natural Gift": null,
+            "Pursuit": null,
+            "Sweet Scent": null,
+            "Twister": null
+        },
+        "null": {
+            "Aqua Tail": "90",
+            "Bind": "15",
+            "Defog": "\u2014",
+            "Gastro Acid": "\u2014",
+            "Giga Drain": "75",
+            "Grass Pledge": "80",
+            "Iron Tail": "100",
+            "Knock Off": "65",
+            "Seed Bomb": "80",
+            "Snatch": "\u2014",
+            "Snore": "50",
+            "Synthesis": "\u2014",
+            "Worry Seed": "\u2014"
+        },
+        "tm": {
+            "Work Up": "01",
+            "Calm Mind": "04",
+            "Toxic": "06",
+            "Hidden Power": "10",
+            "Sunny Day": "11",
+            "Taunt": "12",
+            "Light Screen": "16",
+            "Protect": "17",
+            "Safeguard": "20",
+            "Frustration": "21",
+            "Solar Beam": "22",
+            "Return": "27",
+            "Double Team": "32",
+            "Reflect": "33",
+            "Aerial Ace": "40",
+            "Torment": "41",
+            "Facade": "42",
+            "Rest": "44",
+            "Attract": "45",
+            "Round": "48",
+            "Energy Ball": "53",
+            "Swords Dance": "75",
+            "Grass Knot": "86",
+            "Swagger": "87",
+            "Sleep Talk": "88",
+            "Substitute": "90",
+            "Nature Power": "96",
+            "Confide": "100"
+        }
+    },
+    "entries": {
+        "Servine": [
+            "It moves along the ground as if sliding. Its swift movements befuddle its foes, and it then attacks with a vine whip.",
+            "They avoid attacks by sinking into the shadows of thick foliage. They retaliate with masterful whipping techniques.",
+            "When it gets dirty, its leaves can\u2019t be used in photosynthesis, so it always keeps itself clean.",
+            "It moves along the ground as if sliding. Its swift movements befuddle its foes, and it then attacks with a vine whip.",
+            "When it gets dirty, its leaves can\u2019t be used in photosynthesis, so it always keeps itself clean."
+        ]
+    },
+    "discord_image": "https://cdn.discordapp.com/attachments/1131758889575137330/1131790466493448252/496.png",
+    "discord_sprite": "<:P496:1132134556951126108>"
+}

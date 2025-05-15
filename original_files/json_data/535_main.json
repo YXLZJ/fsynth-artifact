@@ -1,0 +1,87 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.1.0",
+        "name": "com.microchip.mcu8.studio.project.avr128da48-phase-sequence-detection-of-ac-supply-studio",
+        "version": "1.0.2",
+        "displayName": "Phase Sequence Detection of AC Supply using AVR128DA48 Microcontroller(Studio Project)",
+        "projectName": "avr128da48-phase-sequence-detection-of-ac-supply-studio",
+        "shortDescription": "This application note describes the implementation of a phase sequence and phase loss detection system for a three-phase AC supply and demonstrates the detection of phase sequence and phase loss faults on emulated three phase AC supply using the AVR128DA48 microcontroller",
+        "ide": {
+            "name": "STUDIO",
+            "semverRange": ">=7.0.2397"
+        },
+        "compiler": [
+			{
+				"name": "AVR GCC",
+				"semverRange": "^5.4.0"
+			}
+		],
+        "dfp": {
+            "name": "AVR-Dx_DFP",
+            "semverRange": "^1.4.73"
+        },
+        "configurator": {
+            "name": "START",
+            "semverRange": ">=1.8.444"
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "AVR128DA48",
+                "versionRange": "*"
+            }
+        },
+        "author": "Microchip",
+        "subcategories": [
+		    "START",
+            [
+               "Peripherals", "TCA"
+            ],
+            [
+               "Peripherals", "SPI"
+            ],
+            [
+               "Peripherals", "USART"
+            ],
+            [
+               "Peripherals", "ZCD"
+            ],
+            [
+               "Peripherals", "ADC"
+            ],
+            [
+               "Peripherals", "VREF"
+            ]                 			
+        ],
+        "peripherals": [
+            "TCA","SPI","USART","ZCD","ADC","VREF"
+        ],
+        "keywords": [
+		    "Curiosity Nano",
+			"Phase Sequence Detection",
+			"Three-Phase AC Supply",
+			"Phase Loss",
+			"Phase Reversal",
+			"Phase Detection",
+			"Zero Phase",
+			"Rms Voltage",
+			"Data Visualizer"	
+        ],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./README.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

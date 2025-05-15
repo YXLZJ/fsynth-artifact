@@ -1,0 +1,79 @@
+{
+  "story": "#G24# As a data reuser, I want to view a DOI for a dataset, so that I can get back to the data in future and I can import the dataset into my referencemanagement software automatically.\n",
+  "extraction": {
+    "personas": [
+      "data reuser"
+    ],
+    "entities": [
+      "DOI",
+      "dataset",
+      "referencemanagement software"
+    ],
+    "actions": [
+      "view",
+      "get back",
+      "import"
+    ],
+    "benefit": "I can get back to the data in future and I can import the dataset into my referencemanagement software automatically."
+  },
+  "categories": {
+    "primary_entities": [
+      "DOI",
+      "dataset",
+      "referencemanagement software"
+    ],
+    "secondary_entities": [],
+    "primary_actions": [
+      "view",
+      "import"
+    ],
+    "secondary_actions": [
+      "get back"
+    ],
+    "benefit": "I can get back to the data in future and I can import the dataset into my referencemanagement software automatically."
+  },
+  "relations": {
+    "relations": [
+      {
+        "from": "data reuser",
+        "to": "view",
+        "kind": "triggers"
+      },
+      {
+        "from": "view",
+        "to": "DOI",
+        "kind": "targets"
+      },
+      {
+        "from": "view",
+        "to": "dataset",
+        "kind": "targets"
+      },
+      {
+        "from": "view",
+        "to": "referencemanagement software",
+        "kind": "targets"
+      },
+      {
+        "from": "data reuser",
+        "to": "import",
+        "kind": "triggers"
+      },
+      {
+        "from": "import",
+        "to": "dataset",
+        "kind": "targets"
+      },
+      {
+        "from": "import",
+        "to": "referencemanagement software",
+        "kind": "targets"
+      }
+    ]
+  },
+  "cost": {
+    "input": 1476,
+    "output": 247,
+    "time (ns)": 4990947000
+  }
+}

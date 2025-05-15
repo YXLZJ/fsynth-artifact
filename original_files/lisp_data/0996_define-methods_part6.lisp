@@ -1,0 +1,1 @@
+(gem-method :BIT-BLIT (window source s-x s-y width height destination d-x d-y))

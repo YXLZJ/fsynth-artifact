@@ -1,0 +1,1 @@
+(v-def-glsl-template-fun space-boundary-convert (x) "#-SPACEBOUNDARYCONVERT(~a)" (v-type) 0)

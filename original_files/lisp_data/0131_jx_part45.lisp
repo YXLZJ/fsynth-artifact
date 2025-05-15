@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_CreateEmptyObject" create-empty-object) :bool (value :pointer))

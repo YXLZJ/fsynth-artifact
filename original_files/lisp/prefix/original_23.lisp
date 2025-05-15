@@ -1,1 +1,0 @@
-(contemptuousness (is (this (

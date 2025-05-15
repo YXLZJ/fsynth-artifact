@@ -1,1 +1,0 @@
-{ k=98; ^=63; while (k-$) if (k<l) l=l-k; else k=k-l; }

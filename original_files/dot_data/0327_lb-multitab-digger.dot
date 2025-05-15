@@ -1,0 +1,99 @@
+    /*生成命令:
+$ dot -Tpng lb-multitab-digger.dot -o lb-multitab-digger.png
+ -Tcmapx -o lb-crx-roles.map
+    全局设定
+    plaintext
+{{{#!GraphViz dot
+    */
+
+digraph G4Lmultitabdigger {
+    /*全局设定*/
+    graph [label="多标签管理-分类挖掘{流程图}"
+        ,fontsize=14.0
+        ,fontname="WenQuanYi Micro Hei"
+        ,labeljust="l",labelloc="t",center=1
+        ,ranksep=0.3,center=1,ratio=compress
+        ,rankdir=TB
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,fontname="WenQuanYi Micro Hei"
+        ,shape=component 
+        ];
+
+    edge [fontsize=9.0,fontcolor="#333333"
+        ,fontname="WenQuanYi Micro Hei"
+        ,arrowsize=0.6,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+/*
+    src [label="源码",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="http://code.google.com/p/zoomquiet/source/browse/dot/obp/csdndr1-km.dot?repo=tangle"];
+    /*图元声明
+    start       [label="流程开始/结束",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    box         [label="实体/对象",shape=box];
+    ellipse     [label="行动/节点",shape=ellipse];
+    egg         [label="用户/人物",shape=egg];
+    plaintext   [label="状态/属性",shape=plaintext,fillcolor=whitesmoke];
+    diamond     [label="判别",shape=diamond];
+    note        [label="注释",shape=note];
+    tab         [label="目录/模块",shape=tab];
+    db          [label="数据库",shape=box3d];
+    component   [label="主机/组件",shape=component];
+  ,style="rounded,dotted"];
+    url [label="网址",shape=note];
+    act [label="操作",shape=note];
+*/
+
+    USER [label="用户",shape=egg];
+        close [label="关闭",shape=box];
+        revert [label="恢复",shape=box];
+        hide [label="隐藏",shape=box];
+
+    browser [label="浏览器"];
+
+    TAB [label="标签",shape=tab];
+
+    tabStore [label="标签仓库",shape=box3d];
+    bmStore [label="书签仓库",shape=box3d];
+    hisStore [label="访问历史",shape=box3d];
+    tagStore [label="特征仓库",shape=box3d];
+
+    reTAB [label="分类挖掘机",shape=component];
+        groups [label="分组数据",shape=note];
+    doTAB [label="标签控制器",shape=component];
+
+
+    /*图例关系
+    */
+    USER->browser  [label="1.0\n请求网址",style="dotted"];
+    browser->TAB   [label="1.1"];
+        TAB->reTAB->groups [label="1.2"];
+        groups->tabStore [label="1.3"];
+        {tabStore bmStore hisStore}->reTAB [label="1.4"];
+        reTAB->tagStore [label="1.5"];
+        
+    USER->browser [label="2.0\n操作请求",style="dotted"];
+    browser->doTAB [label="2.1"];
+        doTAB->tagStore [label="2.2"];
+        tagStore->browser [label="2.3"];
+        browser->{close revert hide} [label="2.4"];
+        {close revert hide}->doTAB->tabStore [label="2.5"];
+
+/*
+    { rank=same; AC    srvAC; }
+    { rank=same; COMM    commander; }
+    { rank=same; DONE   uriStore; }
+
+    AC[label="认证准备",shape=plaintext];
+    COMM[label="推荐阶段",shape=plaintext];
+    DONE[label="完成阶段",shape=plaintext];
+    AC->COMM->DONE;
+*/
+    edge [style=invis];
+
+}
+

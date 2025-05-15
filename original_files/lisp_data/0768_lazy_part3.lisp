@@ -1,0 +1,1 @@
+(defpackage :lazy (:use :common-lisp :test :strings))

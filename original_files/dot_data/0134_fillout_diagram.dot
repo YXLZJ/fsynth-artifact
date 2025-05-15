@@ -1,0 +1,59 @@
+/* https://graphviz.org/doc/info/attrs.html */
+/* https://graphviz.org/doc/info/shapes.html#html */
+/* https://www.freeformatter.com/html-entities.html */
+
+/* compile with this command: */
+/* dot fillout_diagram.dot -Tpdf -o fillout_diagram.pdf */
+
+digraph workflow {
+    label="Mutation Fillout Across Samples"
+    labelloc="t"
+    rankdir=LR; # edges align horizontally
+    splines="ortho"
+    /* graph [ bgcolor=lightgray, resolution=128, fontname=Arial, fontcolor=blue, fontsize=12 ]; */
+    graph [fontname = "helvetica", compound=true, fontsize=12];
+    node [fontname = "helvetica", style=rounded, shape=record];
+    edge [fontname = "helvetica"];
+
+/* a sample with a mutation */
+Sample1_before[label=<
+Sample 1 <BR/>
+<FONT POINT-SIZE="8" COLOR="red"><BR/>NRAS c.181C&gt;A ref=3, alt=297</FONT>
+>]
+
+/* a sample without a mutation */
+Sample2_before[label=<
+Sample 2 <BR/>
+<FONT POINT-SIZE="8" COLOR="blue"><BR/>BRCA2 c.6803G&gt;T ref=200, alt=80</FONT>
+>]
+
+/* sample after fillout */
+Sample1_after[label=<
+Sample 1 <BR/>
+<FONT POINT-SIZE="8" COLOR="red"><BR/>NRAS c.181C&gt;A ref=3, alt=297</FONT><BR/>
+<FONT POINT-SIZE="8" COLOR="blue"><BR/>BRCA2 c.6803G&gt;T ref=300, alt=0</FONT>
+>]
+
+Sample2_after[label=<
+Sample 2 <BR/>
+<FONT POINT-SIZE="8" COLOR="blue"><BR/>BRCA2 c.6803G&gt;T ref=200, alt=80</FONT><BR/>
+<FONT POINT-SIZE="8" COLOR="red"><BR/>NRAS c.181C&gt;A ref=100, alt=400</FONT>
+>]
+
+    subgraph cluster_before_fillout { /* NOTE: label must start with "cluster" */
+        label="Before Fillout"
+        /* force them to display in this order next to each other */
+        Sample1_before -> Sample2_before [style=invis]
+        DUMMY_before [shape=point style=invis]
+    }
+
+    subgraph cluster_after_fillout {
+        label="After Fillout"
+        Sample1_after -> Sample2_after [style=invis]
+        DUMMY_after [shape=point style=invis]
+    }
+
+    /* force order of clusters */
+    /* connect the dmp2cmo subgraph to usages subgraph */
+    DUMMY_before -> DUMMY_after [ltail=cluster_before_fillout lhead=cluster_after_fillout style=invis]
+}

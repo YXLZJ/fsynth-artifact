@@ -1,9 +1,0 @@
-*
-  "name": "Jane Doe",
-  "age": 28,
-  "address": {
-    "street": "123 Elm St",
-    "city": "Springfield"
-  },
-  "hobbies": ["reading", "swimming"]
-}

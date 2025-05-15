@@ -1,0 +1,104 @@
+{
+  "characters": [
+    {
+      "id": "1",
+      "firstName": "Drizzt",
+      "lastName": "Do'Urden",
+      "race": "Drow",
+      "deity": "Mielikki",
+      "gender": "Male",
+      "description": "Drizzt Do'Urden also called Drizzt Daermon N'a'shezbaernon, was a male drow ranger. He was an atypical drow who had forsaken both the evil ways of his people and their home in the Underdark, to become the legendary hero of the North.",
+      "avatarUrl": "https://i.imgur.com/2U4ds6j.jpg"
+    },
+    {
+      "id": "2",
+      "firstName": "Guenhwyvar",
+      "lastName": "",
+      "race": "Panther",
+      "deity": "Doesn't have",
+      "gender": "Female",
+      "description": "Guenhwyvar was a black panther who resided on the Astral Plane. She was summoned to the Prime Material Plane by the use of an onyx Figurine of Wondrous Power.",
+      "avatarUrl": "https://i.imgur.com/KqndMOX.jpg"
+    },
+    {
+      "id": "3",
+      "firstName": "Catti-brie",
+      "lastName": "",
+      "race": "Human",
+      "deity": "Dumanthoin",
+      "gender": "Female",
+      "description": "Catti-brie was a female human and a friend and later wife[11] to Drizzt Do'Urden. She was a member of the Companions of the Hall and, later, a chosen of the goddess Mielikki. She was reincarnated as a Bedine girl named Ruqiah in 1463 DR",
+      "avatarUrl": "https://i.imgur.com/aPZm6dA.jpg"
+    },
+    {
+      "id": "4",
+      "firstName": "Bruenor",
+      "lastName": "Battlehammer",
+      "race": "Dwarf",
+      "deity": "Moradin",
+      "gender": "Male",
+      "description": "Bruenor Battlehammer was the eighth, tenth and thirteenth king of Mithral Hall from 1356 DR - 1362 DR and 1370 DR - 1409 DR. He was the dwarven adoptive father of Catti-brie and Wulfgar, friend to Drizzt Do'Urden and Regis, crafter of Aegis-fang, and a member of the Companions of the Hall. He was reincarnated in 1463 DR as Reginald Roundshield of Citadel Felbarr.",
+      "avatarUrl": "https://i.imgur.com/jjyCH55.jpg"
+    },
+    {
+      "id": "5",
+      "firstName": "Wulfgar",
+      "lastName": "",
+      "race": "Human",
+      "deity": "Tempus",
+      "gender": "Male",
+      "description": "Wulfgar, son of Beornegar, was the barbarian hero of Icewind Dale, and one of the Companions of the Hall along with Drizzt Do'Urden and his companion, Guenhwyvar, Cattie-brie, Regis, and Bruenor Battlehammer. He worshipped Tempus, the god of battle.[12] He was reborn, along with the rest of the deceased Companions, through the power of the goddess Mielikki, and he rejoined his friends in 1484 DR.",
+      "avatarUrl": "https://i.imgur.com/n5LSe19.jpg"
+    },
+    {
+      "id": "6",
+      "firstName": "Regis",
+      "lastName": "",
+      "race": "Halfling",
+      "deity": "Unknown",
+      "gender": "Male",
+      "description": "Regis, jokingly called Rumblebelly by Bruenor Battlehammer,[6] was the halfling member of the adventuring group known as the Companions of the Hall. He was reincarnated in 1463 DR as Spider Parrafin",
+      "avatarUrl": "https://i.imgur.com/jYmtSx9.jpg"
+    },
+    {
+      "id": "7",
+      "firstName": "Zaknafein",
+      "lastName": "Do'Urden",
+      "race": "Drow",
+      "deity": "Unknown",
+      "gender": "Male",
+      "description": "Zaknafein Do'Urden was the famed weapons master of House Daermon N'a'shezbaernon, more commonly known as House Do'Urden. He was also Drizzt Do'Urden's father, his mentor and his dearest friend. It was he who gave Drizzt the courage[citation needed] to leave Menzoberranzan and trained him to become an excellent warrior. Zaknafein also played a great part in shaping his personality, protecting his son from the truth of Menzoberranzan for as long as he could.",
+      "avatarUrl": "https://i.imgur.com/Jl3v4YS.jpg"
+    },
+    {
+      "id": "8",
+      "firstName": "Artemis",
+      "lastName": "Entreri",
+      "race": "Human",
+      "deity": "Unknown",
+      "gender": "Male",
+      "description": "Artemis Entreri was a ruthless assassin and the former arch-nemesis of Drizzt Do'Urden. A cunning and tactical assassin, Entreri lived an empty life, devoid of any kind of pleasure, existing only to kill. The passage of time caused him to soften his sentiments, but never his fighting edge. He was credited with being one of the most feared and effective assassins in Faerûn.",
+      "avatarUrl": "https://i.imgur.com/l7Cn3H3.jpg"
+    },
+    {
+      "id": "9",
+      "firstName": "Dahlia",
+      "lastName": "Sin'felle",
+      "race": "Elf",
+      "deity": "Unknown",
+      "gender": "Female",
+      "description": "Dahlia Sin'felle, originally known as Dahlia Syn'dalay, was a young elf originally in the service of Szass Tam. She later traveled for a time with Drizzt Do'Urden and became his lover.[6][5] After her apparent death, she was rescued by Quenthel Baenre to serve as the figurehead matron mother of the restored House Do'Urden.",
+      "avatarUrl": "https://i.imgur.com/bnhFNwx.jpg"
+    },
+    {
+      "id": "10",
+      "firstName": "Malice",
+      "lastName": "Do'Urden",
+      "race": "Drow",
+      "deity": "Lolth",
+      "gender": "Female",
+      "description": "Malice Do'Urden was matron mother of House Do'Urden of Menzoberranzan until her death. She was a strong high priestess of Lolth, although her fall was in losing the favor of Lolth.",
+      "avatarUrl": "https://i.imgur.com/2C77QPU.jpg"
+    }
+  ]
+}

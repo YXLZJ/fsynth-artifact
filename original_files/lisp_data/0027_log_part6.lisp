@@ -1,0 +1,5 @@
+(define-condition fatal-error (cl:error)
+  ((message :reader fatal-error-message :initarg :message :type (or null string)))
+  (:documentation "An error caused by the log:fatal.")
+  (:report (lambda (e s)
+             (format s "~@[~A~]" (fatal-error-message e)))))

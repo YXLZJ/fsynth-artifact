@@ -1,0 +1,93 @@
+digraph prolog {
+
+# *************
+# Graph options
+# *************
+
+newrank=true;
+concentrate=true;
+compound=true;
+graph [rankdir=LR,fontname=Helvetica,fontsize=10,ranksep=1.5];#, ranksep=2.5, nodesep=0.2];
+edge  [arrowhead=vee];
+node  [fontname=Helvetica,fontsize=10];
+
+# **********
+# The ebuild
+# **********
+
+subgraph cluster_leftcol {
+color=gray;
+label=<<i>ebuild</i>>;
+id [label="portage://net-misc/lanmap-81-r3", color=red, width=4, href="../net-misc/lanmap-81-r3.svg"];
+}
+
+# ****************
+# The dependencies
+# ****************
+
+subgraph cluster_midcol {
+color=gray;
+label=<<i>dependencies</i>>;
+subgraph cluster_compile {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>compile</i>>;
+subgraph pack258096 {
+dependency354667 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">install</TD></TR><TR><TD>net-libs</TD></TR><TR><TD>libpcap</TD></TR><TR><TD>none</TD></TR><TR><TD>[[],,,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+id:e -> dependency354667:w [weight=20,style="solid",arrowhead="vee"];
+}
+subgraph cluster_compileandrun {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>compile and run</i>>;
+}
+subgraph cluster_run {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>run</i>>;
+subgraph pack258098 {
+dependency354742 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">run</TD></TR><TR><TD>media-gfx</TD></TR><TR><TD>graphviz</TD></TR><TR><TD>none</TD></TR><TR><TD>[[],,,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+id:e -> dependency354742:w [weight=20,style="solid",arrowhead="odot"];
+subgraph pack258148 {
+dependency354794 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">run</TD></TR><TR><TD>net-libs</TD></TR><TR><TD>libpcap</TD></TR><TR><TD>none</TD></TR><TR><TD>[[],,,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+id:e -> dependency354794:w [weight=20,style="solid",arrowhead="odot"];
+}
+}
+
+# **************
+# The candidates
+# **************
+
+subgraph cluster_choices {
+rank=same;
+color=gray;
+label=<<i>candidates</i>>;
+
+subgraph choice256904 {
+color=black;
+nodesep=1;
+choice1101011164510810598115471081059811299971124557575757 [label="portage://net-libs/libpcap-9999", color=red, width=4,href="../net-libs/libpcap-9999.svg"];
+choice11010111645108105981154710810598112999711245494649484653 [label="portage://net-libs/libpcap-1.10.5", color=red, width=4,href="../net-libs/libpcap-1.10.5.svg"];
+dependency354667:e -> choice1101011164510810598115471081059811299971124557575757:w [style=dotted,weight="100"];
+dependency354667:e -> choice11010111645108105981154710810598112999711245494649484653:w [style=dotted,weight="100"];
+}
+subgraph choice256924 {
+color=black;
+nodesep=1;
+choice10910110010597451031021204710311497112104118105122454950465046494511449 [label="portage://media-gfx/graphviz-12.2.1-r1", color=red, width=4,href="../media-gfx/graphviz-12.2.1-r1.svg"];
+dependency354742:e -> choice10910110010597451031021204710311497112104118105122454950465046494511449:w [style=dotted,weight="100"];
+}
+subgraph choice256926 {
+color=black;
+nodesep=1;
+choice1101011164510810598115471081059811299971124557575757 [label="portage://net-libs/libpcap-9999", color=red, width=4,href="../net-libs/libpcap-9999.svg"];
+choice11010111645108105981154710810598112999711245494649484653 [label="portage://net-libs/libpcap-1.10.5", color=red, width=4,href="../net-libs/libpcap-1.10.5.svg"];
+dependency354794:e -> choice1101011164510810598115471081059811299971124557575757:w [style=dotted,weight="100"];
+dependency354794:e -> choice11010111645108105981154710810598112999711245494649484653:w [style=dotted,weight="100"];
+}
+}
+
+}

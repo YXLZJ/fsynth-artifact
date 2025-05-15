@@ -1,0 +1,87 @@
+digraph {
+
+    // https://graphviz.org/doc/info/shapes.html
+    // fontsize=32 style=filled
+    node [margin=0 width=0.2 shape=circle]
+
+    r_1 [label="!"]
+
+    n_2_1 [label="+"];  n_2_2 [label="-"];  n_2_3 [label="="];  n_2_4 [label=">"]
+    r_1->n_2_1;  r_1->n_2_2;  r_1->n_2_3;  r_1->n_2_4
+
+    n_3_1 [label="+"];  n_3_2 [label="-"];  n_3_3 [label="="];  n_3_4 [label=">"]
+    n_2_3->n_3_1;  n_2_3->n_3_2;  n_2_3->n_3_3;  n_2_3->n_3_4
+
+    n_4_0 [label="!"];  n_4_1 [label="+"];  n_4_2 [label="-"];  n_4_3 [label="="];  n_4_4 [label=">"]
+    n_3_3->n_4_0;  n_3_3->n_4_1;  n_3_3->n_4_2;  n_3_3->n_4_3;  n_3_3->n_4_4
+
+
+    r_2 [label="+"]
+
+    p_2_1 [label="+"];  p_2_2 [label="-"];  p_2_3 [label="="]
+    r_2->p_2_1;  r_2->p_2_2;  r_2->p_2_3
+
+    p_3_1 [label="+"];  p_3_2 [label="-"]
+    p_2_1->p_3_1;  p_2_1->p_3_2
+
+
+    r_3 [label="-"]
+
+    m_2_1 [label="-"];  m_2_2 [label="="];  m_2_3 [label=">"]
+    r_3->m_2_1;  r_3->m_2_2;  r_3->m_2_3
+
+    m_3_1 [label="!"];  m_3_2 [label="="];  m_3_3 [label=">"]
+    m_2_1->m_3_1;  m_2_1->m_3_2;  m_2_1->m_3_3
+
+    m_4_1 [label=">"]
+    m_2_2->m_4_1
+
+
+    // r_4 [label="="]
+
+    // e_2_1 [label="="];  e_2_2 [label=">"];  e_3_1 [label="="]
+    // r_4->e_2_1->e_3_1;  r_4->e_2_2
+
+
+}
+
+/*
+std::vector<OperatorInfo> operatorInfos = { { UMBA_TOKENISER_TOKEN_OPERATOR_LOGICAL_NOT             , "!"    }
+                                          , { 555                                                   , "!+"   }
+                                          , { 556                                                   , "!-"   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_NOT_EQUAL               , "!="   }
+                                          , { 557                                                   , "!>"   }
+
+                                          , { 558                                                   , "!=+"  }
+                                          , { 559                                                   , "!=-"  }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_STRICT_NOT_EQUAL        , "!=="  }
+                                          , { 560                                                   , "!=>"  }
+
+                                          , { 561                                                   , "!==!" }
+                                          , { 562                                                   , "!==+" }
+                                          , { 563                                                   , "!==-" }
+                                          , { 564                                                   , "!===" }
+                                          , { 565                                                   , "!==>" }
+
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_ADDITION                , "+"    }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_INCREMENT               , "++"   }
+                                          , { 566                                                   , "+-"   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_ADDITION_ASSIGNMENT     , "+="   }
+                                          , { 567                                                   , "+++"  }
+                                          , { 568                                                   , "++-"  }
+
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_SUBTRACTION             , "-"    }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_DECREMENT               , "--"   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_SUBTRACTION_ASSIGNMENT  , "-="   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_STRUCTURE_DEREFERENCE   , "->"   }
+                                          , { 668                                                   , "--!"  }
+                                          , { 669                                                   , "--="  }
+                                          , { 667                                                   , "-->"  }
+                                          , { 666                                                   , "-=>"  }
+
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_ASSIGNMENT              , "="    }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_EQUAL                   , "=="   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_LAMBDA                  , "=>"   }
+                                          , { UMBA_TOKENISER_TOKEN_OPERATOR_STRICT_EQUAL            , "==="  }
+                                          };
+*/

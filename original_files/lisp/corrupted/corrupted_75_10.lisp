@@ -1,1 +1,0 @@
-(priest (worship (god)) (bless (congregation*))

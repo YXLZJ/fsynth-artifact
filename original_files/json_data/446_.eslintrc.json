@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      },
+      "alias": {
+        "map": [
+          ["src", "./src/"],
+          ["components", "./src/components/"],
+          ["utils", "./src/utils/"],
+          ["services", "./src/services/"],
+          ["demo", "./src/demo/"],
+          ["plugin", "./src/plugin/"]
+        ],
+        "extensions": [".ts", ".js", ".tsx"]
+      }
+    }
+  },
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "no-shadow": "off",
+    "no-param-reassign": [2, { "props": false }],
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-var-requires": 0
+  }
+}

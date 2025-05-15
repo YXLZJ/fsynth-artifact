@@ -1,9 +1,0 @@
-{
-  "name": "Stromboli",
-  "type": "Volcano",
-  "location": {*    "country": "Italy",
-    "island": "Stromboli"
-  },
-  "status": "Active",
-  "eruptionStyle": "Strombolian"
-}

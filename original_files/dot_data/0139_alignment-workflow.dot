@@ -1,0 +1,24 @@
+#
+# see graphviz for associated tools (e.g., dot)
+#
+
+digraph pairwise {
+    bgcolor="transparent";
+    #rankdir=LR;
+    #labelloc="t";
+    a1 [label="Names", shape="box"];
+    b1 [label="parse"];
+    c1 [label="Parsed Names", shape="box"];
+    d1 [label="Taxonomic Resource(s)", shape="box"];
+    e1 [label="align"];
+    f1 [label="Alignment Report", shape="box"];
+    a1 -> b1;
+    b1 -> c1;
+
+    c1 -> e1;
+    d1 -> e1;
+    
+    e1 -> f1;
+    
+}
+

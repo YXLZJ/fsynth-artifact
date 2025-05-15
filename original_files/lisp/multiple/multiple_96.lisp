@@ -1,1 +1,0 @@
-(speleologist (explore (cave (syste: (chamber (rock formations)))[))

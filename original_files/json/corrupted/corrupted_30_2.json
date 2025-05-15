@@ -1,9 +1,0 @@
-{
-  "name": "Septembrian",
-  "age": *8,
-  "location": {
-    "city": "Melbourne",
-    "country": "Australia"
-  },
-  "interests": ["coding", "traveling", "music"]
-}

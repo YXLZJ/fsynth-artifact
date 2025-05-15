@@ -1,1 +1,0 @@
-(pathogenesis (infection (virus)) (response (immune)))

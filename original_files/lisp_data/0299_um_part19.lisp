@@ -1,0 +1,1 @@
+(defop 4 MUL (setf (:reg a) (mod32 (* (:reg b) (:reg c)))))

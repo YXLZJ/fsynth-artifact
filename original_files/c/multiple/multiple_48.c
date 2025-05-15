@@ -1,1 +1,0 @@
-{ g=48; h=96; whil' (g-h) if (g<h) h=h-g; else g|g-h; }

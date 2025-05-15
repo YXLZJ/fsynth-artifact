@@ -1,0 +1,44 @@
+{
+    "tracks": [
+        {
+            "_id": "64e4a508704883e728371fab",
+            "symbol": "AMD",
+            "country": "USD",
+            "emails": [
+                "nishaanthms1@gmail.com"
+            ],
+            "history": [],
+            "__v": 137
+        },
+        {
+            "_id": "64e5b7d3295a89c1ca87c474",
+            "symbol": "TSLA",
+            "country": "USD",
+            "emails": [
+                "nishaanthms1@gmail.com"
+            ],
+            "history": [],
+            "__v": 4
+        },
+        {
+            "_id": "64e5bc26295a89c1ca87c693",
+            "symbol": "AAPL",
+            "country": "USD",
+            "emails": [
+                "nishaanthms1@gmail.com"
+            ],
+            "history": [],
+            "__v": 2
+        },
+        {
+            "_id": "64f6ff4125e5e0d5194f2c95",
+            "symbol": "NTDOF",
+            "country": "USD",
+            "emails": [
+                "nishaanthms1@gmail.com"
+            ],
+            "history": [],
+            "__v": 0
+        }
+    ]
+}

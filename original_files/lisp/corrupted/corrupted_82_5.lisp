@@ -1,1 +1,0 @@
-*birdwoman (wings (left) (right)) (feathers (color brown) (length 30cm)) (habitat (forest) (coast)))

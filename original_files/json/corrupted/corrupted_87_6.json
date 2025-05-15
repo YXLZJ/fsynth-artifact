@@ -1,9 +1,0 @@
-{
-  "name": "rheometry",
-  "data"* {
-    "value1": 25,
-    "value2": 30.4,
-    "status": "active"
-  },
-  "timestamp": "2023-09-15T12:34:56Z"
-}

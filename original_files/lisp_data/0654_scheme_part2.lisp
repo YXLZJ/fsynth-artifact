@@ -1,0 +1,6 @@
+(define-regex-lexer scheme-lexer () ()
+  (:title "Scheme")
+  (:description "Lexer for Scheme code.")
+  (:tags "scheme" "scm")
+  (:filenames "*.scm" "*.ss")
+  (:mime-types "text/x-scheme" "application/x-scheme"))

@@ -1,0 +1,22 @@
+strict digraph "Knowledge Graph" {
+    KG [label = "Knowledge Graph";];
+    wiki [label = "wiki pedia";URL = "https://wikipedia.org";];
+    KG -> wiki;
+    SAT_solver [label = "SAT solver";shape = diamond;];
+    Ycombinator [URL = "news.ycombinator.com";];
+    SAT_solver -> Ycombinator [URL = "https://news.ycombinator.com/item?id=36087464";];
+    SAT_solver -> wiki [URL = "https://en.wikipedia.org/wiki/SAT_solver";];
+    rust [weight = 5;label = "Rust Programming Language";];
+    rust -> C [showboxes = 1; label = "dynamic library"; URL = "https://graphviz.org/docs/edges/";];
+    
+    
+    subgraph GraphViz {
+        node [color = "#141f88";];
+        label = "GraphViz";
+        fontname = "Courier New";
+        URL = "https://graphviz.org/doc/info/lang.html";
+    }
+    // mention zulip
+    subgraph Rust {}
+    subgraph Isabelle {}
+}

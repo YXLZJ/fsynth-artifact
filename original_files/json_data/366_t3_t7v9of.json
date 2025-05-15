@@ -1,0 +1,37 @@
+{
+  "author": {
+    "id": "t2_5jzn8",
+    "name": "cro5point"
+  },
+  "date": {
+    "day": 1646524800,
+    "full": 1646558971,
+    "month": 1646092800,
+    "week": 1646524800
+  },
+  "id": "t3_t7v9of",
+  "picture": {
+    "filesize": 594790,
+    "fullUrl": "https://preview.redd.it/h1geuds5eql81.png?width=3000&format=png&auto=webp&s=55664830717580c274111b3a7a7fa829d2c6ba67",
+    "hash": "3653c52bc2",
+    "height": 640,
+    "lqip": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC0klEQVQokTWSW2/ScADFm/jsB3B70kefjE9qTGa8cBkDWkpb2v7b0tKWXhlsdaVAyxhjGwN24bKxSzbjsgsXN3WLDybTz+A3MpiYnPxyXn7n6UBHVXVeQTgsCKJ+OuqfMPKfsJ+K+gDsB3CAQQNMbBLo16XXvzZrPV4zEUWMSHxYlmFZiaoqMumpiMjNcUSAQSZzLBqA7gbO9kBNr4tsWWDyOLBxqUKzLpWqxDELlVyctFBsAUstxjUxQkZ8kLdIFrZYLkeFVBAwUXgBw5Zwv4ombASej3F5AreQoIGxLr12IpVsEmoWBVmY2wHPF2xcKwr2pphZFzJ1pnoklvtipsYpFYIpIpyHrZ7Kg7EF/Ry681lUlsLpPOFs8O0rY/VY64yNvWuj91Vvn2TMZSCVUa1Gegfi1dCC7i+95qFwE54aBafK21T3xlj/JDXP1e7Y2B1p/WE2v8tzTgLYXOVYvB050O+Lcn1f+DI3PQxOW3Vyd6BXjlOty4nQHundsVndAVIBR7JY7URurvLQ/bnbOFPUEqkWMMHD6qdye6R3hkp3pHXHemtkdKQXljnLuEy5x4tMCPp+bu9em1SVEDzSqNHL+8LmmVS/cVrjhe4XvXmmaNU4sAnaoZY2QBIPQj8GbrNF6Po7oZxQK4S7J3QGevlmU749aHwrrPR5roKlPZqyE3oeZ2MBqL7O3c0+up95mDRDdAGoK2ypn24calsn4s65mttk+QKWzKG8m9BycRDxQXIydJl+dhB9guqx9zksw7/aTzzVHbgizWQLqFqjKBt5KyNEiVLmUQb2QyAWtEoJaZmkSzS5Fu+hj/+8fOCJb3CHl0q0skIkiwSxiKVXwaJDUGEfxMQCIOpLgZCsRM2PhJsJ7pivnQb42OadjlD4l2KXbw3UvEeScz6IRYMTBw7QEd/k3vFZjolksvG8l/A2mNbndG9k9IfmxVer4SXJ8Ie/iKdKl6HnP4sAAAAASUVORK5CYII=",
+    "url": "https://preview.redd.it/h1geuds5eql81.png?width=640&crop=smart&auto=webp&s=cc670d3d418b08097c2b4623f2d69fcda4659f3c",
+    "width": 640
+  },
+  "score": {
+    "comments": 1,
+    "downs": 0,
+    "isCurated": false,
+    "ratio": 0.81,
+    "ups": 9,
+    "value": 9
+  },
+  "subreddit": {
+    "id": "t5_3isai",
+    "name": "dndmaps"
+  },
+  "tags": ["Encounter"],
+  "title": "Simple encounter maps i made. use as you like.",
+  "url": "https://www.reddit.com/r/dndmaps/comments/t7v9of/simple_encounter_maps_i_made_use_as_you_like/"
+}

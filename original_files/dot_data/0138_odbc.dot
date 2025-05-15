@@ -1,0 +1,28 @@
+//
+// graphviz-dot-mode
+//
+// M-x compile
+// C-c p
+//
+
+digraph odbc {
+
+	edge[dir=none]
+	
+	application -> odbc_manager [ label = "DSN" ]
+	odbc_manager -> oracle_odbc_driver
+	odbc_manager -> mysql_odbc_driver
+	oracle_odbc_driver -> oracle_database
+	mysql_odbc_driver -> mysql_database
+
+	subgraph cluster_odbc_driver {
+		oracle_odbc_driver
+		mysql_odbc_driver
+	}
+	
+// 	as -> { storage, database }
+// 	as -> storage
+// 	as -> database[dir=back, color=red]
+
+// 	{ rank = same; as mon}
+}

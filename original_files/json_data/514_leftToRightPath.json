@@ -1,0 +1,202 @@
+[
+  [
+    null,
+    null,
+    null,
+    {
+      "symbol": "O",
+      "color": "grey"
+    },
+    {
+      "symbol": "A",
+      "color": "green"
+    },
+    {
+      "symbol": "D",
+      "color": "cyan"
+    },
+    {
+      "symbol": "A",
+      "color": "red"
+    },
+    null,
+    null,
+    null
+  ],
+  [
+    null,
+    null,
+    {
+      "symbol": "E",
+      "color": "magenta"
+    },
+    {
+      "symbol": "F",
+      "color": "blue"
+    },
+    {
+      "symbol": "C",
+      "color": "green"
+    },
+    {
+      "symbol": "E",
+      "color": "green"
+    },
+    {
+      "symbol": "D",
+      "color": "green"
+    },
+    null,
+    null
+  ],
+  [
+    null,
+    {
+      "symbol": "C",
+      "color": "cyan"
+    },
+    {
+      "symbol": "D",
+      "color": "blue"
+    },
+    {
+      "symbol": "C",
+      "color": "yellow"
+    },
+    {
+      "symbol": "B",
+      "color": "yellow"
+    },
+    {
+      "symbol": "B",
+      "color": "blue"
+    },
+    {
+      "symbol": "A",
+      "color": "cyan"
+    },
+    null
+  ],
+  [
+    {
+      "symbol": "D",
+      "color": "red",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "F",
+      "color": "cyan",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "B",
+      "color": "red",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "C",
+      "color": "magenta",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "E",
+      "color": "yellow",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "B",
+      "color": "cyan",
+      "playedBy": "black",
+      "lastPlayed": false
+    },
+    {
+      "symbol": "A",
+      "color": "yellow",
+      "playedBy": "black",
+      "lastPlayed": false
+    }
+  ],
+  [
+    null,
+    {
+      "symbol": "F",
+      "color": "yellow"
+    },
+    {
+      "symbol": "E",
+      "color": "red"
+    },
+    {
+      "symbol": "E",
+      "color": "blue"
+    },
+    {
+      "symbol": "F",
+      "color": "green"
+    },
+    {
+      "symbol": "D",
+      "color": "yellow"
+    },
+    {
+      "symbol": "F",
+      "color": "magenta"
+    },
+    null
+  ],
+  [
+    null,
+    null,
+    {
+      "symbol": "A",
+      "color": "blue"
+    },
+    {
+      "symbol": "D",
+      "color": "magenta"
+    },
+    {
+      "symbol": "A",
+      "color": "magenta"
+    },
+    {
+      "symbol": "B",
+      "color": "magenta"
+    },
+    {
+      "symbol": "B",
+      "color": "green"
+    },
+    null,
+    null
+  ],
+  [
+    null,
+    null,
+    null,
+    {
+      "symbol": "C",
+      "color": "blue"
+    },
+    {
+      "symbol": "E",
+      "color": "cyan"
+    },
+    {
+      "symbol": "F",
+      "color": "red"
+    },
+    {
+      "symbol": "C",
+      "color": "red"
+    },
+    null,
+    null,
+    null
+  ]
+]

@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_DefineExtension" define-extension) :void (name :string) (callback :pointer))

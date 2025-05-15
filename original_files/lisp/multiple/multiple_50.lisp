@@ -1,1 +1,0 @@
-(en'osteoma (bone (type (cancellous))< (location (skull)))

@@ -1,0 +1,31 @@
+/*
+  HTML-Like Labels
+  http://www.graphviz.org/content/node-shapes#html
+*/
+digraph db_blog {
+  node [shape=plain margin=0];
+  users [label=<<table cellspacing="0" cellpadding="5" cellborder="0" border="0">
+    <tr><td colspan="2" bgcolor="greenyellow"><b>users</b></td></tr>
+    <tr><td align="left"><b><u>id</u></b></td><td align="left">int(10), not null, pk</td></tr>
+    <tr><td align="left"><b>name</b></td><td align="left">varchar(255)</td></tr>
+  </table>>]
+  articles [label=<<table cellspacing="0" cellpadding="5" cellborder="0" border="0">
+    <tr><td colspan="2" bgcolor="greenyellow"><b>articles</b></td></tr>
+    <tr><td align="left"><b><u>id</u></b></td><td align="left">int(10), not null, pk</td></tr>
+    <tr><td align="left"><b>title</b></td><td align="left">varchar(255)</td></tr>
+    <tr><td align="left"><b>text</b></td><td align="left">varchar(255)</td></tr>
+    <tr><td align="left"><b>user_id</b></td><td align="left">int(10), fk</td></tr>
+  </table>>]
+  comments [label=<<table cellspacing="0" cellpadding="5" cellborder="0" border="0">
+    <tr><td colspan="2" bgcolor="greenyellow"><b>comments</b></td></tr>
+    <tr><td align="left"><b><u>id</u></b></td><td align="left">int(10), not null, pk</td></tr>
+    <tr><td align="left"><b>text</b></td><td align="left">varchar(255)</td></tr>
+    <tr><td align="left"><b>article_id</b></td><td align="left">int(10), fk</td></tr>
+    <tr><td align="left"><b>comment_id</b></td><td align="left">int(10), fk</td></tr>
+  </table>>]
+  edge [style="dashed"]
+  edge [arrowhead="crowodot" arrowtail="teetee" dir="both"]
+  articles -> comments [label="create"]
+  users -> articles [label="has"]
+  users -> comments [label="create"]
+}

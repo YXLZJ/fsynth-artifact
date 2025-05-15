@@ -1,0 +1,5 @@
+(fli:define-foreign-function (%cron-parse-expr "cron_parse_expr")
+    ((expr (:reference-pass :ef-mb-string))
+     (target (:pointer fli-cron-expr))
+     (err (:pointer (:pointer :char))))
+  :result-type :void)

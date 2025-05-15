@@ -1,0 +1,102 @@
+{
+  "type": "force",
+  "categories": [
+    {
+      "name": "source",
+      "keyword": {},
+      "base": "HTMLElement"
+    },
+    {
+      "name": "Ceasar Cipher",
+      "keyword": {},
+      "base": "WebGLRenderingContext"
+    },
+    {
+      "name": "Base64",
+      "keyword": {},
+      "base": "SVGElement"
+    },
+    {
+      "name": "Base32",
+      "keyword": {},
+      "base": "CSSRule"
+    },
+    {
+      "name": "Base16",
+      "keyword": {}
+    },
+    {
+      "name": "md5",
+      "keyword": {}
+    },
+    {
+      "name": "sha1",
+      "keyword": {}
+    },
+    {
+      "name": "sha244",
+      "keyword": {}
+    },
+    {
+      "name": "sha256",
+      "keyword": {}
+    },
+    {
+      "name": "sha384",
+      "keyword": {}
+    },
+    {
+      "name": "sha512",
+      "keyword": {}
+    },
+    {
+      "name": "UrlEncode",
+      "keyword": {}
+    },
+    {
+      "name": "Unicode",
+      "keyword": {}
+    },
+    {
+      "name": "XXencode",
+      "keyword": {}
+    },
+    {
+      "name": "UUencode",
+      "keyword": {}
+    },
+    {
+      "name": "Atbash",
+      "keyword": {}
+    },
+    {
+      "name": "Jsfuck",
+      "keyword": {}
+    },
+    {
+      "name": "Brainfuck",
+      "keyword": {}
+    },
+    {
+      "name": "Polybius",
+      "keyword": {}
+    },
+    {
+      "name": "Fence cipher",
+      "keyword": {}
+    }
+  ],
+  "nodes": [
+    {
+      "name": "raw",
+      "value": 1,
+      "category": 0
+    }
+  ],
+  "links": [
+   {
+    "source": 0,
+    "target": 0
+   }
+  ]
+}

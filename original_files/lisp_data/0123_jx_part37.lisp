@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_New" new) :boolean (value :pointer))

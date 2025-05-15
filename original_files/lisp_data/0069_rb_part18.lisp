@@ -1,0 +1,5 @@
+(defun flip (node)
+  (declare (type node node))
+  (setf (node-red? node) (not (node-red? node))
+	(node-red? (node-left node)) (not (node-red? (node-left node)))
+	(node-red? (node-right node)) (not (node-red? (node-right node)))))

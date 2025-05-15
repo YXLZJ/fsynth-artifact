@@ -1,0 +1,17 @@
+# ANSI Common Lisp: exercise 11.3 (b)
+
+# Made with http://magjac.com/graphviz-visual-editor
+
+# (b)
+graph Gb {
+  edge [len=3]
+  t -- stdobj
+  stdobj -- { c e h }
+  e -- d
+  d -- b
+  c -- b:e
+  h -- {f g}
+  f -- d
+  g -- d
+}
+

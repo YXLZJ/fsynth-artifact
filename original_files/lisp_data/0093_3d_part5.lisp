@@ -1,0 +1,5 @@
+(defclass plotwindow (glop:window)
+  ((1st-pressed :initform nil :accessor 1st-pressed)
+   (zoom :initform 1 :accessor zoom)
+   (xangle :initform 0 :accessor xangle)
+   (yangle :initform 0 :accessor yangle)))

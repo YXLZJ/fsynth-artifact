@@ -1,8 +1,0 @@
-{
-  "name": "John Doe",
-  "age": 30,
-  "address": {
-    "street": "123 Elm St",
-    "city": "Springfield",
-    "zip": "62704"
- 

@@ -1,0 +1,67 @@
+{
+  "url": "https://tularecounty.ca.gov/county/",
+  "requestedUrl": "https://tularecounty.ca.gov/",
+  "timestamp": 1708196195440,
+  "ranks": {
+    "hundos": 38,
+    "performance": 58,
+    "accessibility": 156,
+    "cumulative": 36
+  },
+  "lighthouse": {
+    "version": "11.5.0",
+    "performance": 0.74,
+    "accessibility": 0.95,
+    "bestPractices": 0.96,
+    "seo": 0.93,
+    "total": 358
+  },
+  "firstContentfulPaint": 2174.1,
+  "firstMeaningfulPaint": 2174.1,
+  "speedIndex": 2289.4168680288785,
+  "largestContentfulPaint": 7322.2125000000015,
+  "totalBlockingTime": 0,
+  "cumulativeLayoutShift": 0.017748111596597296,
+  "timeToInteractive": 2174.1,
+  "maxPotentialFirstInputDelay": 16,
+  "timeToFirstByte": 533.4810000000001,
+  "weight": {
+    "summary": "34 requests • 1.3 MiB",
+    "total": 1326968,
+    "image": 852856,
+    "imageCount": 9,
+    "script": 114614,
+    "scriptCount": 7,
+    "document": 18790,
+    "font": 247366,
+    "fontCount": 4,
+    "stylesheet": 92781,
+    "stylesheetCount": 12,
+    "thirdParty": 99896,
+    "thirdPartyCount": 1
+  },
+  "run": {
+    "number": 1,
+    "total": 1
+  },
+  "sidequests": {
+    "-weight.total": 75,
+    "+weight.total": 348,
+    "-weight.document": 87,
+    "+weight.document": 332,
+    "-weight.script": 16,
+    "+weight.script": 404,
+    "-weight.image": 192,
+    "+weight.image": 225,
+    "-weight.font": 222,
+    "+weight.font": 129,
+    "+weight.fontCount": 21,
+    "-timeToFirstByte": 341,
+    "-totalBlockingTime": 1,
+    "-largestContentfulPaint": 131
+  },
+  "axe": {
+    "passes": 232,
+    "violations": 3
+  }
+}

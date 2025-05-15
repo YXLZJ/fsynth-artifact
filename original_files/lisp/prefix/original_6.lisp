@@ -1,1 +1,0 @@
-(ethnologer (studies (cultures (a

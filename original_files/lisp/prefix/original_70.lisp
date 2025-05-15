@@ -1,1 +1,0 @@
-(acupunctuation (treatment (point LI4) (point LV3)) (theory 

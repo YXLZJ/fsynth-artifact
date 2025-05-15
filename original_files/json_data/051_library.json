@@ -1,0 +1,57 @@
+{
+  "library": {
+    "book": [
+      {
+        "issn": "1789138086",
+        "title": "Full Stack Development with Spring Boot 2.0 and React",
+        "month": "6",
+        "year": "2018",
+        "publishedBy": "Packt Publishing",
+        "numberOfPages": "302",
+        "language": "English",
+        "author": "Juha Hinkula",
+        "edition": "1",
+        "borrowed": "false",
+        "lastCustomers": {
+          "customer": [
+            { "id": "A78945623" },
+            { "id": "T89456578" },
+            { "id": "E12035645" },
+            { "id": "A15903576" },
+            { "id": "T26483791" }
+          ]
+        }
+      },
+      {
+        "issn": "1259643883",
+        "title": "Building Wealth One House at a Time, Updated and Expanded",
+        "month": "6",
+        "year": "2016",
+        "publishedBy": "McGraw-Hill Education",
+        "numberOfPages": "256",
+        "language": "English",
+        "author": "John Schaub",
+        "edition": "2",
+        "borrowed": "false"
+      },
+      {
+        "issn": "1602550093",
+        "title": "El arte de cerrar la venta",
+        "month": "10",
+        "year": "2007",
+        "publishedBy": "Grupo Nelson",
+        "numberOfPages": "240",
+        "language": "Spanish",
+        "author": "Brian Tracy",
+        "edition": "1",
+        "borrowed": "false",
+        "lastCustomers": {
+          "customer": [
+            { "id": "T89456578" },
+            { "id": "A15903576" }
+          ]
+        }
+      }
+    ]
+  }
+}

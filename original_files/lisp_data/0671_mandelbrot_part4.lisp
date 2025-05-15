@@ -1,0 +1,11 @@
+(defsketch mandelbrot
+    ((width 600)
+     (height 600)
+     (min-val -1.0)
+     (max-val +1.0)
+     (bound 16.0)
+     (max-iters 100)
+     (the-set (make-mandelbrot-image width height min-val max-val max-iters bound)))
+  (background +black+)
+  (draw the-set)
+  (stop-loop))

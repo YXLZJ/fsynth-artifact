@@ -1,1 +1,0 @@
-((trapezia (base 10) (top 5) (height 8)) (trap

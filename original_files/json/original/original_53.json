@@ -1,8 +1,0 @@
-{
-  "name": "ruiner",
-  "attributes": {
-    "health": 100,
-    "mana": 50
-  },
-  "skills": ["smash", "crush"]
-}

@@ -1,0 +1,29 @@
+#GRAPHVIZ_OUTPUT 
+digraph{ 
+rankdir=LR; 
+splines=ortho; 
+RFP[shape=none,label="RFP"]; 
+GFP[shape=none,label="GFP"]; 
+BFP[shape=none,label="BFP"]; 
+YFP[shape=none,label="YFP"]; 
+fadD[shape=none,label="fadD"]; 
+pLuxStar[shape=none,label="pLuxStar"]; 
+pBAD[shape=none,label="pBAD"]; 
+galEP2[shape=none,label="galEP2"]; 
+R1_PsrA[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841913901_A000_R1_PsrA_gate.png"]; 
+F1_AmeR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841913901_A000_F1_AmeR_gate.png"]; 
+H1_HlyIIR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841913901_A000_H1_HlyIIR_gate.png"]; 
+P1_PhlF[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841913901_A000_P1_PhlF_gate.png"]; 
+A1_AmtR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841913901_A000_A1_AmtR_gate.png"]; 
+pBAD ->YFP ; 
+R1_PsrA ->BFP ; 
+fadD ->R1_PsrA ; 
+H1_HlyIIR ->R1_PsrA ; 
+galEP2 ->H1_HlyIIR ; 
+F1_AmeR ->GFP ; 
+fadD ->F1_AmeR ; 
+P1_PhlF ->F1_AmeR ; 
+pLuxStar ->P1_PhlF ; 
+A1_AmtR ->RFP ; 
+fadD ->A1_AmtR ; 
+} 

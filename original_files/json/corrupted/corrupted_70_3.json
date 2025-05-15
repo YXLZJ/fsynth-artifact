@@ -1,8 +1,0 @@
-{
-  "id": 1,
-  "name": "antiscorbutic",
-  "properties": {
-  * "category": "medicine",
-    "effect": "prevents scurvy"
-  }
-}

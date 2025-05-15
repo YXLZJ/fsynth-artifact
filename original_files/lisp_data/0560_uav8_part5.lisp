@@ -1,0 +1,5 @@
+	(:operator (!communicate_data ?v ?c ?d ?a1 ?a2)
+		   ( (disaster ?d) (cdm ?c) (at ?v ?a1) (cdm_at ?c ?a2) (area ?a1) (area ?a2) (have_picture ?v ?d) (in_range ?a1 ?a2)	)
+		   (	(have_picture ?v ?d)	)
+		   (	(communicated_data ?d)	)
+	)

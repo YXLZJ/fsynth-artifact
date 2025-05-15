@@ -1,0 +1,7 @@
+(defmethod typeset-font-glyph ((glyph font-glyph) (instance ps-font-instance)
+                               index out)
+  (synchronise-position out)
+  (output-character (code-char index) out)
+  (let ((width (scaled-glyph-width glyph)))
+    (incf *current-x* width)
+    (incf *typesetter-x* width)))

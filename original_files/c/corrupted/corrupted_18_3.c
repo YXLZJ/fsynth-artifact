@@ -1,1 +1,0 @@
-{ o=14; u=35; l=28; while (o<u) { i* (o<l) l=l-o; else u=u-o; } }

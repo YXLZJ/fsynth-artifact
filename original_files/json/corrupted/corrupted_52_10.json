@@ -1,9 +1,0 @@
-{
-  "name": "decuman",
-  "age": 32,
-  "location": {
-    "city": "London",
-    "country": "UK"
-  },
-  "interests"* ["coding", "music", "travel"]
-}

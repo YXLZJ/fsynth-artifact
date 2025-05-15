@@ -1,1 +1,0 @@
-{ a=43; b=91; wh*le (a-b) if (a<b) b=b-a; else a=a-b; }

@@ -1,0 +1,84 @@
+digraph g{
+graph [
+	rankdir="LR";
+	bgcolor="#A9CCE3"
+	splines=false;
+];
+node [
+	style = "filled"
+	shape = "record"
+	fillcolor = "white"
+];
+edge [
+	color="red"
+];
+"node0" [
+label = "<f0> 根节点| <f1> 思路\l| <f21> ---------------------------\l| <f22> 各个模块大致讲解\l| <f34> ---------------------------\l| <f35> 总体大致讲解\l"
+];
+"node35" [
+label = "<f0> 总体大致讲解| <f36> &#9;首先程序会扫txt文件夹下所有的文件，用队列que记录名字后，将他们交由mindMap::txtToPng来进行转思维导图\l&#9;其中引入了多线程，因为每个文件之间的读写、处理并没有任何的交集，使用多线程能显著加快速度\l&#9;进入mindMap::txtToPng函数后，尝试读写文件，如果成功，将分配结构体graph给他\l&#9;进行读入、记录语句编号、记录缩进数等预处理后，交由bfs函数\l&#9;即，顺序方式读入（深搜），广度方式处理输出\l&#9;进入bfs后开始主要输出，广搜，每个节点遍历两次子节点，第一遍借助出度，判断子节点有没有必要入光搜队列和连边，第二遍构建当前\l节点。（因为，dot语言中，表格是需要一整句语句的，但是要广搜一边才能得到所有子节点）\l&#9;bfs结束后调用system将dot转png，至此完全结束\l\l"
+];
+"node22" [
+label = "<f0> 各个模块大致讲解...| <f23> 结构体stringProcess，里面有五个字符串\l处理函数\l| <f25> 基本图论结构体graph\l| <f28> dot语法结构体DOT\l| <f30> 生成思维导图结构体mindMap\l"
+];
+"node1" [
+label = "<f0> 思路| <f2> 出处&适用性\l| <f6> 生成思路\l| <f9> 使用方法&特性\l"
+];
+"node30" [
+label = "<f0> 生成思维导图结构体mindMap| <f31> string&nbsp;codeblock(ifstream&nbsp;&fin)&nbsp;&#9;将多行代码块转为一个普通的string语句\l| <f32> void&nbsp;bfs(const&nbsp;unique_ptr&lt;graph&gt;&nbsp;&g,&nbsp;map&lt;int,&nbsp;string&gt;&nbsp;&pId,&nbsp;ofstream&nbsp;&fout)&#9;&#9;广度遍历，输出\ldot语句的主要函数\l| <f33> void&nbsp;txtToPng(const&nbsp;int&nbsp;&fileId,&nbsp;const&nbsp;string&nbsp;&fileName)&#9;对于当前的文本fileName，以缩进\l和代码快的形式读入整个文档，并给每一个字符串读入，分配编号和记录缩\l进数，即预处理，完成后交由bfs函数进行总的输出。\l"
+];
+"node28" [
+label = "<f0> dot语法结构体DOT| <f29> 用于生成DOT头尾、以及边edge和节点node\l所需要的语句\l"
+];
+"node25" [
+label = "<f0> 基本图论结构体graph| <f26> 使用链向式前星，头结点为head，边记作e，使用\lvector+resize实现动态给空间\l| <f27> 其中出度out用来判断出度，也就是还有没有子\l节点，没有就不用往后延伸了\l"
+];
+"node23" [
+label = "<f0> 结构体stringProcess，里面有五个字符串处理函数| <f24> int&nbsp;upLen(int&nbsp;len)&#9;&#9;&#9;&#9;根据当前表格内所有文本最长的那个，计算多少个字符进行换行\lstring&nbsp;ridSuf(const&nbsp;string&nbsp;&s)&nbsp;&#9;&#9;去掉后缀，如&nbsp;思维导图.jpg&nbsp;&#9;→&#9;思维导图\lstring&nbsp;split(int&nbsp;len,const&nbsp;string&nbsp;&s)&#9;&#9;根据upLen算出来的字符数len，对字符串s进行换行处理（使用\\n）\lstring&nbsp;cut(int&nbsp;len,const&nbsp;string&nbsp;&s)&#9;&#9;用于截取标题，防止过长（这个和上个都有考虑会卡在汉字ascii之间截断的情况\l）\lstring&nbsp;deal(const&nbsp;string&nbsp;&s)&#9;&#9;&#9;将字符串s的处理转移，防止被识别出html的字符\l\l"
+];
+"node9" [
+label = "<f0> 使用方法&特性| <f10> 对于每个表格，包括了当前节点和他的所有子节点。\l| <f11> 其中当前节点作为标题，仅保留前面若干字符，防止标\l题过长\l| <f12> 可以参考本文档的方式来使用\l| <f13> 通过缩进tab，比如这一行缩进数是2，那么会自动找到\l前面缩进比他小的，\l| <f14> 比如前面的&quot;使用方法&特性&quot;，缩进为1，本行变成他的\l子节点\l| <f15> 可以使用三个`来进行markdown的代码块语法，并且这三个\l`也收到缩进影响\l| <f17> 记得要使用三个`来进行收尾，不然程序可能会bug\l| <f18> dot本身是会识别html语法的，因此程序本身对一些符号\l转义了一下，\l| <f19> 保证不会被识别出html，但是可能并没有完成覆盖。\l| <f20> （可能习惯称呼当前节点时，实际是指包括当前节点和\l他所有子节点的表格，请结合png具体来意会一下\l"
+];
+"node6" [
+label = "<f0> 生成思路| <f7> 建立3个文件夹，在txt下放要变思维导图的\l所有文本\l| <f8> 程序根据txt内容生成dot后，再调用system语\l句，dot生成png图片\l"
+];
+"node2" [
+label = "<f0> 出处&适用性| <f3> 在该笔记网站发现一种dot语法，可以快\l速出节点图\l| <f4> https://www.yuque.com/yuque/gpvawt/graphviz\l| <f5> 像html，本身也支持html，以.dot为后缀格\l式\l"
+];
+"node15" [
+label = "<f0> 可以使用三个`来进行markdown的代...| <f16> 比如这样，在里面会视为一整个模块，\l&#9;此时会保留块中的格式，不受到缩进思路的影响\l依靠这两种方法基本可以快速完成编写，并且简单方便\l\l"
+];
+"node0":f35 -> "node35":f0 [
+id = 0
+];
+"node0":f22 -> "node22":f0 [
+id = 1
+];
+"node0":f1 -> "node1":f0 [
+id = 2
+];
+"node22":f30 -> "node30":f0 [
+id = 0
+];
+"node22":f28 -> "node28":f0 [
+id = 1
+];
+"node22":f25 -> "node25":f0 [
+id = 2
+];
+"node22":f23 -> "node23":f0 [
+id = 3
+];
+"node1":f9 -> "node9":f0 [
+id = 4
+];
+"node1":f6 -> "node6":f0 [
+id = 7
+];
+"node1":f2 -> "node2":f0 [
+id = 8
+];
+"node9":f15 -> "node15":f0 [
+id = 20
+];
+}

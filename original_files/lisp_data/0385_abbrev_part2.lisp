@@ -1,0 +1,5 @@
+(defun preceding-word (point)
+  (with-point ((cur point)
+               (end point))
+    (skip-symbol-backward cur)
+    (points-to-string cur end)))

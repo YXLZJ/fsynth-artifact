@@ -1,9 +1,0 @@
-{
-  "name": "Sesuto",
-  ^age": 29,
-  "location": {
-    "city": "Lusaka",
-    "country": "Zam#ia"
-  },
-  "interests": ["programming", "reading", "travel"]
-}

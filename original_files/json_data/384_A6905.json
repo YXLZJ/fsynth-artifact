@@ -1,0 +1,16 @@
+{
+ "PrintNo":"A6905","Session":2025,"Chamber":"ASSEMBLY","BillType":"Assembly","Published":"2025-03-18T13:09:21.227946Z",
+ "Status":"IN_ASSEMBLY_COMM","Committee":"Higher Education",
+ "Milestones":[{"Type":"IN_ASSEMBLY_COMM","Date":"2025-03-18","Committee":"Higher Education"}],
+ "Actions":[{"Text":"REFERRED TO HIGHER EDUCATION","Date":"2025-03-18","Chamber":"ASSEMBLY"}],
+ "Sponsors":[
+  {"ID":1528,"Name":"Lester Chang","Short":"CHANG"},{"ID":1238,"Name":"Joe DeStefano","Short":"DESTEFANO"},
+  {"ID":908,"Name":"Karl Brabenec","Short":"BRABENEC"},{"ID":1148,"Name":"Doug Smith","Short":"SMITH"},
+  {"ID":1503,"Name":"Yudelka Tapia","Short":"TAPIA"}
+ ],
+ "Title":"Allows the state and city university of New York system to offer college credits to prospective students",
+ "Summary":"Allows the state and city university of New York system to offer college credits to prospective students based on such prospective student's performance on the regents examinations.",
+ "LawSection":"Education Law","LawCode":"Add §§239-c & 6235, Ed L",
+ "ActClause":"AN ACT to amend the education law, in relation to providing college credits for students who receive high marks on regents examinations",
+ "SameAsPrintNo":"S6696-2025"
+}

@@ -1,0 +1,5 @@
+(:operator (!!visit ?area)
+  ()
+  ()
+  ((visited ?area))
+)

@@ -1,0 +1,65 @@
+{
+  "gpt_result": {
+    "nl_utterance": "Show me the trend of DJIA values over time between January 1, 1914, and October 1, 1929, on a line chart.",
+    "encoded_fields": [
+      {
+        "field": "DATE",
+        "type": "temporal",
+        "nl_ref_type": "explicit",
+        "nl_ref_phrase": "over time"
+      },
+      {
+        "field": "DJIA",
+        "type": "quantitative",
+        "nl_ref_type": "explicit",
+        "nl_ref_phrase": "DJIA values"
+      }
+    ],
+    "constraints": [
+      {
+        "c_type": "task",
+        "c_name": "trend",
+        "c_list": [
+          {
+            "mark": [
+              "bar",
+              "line",
+              "area"
+            ],
+            "encoding": {
+              "x": {
+                "type": "temporal"
+              }
+            }
+          }
+        ],
+        "nl_ref_type": "explicit",
+        "nl_ref_phrase": "trend"
+      },
+      {
+        "c_type": "transform",
+        "c_name": "filter",
+        "c_list": [
+          {
+            "field": "DATE",
+            "range": [
+              {
+                "year": 1914,
+                "month": 1,
+                "day": 1
+              },
+              {
+                "year": 1929,
+                "month": 10,
+                "day": 1
+              }
+            ]
+          }
+        ],
+        "nl_ref_type": "by_value",
+        "nl_ref_phrase": "between January 1, 1914, and October 1, 1929"
+      }
+    ]
+  },
+  "input": "Dataset Information: {\n  \"data samples\": [\n    {\n      \"DATE\": \"1914-12-01\",\n      \"DJIA\": 55.0\n    },\n    {\n      \"DATE\": \"1956-12-01\",\n      \"DJIA\": 492.01\n    },\n    {\n      \"DATE\": \"1922-10-01\",\n      \"DJIA\": 99.75\n    }\n  ],\n  \"column names\": [\n    \"DATE\",\n    \"DJIA\"\n  ]\n}\n\nYour Job:\nI am developing a NL to Data Visualization Dataset. \nPlease help me generate natural language utterance for given dataset and constraints.\nDefinition about the Taks:\n- 'utterance' is what a user would say to make a chart, it can be a question or a command. One NL 'utterance' is in one or two sentences. \n- 'given dataset' is in form of column names, column type, range/unique values of the column.\n- 'constraints' are information about the chart that should be included in the utterance. \n    So we can find a reference phrase in the NL utterance that corresponds to the given constraints. \n- 'reference phrase' can be explicit, ambiguous, and by_value. 'ambiguous' means the phrase can map to more than one columns in the dataset, always a hypernym of column names(depending on the dataset values).\n    For example:\n    {\"column\": \"gdpPercap\", \"nl_ref_type\": \"explicit\", \"nl_ref_phrase\": \"GDP per capita\"},\n    {\"column\": [\"country\",\"continent\"], \"nl_ref_type\": \"ambiguous\", \"nl_ref_phrase\": \"region\"}\n    {\"column\": [\"country\",\"country_short_name\"], \"nl_ref_type\": \"ambiguous\", \"nl_ref_phrase\": \"countries\"}\n    {\"c_type\": \"mark\", \"c_name\": \"point chart\", \"nl_ref_type\": \"explicit\", \"nl_ref_phrase\": \"scatter plot\"}\n    {\"c_type\": \"mark\", \"c_name\": \"arc chart\", \"nl_ref_type\": \"explicit\", \"nl_ref_phrase\": \"pie chart\"}\n    {\"c_type\": \"transform\",\"c_name\": \"filter\",\"c_list\": [{\"field\": \"country\",\"oneOf\": [\"Iceland\",\"Norway\"]}],\"nl_ref_type\": \"explicit\",\"nl_ref_phrase\": \"for countries Iceland and Norway\"},\n    {\"c_type\": \"transform\",\"c_name\": \"filter\",\"c_list\": [{\"field\": \"country\",\"oneOf\": [\"Iceland\",\"Norway\"]}],\"nl_ref_type\": \"by_value\",\"nl_ref_phrase\": \"for Iceland and Norway\"},\n- the 'nl_ref_phrase' for 'ambiguous' columns should be equally near all ambiguous columns, not too near to one of the column since it would not be ambiguous.\n    good example: {\"column\": [\"country\",\"region\"], \"nl_ref_type\": \"ambiguous\", \"nl_ref_phrase\": \"location\"}\n    bad example: {\"column\": [\"country\",\"region\"], \"nl_ref_type\": \"ambiguous\", \"nl_ref_phrase\": \"region\"}\n- You only include given constraints and no other information. \n    For example, if a column name is not in the given constraint, it will not be included in the NL utterance.\n    Also, it a chart mark or chart encoding channel is not in the given constraint, it will not be included in the NL utterance.\n- all 'nl_ref_phrase' shoule be included in the 'nl_utterance'. \n\nThe output format is identical to the input format, but fill in the str blanks(\"...\").\n### Input:\n{\n  \"nl_utterance\": \"...\",\n  \"encoded_fields\": [\n    {\n      \"field\": \"DATE\",\n      \"type\": \"temporal\",\n      \"nl_ref_type\": \"explicit\",\n      \"nl_ref_phrase\": \"...\"\n    },\n    {\n      \"field\": \"DJIA\",\n      \"type\": \"quantitative\",\n      \"nl_ref_type\": \"explicit\",\n      \"nl_ref_phrase\": \"...\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"c_type\": \"task\",\n      \"c_name\": \"trend\",\n      \"c_list\": [\n        {\n          \"mark\": [\n            \"bar\",\n            \"line\",\n            \"area\"\n          ],\n          \"encoding\": {\n            \"x\": {\n              \"type\": \"temporal\"\n            }\n          }\n        }\n      ],\n      \"nl_ref_type\": \"explicit\",\n      \"nl_ref_phrase\": \"...\"\n    },\n    {\n      \"c_type\": \"transform\",\n      \"c_name\": \"filter\",\n      \"c_list\": [\n        {\n          \"field\": \"DATE\",\n          \"range\": [\n            {\n              \"year\": 1914,\n              \"month\": 1,\n              \"day\": 1\n            },\n            {\n              \"year\": 1929,\n              \"month\": 10,\n              \"day\": 1\n            }\n          ]\n        }\n      ],\n      \"nl_ref_type\": \"by_value\",\n      \"nl_ref_phrase\": \"...\"\n    }\n  ]\n}\n\n### Output:"
+}

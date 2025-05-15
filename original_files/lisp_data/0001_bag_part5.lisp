@@ -1,0 +1,8 @@
+(defmethod clear ((bag bag))
+  (let ((objects (%objects bag)))
+    (clrhash (%object->index bag))
+    (loop for i from 0 below (size bag)
+          do (when (aref objects i)
+               (setf (container (aref objects i)) NIL)
+               (setf (aref objects i) NIL)))
+    (setf (size bag) 0)))

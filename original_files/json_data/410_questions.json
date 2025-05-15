@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "Are you currently pregnant or breastfeeding?",
+    "description": "Please select one option.",
+    "options": ["Yes", "No"],
+    "isCheckbox": false,
+    "advice": {
+      "Yes": "Consult your healthcare provider before starting any new skincare regimen."
+    }
+  },
+  {
+    "id": 2,
+    "title": "What is your skin condition like?",
+    "description": "You can select multiple options.",
+    "options": ["Normal", "Dry", "Oily", "Combination", "Sensitive"],
+    "isCheckbox": true,
+    "advice": {
+      "Dry": "Focus on hydrating products like hyaluronic acid or ceramides.",
+      "Oily": "Use lightweight, non-comedogenic moisturizers to avoid clogging pores.",
+      "Sensitive": "Choose products labeled as 'fragrance-free' and 'hypoallergenic.'"
+    }
+  },
+  {
+    "id": 3,
+    "title": "What is your primary skincare goal?",
+    "description": "Please select one option.",
+    "options": ["Hydration", "Acne treatment", "Anti-aging", "Brightening", "Reducing redness/sensitivity"],
+    "isCheckbox": false,
+    "advice": {
+      "Hydration": "Include hydrating serums and moisturizers in your routine.",
+      "Acne treatment": "Look for products containing salicylic acid or benzoyl peroxide.",
+      "Anti-aging": "Consider using products with retinoids or peptides.",
+      "Brightening": "Use vitamin C serums to help even out skin tone."
+    }
+  },
+  {
+    "id": 4,
+    "title": "How often do you experience acne problems?",
+    "description": "Select one option if acne issues are detected.",
+    "options": ["Never", "1-2 times a month", "3-4 times a month", "Always"],
+    "isCheckbox": false,
+    "advice": {
+      "3-4 times a month": "Consider consulting a dermatologist for persistent acne.",
+      "Always": "Seek professional advice to identify potential underlying causes."
+    }
+  },
+  {
+    "id": 5,
+    "title": "Do you have any allergies to specific ingredients?",
+    "description": "You can select multiple options.",
+    "options": ["Nut oils", "Rosemary extract", "Soybean extract", "No allergies"],
+    "isCheckbox": true,
+    "advice": {
+      "Nut oils": "Avoid products containing almond, walnut, or other nut-based oils.",
+      "Rosemary extract": "Check ingredient lists carefully for plant-based extracts.",
+      "Soybean extract": "Choose soy-free skincare formulations."
+    }
+  },
+  {
+    "id": 6,
+    "title": "Do you have any specific skin conditions or medical issues?",
+    "description": "You can select multiple options.",
+    "options": ["Eczema", "Psoriasis", "Rosacea", "None"],
+    "isCheckbox": true,
+    "advice": {
+      "Eczema": "Stick to products with soothing ingredients like colloidal oatmeal.",
+      "Psoriasis": "Use medicated creams or shampoos specifically for psoriasis.",
+      "Rosacea": "Avoid products with alcohol or other potential irritants."
+    }
+  },
+  {
+    "id": 7,
+    "title": "How long are you exposed to sunlight daily?",
+    "description": "Please select one option.",
+    "options": ["Less than 1 hour", "1-3 hours", "4-6 hours", "7-8 hours", "More than 8 hours"],
+    "isCheckbox": false,
+    "advice": {
+      "4-6 hours": "Ensure you apply sunscreen with SPF 30 or higher daily.",
+      "7-8 hours": "Consider wearing hats or protective clothing in addition to sunscreen.",
+      "More than 8 hours": "Frequent reapplication of sunscreen is essential for long sun exposure."
+    }
+  },
+  {
+    "id": 8,
+    "title": "How much water do you drink daily?",
+    "description": "Please select one option.",
+    "options": ["Less than 1 liter", "1-2 liters", "More than 2 liters"],
+    "isCheckbox": false,
+    "advice": {
+      "Less than 1 liter": "You should drink more water to keep your skin hydrated."
+    }
+  },
+  {
+    "id": 9,
+    "title": "What time do you usually go to bed recently?",
+    "description": "Please select one option.",
+    "options": ["Between 9-11 PM", "Between 11 PM - 1 AM", "Between 1-3 AM", "After 3 AM"],
+    "isCheckbox": false,
+    "advice": {
+      "After 3 AM": "Try to sleep earlier to improve skin regeneration."
+    }
+  },
+  {
+    "id": 10,
+    "title": "How often have you been feeling stressed lately?",
+    "description": "Please select one option.",
+    "options": ["Never", "Rarely", "Often", "Very Often"],
+    "isCheckbox": false,
+    "advice": {
+      "Often": "Incorporate stress-relief techniques such as yoga or meditation.",
+      "Very Often": "Chronic stress can impact your skin; seek support or professional help."
+    }
+  },
+  {
+    "id": 11,
+    "title": "Do you smoke or consume alcohol regularly?",
+    "description": "Please select one option.",
+    "options": ["Yes", "No"],
+    "isCheckbox": false,
+    "advice": {
+      "Yes": "Smoking and alcohol can dehydrate the skin; consider reducing consumption."
+    }
+  },
+  {
+    "id": 12,
+    "title": "Are you currently using any skincare products?",
+    "description": "Please select one option. If yes, list the products you use.",
+    "options": ["Yes", "No"],
+    "isCheckbox": false,
+    "advice": {
+      "No": "Start with basic skincare: a gentle cleanser, moisturizer, and sunscreen."
+    }
+  },
+  {
+    "id": 13,
+    "title": "How often do you exfoliate your skin?",
+    "description": "Please select one option.",
+    "options": ["Rarely/Never", "Once a week", "2-3 times a week", "Daily"],
+    "isCheckbox": false,
+    "advice": {
+      "Rarely/Never": "Consider exfoliating once a week to remove dead skin cells.",
+      "Daily": "Daily exfoliation may irritate your skin; reduce to 2-3 times per week."
+    }
+  }
+]

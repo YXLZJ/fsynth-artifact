@@ -1,0 +1,1 @@
+(defop 3 ADD (setf (:reg a) (mod32 (+ (:reg b) (:reg c)))))

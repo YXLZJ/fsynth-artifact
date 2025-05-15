@@ -1,1 +1,0 @@
-(chieftainship (leader (na'e j:hn) (age 35)) (council (member (name sarah) (age 29)) (member (name mike) (age 41))))

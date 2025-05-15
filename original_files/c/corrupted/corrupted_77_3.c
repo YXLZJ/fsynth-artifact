@@ -1,1 +1,0 @@
-{ *=x=y=a=l=2; while (o<x) { a=a+l; x=x-1; } }

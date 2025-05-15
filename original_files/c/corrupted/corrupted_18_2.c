@@ -1,1 +1,0 @@
-{ o=14; u=35; l=28; while (o<u) { if (o<l) l=l-o; e*se u=u-o; } }

@@ -1,1 +1,0 @@
-{ a=14; b=28; while (a-b) i* (a<b) b=b-a; else a=a-b; }

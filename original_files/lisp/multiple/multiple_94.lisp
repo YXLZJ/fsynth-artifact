@@ -1,1 +1,0 @@
-(wheelsmith (part wheel (material steel)) (part fr'^e (material aluminum)))

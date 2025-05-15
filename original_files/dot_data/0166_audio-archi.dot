@@ -1,0 +1,79 @@
+/**
+ * Hal Architecture diagram with solarized light colorscheme
+ * Example found on http://fsteeg.com/2006/11/17/uml-class-diagrams-with-graphviz/
+ *
+ * Colors added by Mattijs Korpershoek
+ * <mattijs.korpershoek@gmail.com>
+ */
+
+/*
+ * Solarized colorscheme:
+ * $base03:    #002b36;
+ * $base02:    #073642;
+ * $base01:    #586e75;
+ * $base00:    #657b83;
+ * $base0:     #839496;
+ * $base1:     #93a1a1;
+ * $base2:     #eee8d5;
+ * $base3:     #fdf6e3;
+ * $yellow:    #b58900;
+ * $orange:    #cb4b16;
+ * $red:       #dc322f;
+ * $magenta:   #d33682;
+ * $violet:    #6c71c4;
+ * $blue:      #268bd2;
+ * $cyan:      #2aa198;
+ * $green:     #859900;
+ * */
+
+/*TODO: montrer qu'on peut enchainer les algos
+ * mettre des fleches pour le PATH audio */
+graph hierarchy
+{
+  size="30,15";
+  node[shape=record,style=filled,fillcolor="#fdf6e3", fontcolor="#657b83", color="#eee8d5"];
+  edge[arrowhead=none, arrowtail=none, color="#586e75"];
+  ranksep=0.10; //packs the nodes a bit more
+  labeljust="r";
+  rankdir="LR";  //left to right ranking
+
+  Codec [fillcolor="#cb4b16", fontcolor="#ffffff"];
+
+  subgraph clusterDSP{
+    label="Audio DSP";
+    edge[arrowhead=none, arrowtail=none, color="#586e75"];
+    bgcolor="#268bd2";
+    fontcolor="#ffffff";
+    Algo1[label="Algorithm 01"];
+    Algo2[label="Noise reduction"];
+    Algo3[label="Algorithm 03"];
+  }
+
+  VoiceModem [label="Voice modem", fillcolor="#dc322f", fontcolor="#ffffff"];
+
+  Codec -- Microphone;
+  Codec -- Speaker;
+  Codec -- Headset;
+
+  Algo1 -- Algo2 -- Algo3 [weight=100];
+
+ /* path audio */
+  VoiceModem -- Algo2 -- Codec;
+
+  VoiceModem -- Algo2 [dir=forward, arrowhead="normal", label="voice", penwidth="2.0"];
+   Algo2 -- Algo1 [dir=forward, arrowhead="normal", label="voice", penwidth="2.0"];
+   Algo1 -- Codec [dir=forward, arrowhead="normal", label="voice", penwidth="2.0"];
+   Codec -- Headset [dir=forward, arrowhead="normal", label="voice", penwidth="2.0"];
+
+{ rank=min; Algo1; Algo2; Algo3 }
+
+/*
+  AudioMgr -- streamMgr;
+  streamMgr -- RoutePfw;
+  RoutePfw -- RoutePlugin;
+  RoutePlugin -- RouteMgr;
+  RouteMgr -- AudioPfw;
+  AudioPfw -- TinyPlugin;
+  TinyPlugin -- TinyAlsa;
+  */
+}

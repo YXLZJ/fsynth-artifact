@@ -1,0 +1,26 @@
+digraph G {
+  rankdir = LR;
+  overlap = scale;
+  # http://www.graphviz.org/content/global-subgraph-style-statements
+  graph [shape="folder", style="rounded"];
+  node [shape="note", color="blue", fontcolor="blue"];
+  subgraph "cluster" {
+    label="/";
+    "/initrd.img-*-generic" [ label="initrd.img-*-generic"];
+    subgraph "cluster/isolinux" {
+      label="isolinux";
+      "/isolinux/cyut-bv.jpg" [ label="cyut-bv.jpg"];
+      "/isolinux/autumn.jpg" [ label="autumn.jpg"];
+      "/isolinux/boot.cat" [ label="boot.cat"];
+      "/isolinux/[more-files]" [ label="[more-files]"];
+    }
+    subgraph "cluster/live" {
+      label="live";
+      "/live/filesystem.module" [ label="filesystem.module"];
+      "/live/root.squashfs" [ label="root.squashfs"];
+    }
+    "/vmlinuz-*-generic" [ label="vmlinuz-*-generic"];
+  }
+  "/isolinux/autumn.jpg" -> { "/vmlinuz-*-generic" "/initrd.img-*-generic" "/live/root.squashfs" } [style=invis];
+
+}

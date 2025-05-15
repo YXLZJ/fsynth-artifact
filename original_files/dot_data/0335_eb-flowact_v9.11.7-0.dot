@@ -1,0 +1,89 @@
+digraph G {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ dot -Tpng:cairo eb-flowact_v9.11.7-0.dot -o eb-flowact-0.png
+        size="20,15",
+*/
+    graph [label="社区工程生命周期`巫师`角色图谱 by ZQ[091107 02:18]",
+        labeljust="l",labelloc="t",
+        fontsize=12.0,
+        fontname="VeraSansYuanTi-Regular.ttf",        
+        center=1,
+        ranksep=0.2,
+        ratio=compress,
+        rankdir=TB,
+        ];
+
+    node[fontsize=10.0,
+        style=filled,fillcolor=snow,
+        color=darkolivegreen,fontcolor=darkolivegreen,
+        height=0.1,
+        shape=plaintext,
+        ];
+    /*dir=both,color=yellowgreen,*/
+    edge [fontsize=9.0,
+        fontcolor=gray25,
+        color=gray30,
+		arrowhead=vee,
+		arrowtail=none,
+        ];
+
+    /*图元声明
+    Master      [label="法师",shape=egg];
+    WolfPack    [label="狼群",shape=egg];
+    WolfMan     [label="狼人",shape=egg];
+    WolfSon    [label="狼仔",shape=egg];
+    Visitor     [label="旁观",shape=egg];
+    */
+    start       [label="开始",shape=point];
+    end         [label="",shape=doublecircle,fillcolor=red];
+
+    brew        [label="酝酿阶段",shape=box3d];
+    design      [label="创意阶段",shape=box3d];
+    stuff       [label="积累阶段",shape=box3d];
+    useful      [label="成熟阶段",shape=box3d];
+    spread      [label="传播阶段",shape=box3d];
+    growing     [label="成长阶段",shape=box3d];
+    
+    published   [label="释放",shape=box,fillcolor=yellow];
+    losted      [label="消失",shape=box,fillcolor=tan];
+    canceled    [label="放弃",shape=box,fillcolor=tan];
+
+    Shaman      [label="巫师",shape=egg,fillcolor=dimgray,fontcolor=snow,color=dimgray];
+
+
+    /*流程关系    Master->stuff    [label="",];
+        Master->useful    [label="",];
+        Master->spread    [label="",];
+        Master->growing    [label="",];
+    WolfPack->useful    [label="",];
+        WolfPack->spread    [label="",];
+        WolfPack->growing    [label="",];
+    WolfMan->useful    [label="",];
+        WolfMan->growing    [label="",];
+    WolfSon->useful    [label="",];
+        WolfSon->spread    [label="",];
+    spread->Visitor [label="",];
+        growing->Visitor    [label="",];
+
+    */
+    Shaman->brew    [label="",color=dimgray];
+        Shaman->design    [label="",color=dimgray];
+        Shaman->stuff    [label="",color=dimgray];
+        Shaman->useful    [label="",color=dimgray];
+        Shaman->growing    [label="",color=dimgray];
+    
+    start->brew->design->stuff->useful->spread->growing  [color=yellowgreen,arrowhead=normal,style="setlinewidth(6)"];
+    useful->published [color=yellowgreen,arrowhead=normal,style="setlinewidth(4)"];
+    spread->published [color=yellowgreen,arrowhead=normal,style="setlinewidth(4)"];
+    growing->published [color=yellowgreen,arrowhead=normal,style="setlinewidth(4)"];
+    published->published [label="版本/迭代",color=darkolivegreen,];
+    
+        brew->losted->end   [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        design->canceled    [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        stuff->canceled     [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+
+        spread->losted    [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+        growing->losted    [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+            canceled->end       [color=yellowgreen,arrowhead=normal,style="setlinewidth(2)"];
+}
+

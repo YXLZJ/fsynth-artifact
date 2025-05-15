@@ -1,1 +1,0 @@
-{ h=e=r=i=t=a=b=i=l=i=t=y=0; w*ile(h<5){ e=e+1; r=r+2; t=t+3; } }

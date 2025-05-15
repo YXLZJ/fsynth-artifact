@@ -1,0 +1,6 @@
+(defmethod glut:mouse ((window mol-window) button state x y)
+  (if (eq button :left-button)
+    (if (eq state :down)
+      (progn (setf origrot (list view-rotx view-roty))
+             (setf origclick (list x y)))
+      (setf origclick ()))))

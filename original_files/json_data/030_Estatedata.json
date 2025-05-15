@@ -1,0 +1,148 @@
+{
+  "bookingForLet": [
+    {
+      "Name": "Mr Man",
+      "Email": "man@email.com",
+      "PhoneNumber": "01234555678",
+      "Date": "2023-12-20",
+      "TimeSlot": "14:22",
+      "letProperty": "2",
+      "id": 1
+    }
+  ],
+  "bookingForSale": [
+    {
+      "Name": "Elliot",
+      "Email": "elliot@aol.com",
+      "PhoneNumber": "071542568",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:22",
+      "property": "1",
+      "id": 2
+    },
+    {
+      "Name": "Adele",
+      "Email": "a@a.com",
+      "PhoneNumber": "071622568",
+      "Date": "2023-12-14",
+      "TimeSlot": "17:52",
+      "property": "1",
+      "id": 3
+    },
+    {
+      "Name": "James Jameson",
+      "Email": "abc@123.com",
+      "PhoneNumber": "37463272390",
+      "Date": "2023-12-14",
+      "TimeSlot": "16:23",
+      "property": "2",
+      "id": 5
+    }
+  ],
+  "Sellers": [
+    {
+      "FirstName": "Agus",
+      "LastName": "Tina",
+      "Address": "1 Asney Cottage",
+      "Postcode": "LL13 0DS",
+      "PhoneNumber": "0777777777",
+      "id": 2
+    },
+    {
+      "FirstName": "John",
+      "LastName": "Smith",
+      "Address": "19 Arun Court",
+      "Postcode": "G30 2EZ",
+      "PhoneNumber": "07481235777",
+      "id": 3
+    },
+    {
+      "FirstName": "Michael",
+      "LastName": "Parker",
+      "Address": "10 Deebank Road",
+      "Postcode": "AB35 5QT",
+      "PhoneNumber": "07481235515",
+      "id": 4
+    },
+    {
+      "FirstName": "Otto",
+      "LastName": "Octavius",
+      "Address": "139 NY",
+      "Postcode": "NY1 122",
+      "PhoneNumber": "07481235515",
+      "id": 5
+    }
+  ],
+  "Buyers": [
+    {
+      "FirstName": "Poca",
+      "LastName": "Hontas",
+      "Address": "3 Logie Farm Cottage",
+      "Postcode": "KY14 6HL",
+      "PhoneNumber": "07481235000",
+      "id": 5
+    },
+    {
+      "FirstName": "Mike",
+      "LastName": "Atkinson",
+      "Address": "56 East Lancashire Road",
+      "Postcode": "WA11 9AB",
+      "PhoneNumber": "07957447474",
+      "id": 7
+    }
+  ],
+  "PropertiesForSale": [
+    {
+      "Type": "Flat",
+      "Price": 200000,
+      "Bedrooms": 2,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "5 High Antrim",
+      "Postcode": "BT41 1AT",
+      "id": 1
+    },
+    {
+      "Type": "Flat",
+      "Price": 180000,
+      "Bedrooms": 1,
+      "Bathrooms": 3,
+      "Garden": "No",
+      "Address": "3 South London Road",
+      "Postcode": "IP9 2JP",
+      "id": 2
+    },
+    {
+      "Type": "Terrace",
+      "Price": 505000,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "57 Bon Accord Street",
+      "Postcode": "AB11 6EB",
+      "id": 3
+    }
+  ],
+  "PropertiesToLet": [
+    {
+      "Type": "Semi-Detached",
+      "Rent": 900,
+      "Bedrooms": 1,
+      "Bathrooms": 1,
+      "Garden": "Yes",
+      "Address": "Flat 3 Lerwick Road",
+      "Postcode": "ZE1 0AD",
+      "id": 1
+    },
+    {
+      "Type": "Semi-Detached",
+      "Rent": 1200,
+      "Bedrooms": 2,
+      "Bathrooms": 2,
+      "Garden": "No",
+      "Address": "3 Caerphilly Park",
+      "Postcode": "CF83 3GG",
+      "id": 2
+    }
+  ]
+}

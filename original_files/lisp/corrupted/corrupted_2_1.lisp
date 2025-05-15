@@ -1,1 +1,0 @@
-(glauconitization (of (rocks) (in (marine (environments))))*

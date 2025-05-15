@@ -1,1 +1,0 @@
-(centronucleus (nucleus (protons 26) (neutron

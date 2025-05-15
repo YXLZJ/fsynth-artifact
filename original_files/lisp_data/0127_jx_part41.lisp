@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_SetString" set-string) :void (value :pointer) (val :string) (len :int))

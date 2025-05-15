@@ -1,0 +1,310 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "status": "completed",
+    "item": [
+        {
+            "linkId": "LaboratoryReport.Header.DocumentIdentifier",
+            "answer": [
+                {
+                    "valueString": "6401332d-6012-443f-9690-9331adb23aab"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Header.DocumentTimestamp",
+            "answer": [
+                {
+                    "valueString": "2024-09-05T12:00:00+02:00"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Header.DocumentLanguage",
+            "answer": [
+                {
+                    "valueString": "de-CH"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Header.DocumentTitle",
+            "answer": [
+                {
+                    "valueString": "Laborbericht vom 2.9.2024"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Header.DocumentSectionTitle",
+            "answer": [
+                {
+                    "valueString": "Analyseergebnisse der mikrobiologischen Untersuchung"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Author.OrganizationGLN",
+            "answer": [
+                {
+                    "valueString": "7601002331470"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Lab.OrganizationGLN",
+            "answer": [
+                {
+                    "valueString": "7601002331470"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Lab.OrganizationName",
+            "answer": [
+                {
+                    "valueString": "SanLab"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Lab.OrderIdentifier",
+            "answer": [
+                {
+                    "valueString": "26500923622"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.OrganizationBER",
+            "answer": [
+                {
+                    "valueString": "A74966168"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.OrganizationName",
+            "answer": [
+                {
+                    "valueString": "Praxis Dr. Hauser"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.Physician.GLN",
+            "answer": [
+                {
+                    "valueString": "7601000000514"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.Physician.Surname",
+            "answer": [
+                {
+                    "valueString": "Hauser"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.Physician.Givenname",
+            "answer": [
+                {
+                    "valueString": "Peter"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.Physician.Phone",
+            "answer": [
+                {
+                    "valueString": "+41 79 222 33 44"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.Physician.Email",
+            "answer": [
+                {
+                    "valueString": "peter.hauser@hauserpraxis.ch"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.OrganizationAddress.StreetLine",
+            "answer": [
+                {
+                    "valueString": "Hauptstrasse 10"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.OrganizationAddress.ZipCode",
+            "answer": [
+                {
+                    "valueString": "4500"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Orderer.OrganizationAddress.City",
+            "answer": [
+                {
+                    "valueString": "Solothurn"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.OASI",
+            "answer": [
+                {
+                    "valueString": "7561234567897"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Surname",
+            "answer": [
+                {
+                    "valueString": "D"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Givenname",
+            "answer": [
+                {
+                    "valueString": "A"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Gender",
+            "answer": [
+                {
+                    "valueString": "female"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.DateOfBirth",
+            "answer": [
+                {
+                    "valueString": "1981-02-07"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Address.ZipCode",
+            "answer": [
+                {
+                    "valueString": "1227"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Address.City",
+            "answer": [
+                {
+                    "valueString": "Carouge"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Address.Canton",
+            "answer": [
+                {
+                    "valueString": "GE"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.Patient.Address.Country",
+            "answer": [
+                {
+                    "valueString": "CH"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.StudyType",
+            "answer": [
+                {
+                    "valueString": "18725-2"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.ExecutionDateTime",
+            "answer": [
+                {
+                    "valueString": "2024-08-28T14:20:00+02:00"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Type.Code",
+            "answer": [
+                {
+                    "valueString": "86520-4"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Type.CodeSystem",
+            "answer": [
+                {
+                    "valueString": "LOINC"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Specimen.CollectionDateTime",
+            "answer": [
+                {
+                    "valueString": "2024-08-26T14:20:00+02:00"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Specimen.Type.Text",
+            "answer": [
+                {
+                    "valueString": "Material declared by Observation.code or non-mandatory"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Value.Code",
+            "answer": [
+                {
+                    "valueString": "40754006"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Value.CodeSystem",
+            "answer": [
+                {
+                    "valueString": "Snomed CT"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Interpretation.Code",
+            "answer": [
+                {
+                    "valueString": "POS"
+                }
+            ]
+        },
+        {
+            "linkId": "LaboratoryReport.TestResult.Interpretation.CodeSystem",
+            "answer": [
+                {
+                    "valueString": "HL7 CodeSystem ObservationInterpretation"
+                }
+            ]
+        }
+    ]
+}

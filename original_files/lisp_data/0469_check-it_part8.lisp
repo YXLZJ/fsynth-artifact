@@ -1,0 +1,1 @@
+(defparameter *package-regression-files* (make-hash-table))

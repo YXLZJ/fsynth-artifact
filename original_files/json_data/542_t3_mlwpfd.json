@@ -1,0 +1,41 @@
+{
+  "author": {
+    "id": "t2_3flrb4ea",
+    "name": "patreoncomDnDavid"
+  },
+  "date": {
+    "day": 1617753600,
+    "full": 1617780010,
+    "month": 1617235200,
+    "week": 1617494400
+  },
+  "id": "t3_mlwpfd",
+  "misc": {
+    "postHint": "image"
+  },
+  "picture": {
+    "filesize": 59325,
+    "fullUrl": "https://preview.redd.it/vp44fcsocpr61.jpg?auto=webp&s=1a9780190cc53ba9d900de5e843f69526a1b7a86",
+    "hash": "c5c67e5fea",
+    "height": 480,
+    "lqip": "data:image/jpg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQMH/8QAHxAAAgIBBQEBAAAAAAAAAAAAAQMCEQQABRIjQSFR/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABkRAQACAwAAAAAAAAAAAAAAABEAEgECIf/aAAwDAQACEQMRAD8A0NuZAryFdyQJBa2RFAmvTX7o3Bbue37orDze5DrlFkhZBo0L80uvDTlqUHRscroEgXqu6wgFwZxHNfyMvRpjgCBptZeT/9k=",
+    "thumbnailUrl": "https://b.thumbs.redditmedia.com/wX8bIsXFuTrWPyWS9Yaiw4OFllgVJJsYIzDbdWCkirA.jpg",
+    "url": "https://preview.redd.it/vp44fcsocpr61.jpg?width=640&crop=smart&auto=webp&s=777cb35238c8de401c65841f482ca74df1041b1a",
+    "width": 640
+  },
+  "score": {
+    "comments": 1,
+    "downs": 0,
+    "isCurated": false,
+    "ratio": 0.89,
+    "ups": 45,
+    "value": 45
+  },
+  "subreddit": {
+    "id": "t5_3isai",
+    "name": "dndmaps"
+  },
+  "tags": [],
+  "title": "The Broken Stormblade",
+  "url": "https://www.reddit.com/r/dndmaps/comments/mlwpfd/the_broken_stormblade_32x24/"
+}

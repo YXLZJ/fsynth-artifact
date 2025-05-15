@@ -1,1 +1,0 @@
-(random-watchmaker (make-watch (cog 10) (spring "strong")) (a

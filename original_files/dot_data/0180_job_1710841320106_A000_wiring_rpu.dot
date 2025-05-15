@@ -1,0 +1,24 @@
+#GRAPHVIZ_OUTPUT 
+digraph{ 
+rankdir=LR; 
+splines=ortho; 
+YFP[shape=none,label="YFP"]; 
+pTac[shape=none,label="pTac"]; 
+pTet[shape=none,label="pTet"]; 
+pBAD[shape=none,label="pBAD"]; 
+S4_SrpR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_S4_SrpR_gate.png"]; 
+P3_PhlF[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_P3_PhlF_gate.png"]; 
+H1_HlyIIR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_H1_HlyIIR_gate.png"]; 
+A1_AmtR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_A1_AmtR_gate.png"]; 
+E1_BetI[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_E1_BetI_gate.png"]; 
+B3_BM3R1[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841320106_A000_B3_BM3R1_gate.png"]; 
+S4_SrpR ->YFP ; 
+P3_PhlF ->S4_SrpR ; 
+A1_AmtR ->S4_SrpR ; 
+H1_HlyIIR ->P3_PhlF ; 
+pBAD ->A1_AmtR ; 
+E1_BetI ->H1_HlyIIR ; 
+B3_BM3R1 ->H1_HlyIIR ; 
+pTac ->E1_BetI ; 
+pTet ->B3_BM3R1 ; 
+} 

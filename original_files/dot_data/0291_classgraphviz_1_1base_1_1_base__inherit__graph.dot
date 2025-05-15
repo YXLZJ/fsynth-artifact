@@ -1,0 +1,41 @@
+digraph "graphviz.base.Base"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="graphviz.base.Base",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="graphviz.base.LineIterable",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1base_1_1_line_iterable.html",tooltip=" "];
+  Node3 -> Node1 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="graphviz.copying.CopyBase",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1copying_1_1_copy_base.html",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="graphviz.dot.Dot",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1dot_1_1_dot.html",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="graphviz.graphs.BaseGraph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_base_graph.html",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="graphviz.graphs.Digraph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_digraph.html",tooltip=" "];
+  Node5 -> Node7 [id="edge6_Node000005_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="graphviz.graphs.Graph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_graph.html",tooltip=" "];
+  Node1 -> Node8 [id="edge7_Node000001_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="graphviz.piping.Pipe",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1piping_1_1_pipe.html",tooltip=" "];
+  Node8 -> Node5 [id="edge8_Node000008_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 -> Node9 [id="edge9_Node000008_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="graphviz.jupyter_integration.\lJupyterIntegration",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1jupyter__integration_1_1_jupyter_integration.html",tooltip=" "];
+  Node9 -> Node5 [id="edge10_Node000009_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 -> Node10 [id="edge11_Node000009_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="graphviz.sources.Source",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1sources_1_1_source.html",tooltip=" "];
+  Node8 -> Node10 [id="edge12_Node000008_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node11 [id="edge13_Node000001_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="graphviz.saving.Save",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1saving_1_1_save.html",tooltip=" "];
+  Node11 -> Node12 [id="edge14_Node000011_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="graphviz.rendering.Render",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1rendering_1_1_render.html",tooltip=" "];
+  Node12 -> Node5 [id="edge15_Node000012_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 -> Node10 [id="edge16_Node000012_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 -> Node10 [id="edge17_Node000011_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node13 [id="edge18_Node000001_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="graphviz.unflattening.Unflatten",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1unflattening_1_1_unflatten.html",tooltip=" "];
+  Node13 -> Node5 [id="edge19_Node000013_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node10 [id="edge20_Node000013_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

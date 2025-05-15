@@ -1,0 +1,73 @@
+/*                               -*-c-*-
+   Mutual dependencies for the pencil-code
+   Run this through
+     dot -Tps structure.dot -o struct.eps
+   to obtain a PostScript graph.
+   `dot' is part of AT&T's `graphviz' package.
+ */
+
+digraph G {
+
+  /* Top directory */
+  node [shape=ellipse];
+  { pencilcode}
+
+  pencilcode [ label="pencil-code"];
+
+  /* */
+  node [shape=ellipse];
+  { rank=same; src; idl_dx; doc; bin; samples }
+
+  idl_dx [label="idl | dx"];
+
+  pencilcode -> src;
+  pencilcode -> idl_dx;
+  pencilcode -> bin;
+  pencilcode -> doc;
+/*    pencilcode -> runs; */
+  pencilcode -> samples;
+
+/*
+  runs->gravz    ->entro1;
+  runs->spher    ->spher1;
+  runs->rings    ->rings1;
+  runs->kinematic->abc;
+
+  gravz->vconv1;
+  spher->spher2;
+*/
+
+  samples->conv_slab;
+  samples->fluxrings;
+  samples->dot_dot_dot;
+  conv_slab      [shape=ellipse, label="conv-slab"];
+  fluxrings [shape=ellipse, label="interlocked-fluxrings"];
+  dot_dot_dot    [shape=ellipse, label="..."];
+
+  /* Switch default to boxed (for files) */
+  node [shape=box];
+  { Makefile; startrun; scheme; equ; physics; }
+
+  startrun [label="start, run"];
+  scheme   [label="timestep, deriv"];
+  physics  [label="\nhydro | hohydro\ndensity | nodensity\nentropy | noentropy\ngrav_z | grav_r | nograv\nmagnetic | nomagnetic\n\n"];
+
+  src->Makefile->startrun->scheme->equ->physics [dir=none,weight=5];
+
+
+/*    vconv1->src1[weight=5]; */
+  conv_slab->src1[weight=5];
+  src1 [shape=ellipse, label="src"];
+  src1->src_local[weight=5];
+  src_local[label="\nMakefile.local\ncparam.local\n\n"];
+
+
+  /* Indicate links from src to runs/gravz/vconv1/src*/
+  Makefile -> src1 [style=dashed];
+  startrun -> src1 [style=dashed];
+  scheme   -> src1 [style=dashed];
+  equ      -> src1 [style=dashed];
+  physics  -> src1 [style=dashed];
+
+  { rank = same; startrun; src1 }
+}

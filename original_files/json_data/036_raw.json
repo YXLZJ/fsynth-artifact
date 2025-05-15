@@ -1,0 +1,60 @@
+{
+  "análise": [
+    {
+      "fenomeno": "chuva",
+      "data": "2023-12-30T12:00",
+      "mensagem": "Registro de chuva moderada ao longo do dia inteiro, com períodos de intensificação em algumas áreas. A chuva começou nas primeiras horas da manhã e se estendeu até a noite, resultando em acumulações significativas. Essa condição pode causar transtornos no trânsito e em áreas vulneráveis a alagamentos."
+    },
+    {
+      "fenomeno": "deslizamento",
+      "data": "2023-12-30T09:00",
+      "mensagem": "Deslizamento de terra durante a chuva devido ao encharcamento do solo, que já estava saturado pelas chuvas dos dias anteriores. Esse deslizamento causou bloqueios em estradas locais e danos em algumas propriedades próximas. As autoridades foram acionadas para realizar os devidos reparos e garantir a segurança dos moradores."
+    },
+    {
+      "data": "2023-12-30T15:00",
+      "mensagem": "A operação externa foi interrompida durante 3 horas devido à ocorrência de raios. Durante este período, a atividade elétrica foi intensa, representando um risco significativo para as atividades ao ar livre. Todos os funcionários foram instruídos a se abrigarem em locais seguros até que a tempestade passasse e fosse considerado seguro retomar as operações."
+    },
+    {
+      "fenomeno": "neve",
+      "data": "2023-12-28T06:00",
+      "mensagem": "Nevou intensamente durante a madrugada, resultando em um acúmulo considerável de neve nas ruas e calçadas. As equipes de limpeza urbana foram mobilizadas para liberar as principais vias de acesso. Houve interrupção no transporte público e algumas escolas suspenderam as aulas devido às condições perigosas das estradas."
+    },
+    {
+      "fenomeno": "inundação",
+      "data": "2023-12-29T17:00",
+      "mensagem": "Uma forte chuva causou a rápida elevação dos níveis dos rios, resultando em inundações em diversas áreas baixas. Várias residências foram evacuadas e abrigos temporários foram montados para acolher as famílias afetadas. Equipes de emergência trabalharam durante a noite para resgatar moradores isolados e minimizar os danos."
+    }
+  ],
+  "previsao": [
+    {
+      "fenomeno": "chuva",
+      "data": "2024-01-01T12:00",
+      "mensagem": "No início da tarde haverá chuva forte entre 12h e 13h, com possibilidade de trovoadas. A previsão indica que a intensidade da chuva será suficiente para causar alagamentos temporários em áreas baixas. As atividades a céu aberto não são indicadas durante esse período devido ao risco de raios e inundações rápidas."
+    },
+    {
+      "fenomeno": "vento",
+      "data": "2024-01-02T20:00",
+      "mensagem": "Durante a noite, a previsão é de vento forte com rajadas que podem chegar a 50 km/h. Essas condições de vento podem derrubar galhos de árvores e causar dificuldades para o manuseio de equipamentos pesados. As atividades que envolverem uso de guindaste devem ser remanejadas para o período da manhã, quando os ventos estarão mais calmos e seguros para a operação."
+    },
+    {
+      "fenomeno": "nevoeiro",
+      "data": "2024-01-04T04:00",
+      "mensagem": "Durante a madrugada haverá a ocorrência de nevoeiro denso, reduzindo a visibilidade a menos de 200 metros em algumas áreas. Esta condição se prolongará até o início da manhã, afetando principalmente a navegação e o tráfego nas estradas. A prática de navegação deverá ser interrompida até que o nevoeiro se dissipe, por volta das 8h da manhã, para evitar acidentes."
+    },
+    {
+      "fenomeno": "geada",
+      "data": "2024-01-05T06:00",
+      "mensagem": "No início da manhã haverá formação de geada, principalmente em áreas rurais e baixadas. Esta condição pode afetar negativamente a agricultura, especialmente cultivos sensíveis às baixas temperaturas. Recomenda-se aos agricultores tomarem medidas preventivas para proteger as plantações."
+    },
+    {
+      "fenomeno": "chuva",
+      "data": "2024-01-06T14:00",
+      "mensagem": "Previsão de tempestade com raios e ventos fortes, podendo alcançar até 70 km/h. As condições adversas devem durar até o início da noite. É aconselhável que as pessoas evitem áreas abertas e procurem abrigo seguro até que a tempestade passe."
+    },
+    {
+      "fenomeno": "onda de calor",
+      "data": "2024-01-07T13:00",
+      "mensagem": "Durante a tarde, espera-se uma onda de calor com temperaturas podendo ultrapassar os 35°C. Essas condições extremas podem representar riscos à saúde, como desidratação e insolação. Recomenda-se evitar exposição prolongada ao sol, manter-se hidratado e procurar locais frescos e sombreados."
+    }
+  ]
+}

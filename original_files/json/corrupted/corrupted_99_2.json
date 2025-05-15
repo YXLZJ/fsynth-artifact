@@ -1,9 +1,0 @@
-{
-  "name": "chiliarchia",
-  "type": "ancient military unit",
-  "size": {
-    "min": 500,
-    "max": 10*0
-  },
-  "commander": "chiliarch"
-}

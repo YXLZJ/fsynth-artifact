@@ -1,0 +1,8 @@
+(defun mv* (m v)
+  (declare (type m3x3 m) (type v2 v))
+  (v2 (+ (* (aref m 0) (aref v 0))
+         (* (aref m 3) (aref v 1))
+         (aref m 6))
+      (+ (* (aref m 1) (aref v 0))
+         (* (aref m 4) (aref v 1))
+         (aref m 7))))

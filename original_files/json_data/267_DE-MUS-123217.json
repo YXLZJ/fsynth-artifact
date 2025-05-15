@@ -1,0 +1,131 @@
+{
+    "id": "https://sigel.staatsbibliothek-berlin.de/api/org/DE-MUS-123217.jsonld",
+    "data": {
+        "001A": [
+            [
+                [
+                    "9006:04-01-12"
+                ]
+            ]
+        ],
+        "001B": [
+            [
+                [
+                    "9006:12-10-20"
+                ],
+                {
+                    "t": "09:23:32.000"
+                }
+            ]
+        ],
+        "001D": [
+            [
+                [
+                    "9006:04-01-12"
+                ]
+            ]
+        ],
+        "001U": [
+            [
+                [
+                    "utf8"
+                ]
+            ]
+        ],
+        "002@": [
+            [
+                [
+                    "Tw"
+                ]
+            ]
+        ],
+        "003@": [
+            [
+                [
+                    "1018499962"
+                ]
+            ]
+        ],
+        "008H": [
+            [
+                {
+                    "e": "DE-MUS-123217"
+                }
+            ]
+        ],
+        "009Q": [
+            [
+                {
+                    "u": "http://www.museen-in-deutschland.de/singleview.php?muges=123217"
+                },
+                {
+                    "x": "Weitere Informationen"
+                },
+                {
+                    "z": "W"
+                }
+            ]
+        ],
+        "029A": [
+            [
+                {
+                    "a": "H\u00e4llisch-Fr\u00e4nkisches Museum in der Keckenburg"
+                }
+            ]
+        ],
+        "032P": [
+            [
+                {
+                    "a": "Keckenhof 6"
+                },
+                {
+                    "b": "Schw\u00e4bisch Hall"
+                },
+                {
+                    "d": "DE"
+                },
+                {
+                    "e": "74523"
+                },
+                {
+                    "f": "Baden-W\u00fcrttemberg"
+                },
+                {
+                    "k": "9.77410"
+                },
+                {
+                    "l": "49.10670"
+                },
+                {
+                    "p": "j"
+                },
+                {
+                    "2": "S"
+                }
+            ]
+        ],
+        "035E": [
+            [
+                {
+                    "a": "H"
+                },
+                {
+                    "b": "m"
+                },
+                {
+                    "f": "86"
+                }
+            ]
+        ]
+    },
+    "_id": "DE-MUS-123217",
+    "seeAlso": "https://ld.zdb-services.de/resource/organisations/DE-MUS-123217",
+    "sameAs": "https://ld.zdb-services.de/resource/organisations/DE-MUS-123217",
+    "identifier": "DE-MUS-123217",
+    "name": "H\u00e4llisch-Fr\u00e4nkisches Museum in der Keckenburg",
+    "location": "Schw\u00e4bisch Hall",
+    "type": [
+        "Organization",
+        "Museum"
+    ]
+}

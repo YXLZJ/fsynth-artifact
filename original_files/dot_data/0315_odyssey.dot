@@ -1,0 +1,383 @@
+/// graph of odyssey connections between components
+// I use this by opening this file in VSCode, which has 'Graphviz Interactive
+// Preview' installed. This allows you to search for and highlight specific
+// nodes. With the added annotations, this can be an aide to understand how the
+// components interact.
+
+digraph odyssey2 {
+node [shape=record];
+graph [rankdir=LR, center=true];
+overlap=compress;
+//ranksep=3;
+
+/// components
+subgraph cluster2 {
+    j2_9 [label="9"];
+    j2_38 [label="38"];
+    j2_28 [label="28"];
+    j2_42 [label="42"];
+    j2_12 [label="12"];
+    j2_16 [label="16"];
+    j2_44 [label="44"];
+    j2_34 [label="34"];
+    j2_32 [label="32"];
+    j2_20 [label="20"];
+    j2_29 [label="29"];
+    j2_40 [label="40"];
+    j2_25 [label="25"];
+    j2_15 [label="15"];
+    j2_3 [label="3"];
+    j2_14 [label="14"];
+    j2_10 [label="10"];
+    j2_8 [label="8"];
+    j2_19 [label="19"];
+    j2_5 [label="5"];
+    j2_21 [label="21"];
+    j2_13 [label="13"];
+    j2_37 [label="37"];
+    j2_39 [label="39"];
+    j2_26 [label="26"];
+    j2_43 [label="43"];
+    j2_7 [label="7"];
+    j2_1 [label="1"];
+    j2_41 [label="41"];
+    j2_31 [label="31"];
+    j2_35 [label="35"];
+    j2_30 [label="30"];
+    j2_36 [label="36"];
+    j2_22 [label="22"];
+    j2_17 [label="17"];
+    j2_11 [label="11"];
+    j2_18 [label="18"];
+    j2_33 [label="33"];
+    j2_27 [label="27"];
+    j2_23 [label="23"];
+    j2_6 [label="6"];
+    j2_4 [label="4"];
+    j2_24 [label="24"];
+    j2_2 [label="2"];
+    label = "j2 game card 1";
+    tooltip = "game card 1";
+}
+
+
+subgraph cluster3 {
+    j3_9 [label="9"];
+    j3_3 [label="3"];
+    j3_2 [label="2"];
+    j3_4 [label="4"];
+    j3_12 [label="12"];
+    j3_1 [label="1" tooltip="5.6v"];
+    j3_11 [label="11"];
+    j3_8 [label="8"];
+    j3_5 [label="5"];
+    j3_6 [label="6"];
+    j3_7 [label="7"];
+    j3_10 [label="10"];
+    label = "j3 hand control no. 1";
+    tooltip = "hand control no. 1";
+}
+
+subgraph cluster4 {
+    j4_9 [label="9"];
+    j4_3 [label="3"];
+    j4_2 [label="2"];
+    j4_4 [label="4"];
+    j4_12 [label="12"];
+    j4_1 [label="1" tooltip="5.6v"];
+    j4_11 [label="11"];
+    j4_8 [label="8"];
+    j4_5 [label="5"];
+    j4_6 [label="6"];
+    j4_7 [label="7"];
+    j4_10 [label="10"];
+
+    label = "j4 hand control no. 2";
+    tooltip = "hand control no. 2";
+}
+
+subgraph cluster8 {
+    // left
+    j8_9 [label="9"];
+    j8_10 [label="10"];
+    j8_6 [label="6"];
+    j8_1 [label="1"];
+    // bottom
+    j8_4 [label="4"];
+    // right
+    j8_7 [label="7"];
+    j8_8 [label="8"];
+    j8_5 [label="5"];
+    j8_3 [label="3"];
+    j8_2 [label="2"];
+
+    label = "j8 ball generator";
+    tooltip = "ball generator";
+}
+
+subgraph cluster7 {
+    // left
+    j7_9 [label="9"];
+    j7_10 [label="10"];
+    j7_6 [label="6"];
+    j7_1 [label="1"];
+    // bottom
+    j7_4 [label="4"];
+    // right
+    j7_7 [label="7"];
+    j7_8 [label="8"];
+    j7_5 [label="5"];
+    j7_3 [label="3"];
+    j7_2 [label="2"];
+
+    label = "j7 wall generator";
+    tooltip = "wall generator";
+}
+
+subgraph cluster6 {
+    // left
+    j6_9 [label="9"];
+    j6_10 [label="10"];
+    j6_6 [label="6"];
+    j6_1 [label="1"];
+    // bottom
+    j6_4 [label="4"];
+    // right
+    j6_7 [label="7"];
+    j6_8 [label="8"];
+    j6_5 [label="5"];
+    j6_3 [label="3"];
+    j6_2 [label="2"];
+
+    label = "j6 player no. 1 gen";
+    tooltip = "player no. 1 gen";
+}
+
+subgraph cluster5 {
+    // left
+    j5_9 [label="9"];
+    j5_10 [label="10"];
+    j5_6 [label="6"];
+    j5_1 [label="1"];
+    // bottom
+    j5_4 [label="4"];
+    // right
+    j5_7 [label="7"];
+    j5_5 [label="5"];
+    j5_8 [label="8"];
+    j5_3 [label="3"];
+    j5_2 [label="2"];
+
+    label = "j5 player no. 2 gen";
+    tooltip = "player no. 2 gen";
+}
+
+subgraph cluster12 {
+    // left
+    j12_2 [label="2"];
+    j12_1 [label="1"];
+    j12_4 [label="4"];
+    j12_3 [label="3"];
+    j12_5 [label="5"];
+    j12_6 [label="6"];
+    // right
+    j12_8 [label="8"];
+    j12_7 [label="7"];
+    j12_10 [label="10"];
+
+    label = "j12 summer";
+    tooltip = "summer";
+}
+
+subgraph cluster11 {
+    // left
+    j11_10 [label="10"];
+    j11_2 [label="2"];
+    j11_9 [label="9"];
+    j11_1 [label="1"];
+    // bottom
+    j11_3 [label="3"];
+    j11_7 [label="7"];
+    j11_4 [label="4"];
+    // right
+    j11_6 [label="6"];
+    j11_5 [label="5"];
+    // top
+    j11_8 [label="8"];
+
+    label = "j11 gate matrix";
+    tooltip = "gate matrix";
+}
+
+subgraph cluster10 {
+    // only showing ports that connect to rest of system
+    // left
+    j10_3 [label="3"];
+    // right
+    j10_7 [label="7"];
+
+    label = "j10 horiz sync generator";
+    tooltip = "horiz sync generator";
+}
+
+subgraph cluster9 {
+    // only showing ports that connect to rest of system
+    // left
+    j9_3 [label="3"];
+    // right
+    j9_7 [label="7"];
+
+    label = "j9 vert sync generator";
+    tooltip = "vert sync generator";
+}
+
+subgraph cluster16 {
+    // left
+    j16_10 [label="10"];
+    j16_7 [label="7"];
+    j16_1 [label="1"];
+    j16_4 [label="4"];
+    // bottom
+    j16_3 [label="3"];
+    j16_5 [label="5"];
+    // right
+    j16_8 [label="8"];
+    j16_6 [label="6"];
+    j16_2 [label="2"];
+
+    label = "j16 flip-flop/ball";
+    tooltip = "flip-flop/ball";
+}
+
+subgraph cluster15 {
+    // left
+    j15_10 [label="10"];
+    j15_7 [label="7"];
+    j15_1 [label="1"];
+    j15_4 [label="4"];
+    // bottom
+    j15_3 [label="3"];
+    j15_5 [label="5"];
+    // right
+    j15_8 [label="8"];
+    j15_6 [label="6"];
+    j15_2 [label="2"];
+
+    label = "j15 flip-flop/english";
+    tooltip = "flip-flop/english";
+}
+
+subgraph cluster101 {
+    // left
+    w1;
+    w2;
+    // right
+    w3;
+    w4;
+    w5;
+    w6;
+
+    label = "rifletronix";
+    tooltip = "rifletronix";
+}
+
+source_j3 [label="5.6v"];
+source_j5 [label="5.6v"];ß
+crowbar_reset;
+ext_power_adapter;
+regulator;
+ball_width;
+ball_height;
+player_1_width;
+player_1_height;
+player_2_width;
+player_2_height;
+
+j4_3 -> j2_9;
+
+/// inputs
+// both inputs go to gate matrix and english flip-flops but on different ports
+// within the gate matrix I'm assuming either the output of english flip-flop
+// 3 or 5 is used, which I presume is the enable for either player 1 or 2, but
+// why are these lines shared with controller lines?
+j3_3 -> { j15_5; j11_9};
+j15_5 -> j11_9;
+j4_2 -> { j15_3; j11_1};
+j15_3 -> j11_1;
+
+j3_2 -> { j2_15; j11_2 };
+
+{j4_4; j3_4} -> j2_38;
+
+j4_11 -> j6_9 [label="horiz pos"];
+j3_11 -> {j5_9; j2_28} [label="horiz pos"];
+j4_8 -> j6_2 [label="vert pos"];
+j3_8 -> j5_2 [label="vert pos"];
+
+// the voltage that comes from/goes to to english pot of the
+// controller input. which possibly already holds a height value on the charge
+//  that the english can vary between. as in, it's not just on or off.
+j4_5 -> j15_2;
+j3_5 -> j15_1;
+j4_6 -> j15_7;
+j3_6 -> j15_8;
+
+// controller english output
+{j4_7; j3_7} -> j2_42;
+// on paddles this is vert
+{j4_7; j3_7} -> {j8_2};
+j2_42 -> j8_2;
+// funnily on one of the game cards j2_42 goes to j2_44,
+// so both are then connected to ball vert
+j2_44 -> j8_2;
+
+/// reset
+{j4_9; j3_9} -> crowbar_reset [label="reset"];
+crowbar_reset -> {j2_23; w6} [label="reset"];
+// don't understand this part of circuit, so not sure what relation is
+// diode with third line coming out
+{ j2_18; j2_27; j2_33} -> crowbar_reset [color=deeppink, label="reset<?>"];
+
+/// power
+// player 2 is always on, so always gets power from board.
+// not from j2 like the rest.
+source_j3 -> j3_1 [label="5.6v"];
+source_j5 -> {j5_6; player_2_height; player_2_width;} [label="5.6v"];
+
+// j2 power source and internal power lines
+ext_power_adapter -> j2_2 [label="ext power"];
+j2_2 -> j2_4 [label="ext power"];
+j2_4 -> regulator -> j2_6 [label="regulator"];
+j2_6 -> { j2_8; j2_10; j2_14; j2_16; j2_20; j2_22;} [label="5.6v"];
+
+// j2 power lines to other units
+j2_8 -> {j4_1; j6_6; player_1_width; player_1_height; } [label="j2:8 5.6v"];
+j2_20 -> {j15_10; j8_6; ball_width; ball_height} [label="j2:20 5.6v"];
+
+/// j2 internal connections
+j2_30 -> j2_34;
+j2_31 -> j2_39;
+j2_35 -> j2_37;
+// game card 3
+j2_42 -> j2_44 [color=blueviolet];
+// game card 4
+j2_33 -> {j2_37; j2_39} [color="#f4a6b6"];
+// game card 5
+j2_23 -> {j2_21; j2_25} [color=forestgreen, label="reset"];
+j2_33 -> {j2_31; j2_39} [color=forestgreen];
+// game card 6
+j2_3 -> {j2_5; j2_9} [color=greenyellow];
+j2_26 -> {j2_28; j2_38} [color=greenyellow];
+// game card 7
+j2_13 -> j2_27 [color=blue];
+j2_23 -> j2_25 [color=blue];
+j2_42 -> j2_44 [color=blue];
+// game card 8
+j2_9 -> {j2_11;j2_13} [color=cornflowerblue];
+j2_15 -> j2_17 [color=cornflowerblue];
+j2_34 -> j2_36 [color=cornflowerblue];
+// game card 9
+j2_21 -> j2_23 [color=darkgray];
+// game card 10
+ßj2_23 -> j2_25 [color=aqua];
+}

@@ -1,0 +1,6 @@
+(defun rem-test (&optional (name *test*))
+  (do ((l *entries* (cdr l)))
+      ((null (cdr l)) nil)
+    (when (equal (name (cadr l)) name)
+      (setf (cdr l) (cddr l))
+      (return name))))

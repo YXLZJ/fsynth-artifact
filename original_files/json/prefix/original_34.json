@@ -1,7 +1,0 @@
-{
-  "id": 123,
-  "name": "John Doe",
-  "address": {
-    "street": "123 Elm St",
-    "city": "Springfield"
-  },

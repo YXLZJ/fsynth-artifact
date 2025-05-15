@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_ClearPersistent" clear-persistent) :boolean (value :pointer))

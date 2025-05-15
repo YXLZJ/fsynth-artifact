@@ -1,0 +1,1 @@
+(gem-method :COLOR-TO-INDEX (root-window a-color))

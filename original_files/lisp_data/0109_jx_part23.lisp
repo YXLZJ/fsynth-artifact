@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsInt32" is-int32) :boolean (result :pointer))

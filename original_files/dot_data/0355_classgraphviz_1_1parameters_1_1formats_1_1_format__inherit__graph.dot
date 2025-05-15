@@ -1,0 +1,37 @@
+digraph "graphviz.parameters.formats.Format"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="graphviz.parameters.formats.\lFormat",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="graphviz.parameters.base.\lParameterBase",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1parameters_1_1base_1_1_parameter_base.html",tooltip=" "];
+  Node3 -> Node2 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="graphviz.copying.CopyBase",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1copying_1_1_copy_base.html",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="graphviz.parameters.mixins.\lParameters",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1parameters_1_1mixins_1_1_parameters.html",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="graphviz.backend.mixins.Pipe",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1backend_1_1mixins_1_1_pipe.html",tooltip=" "];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="graphviz.piping.Pipe",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1piping_1_1_pipe.html",tooltip=" "];
+  Node6 -> Node7 [id="edge6_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="graphviz.graphs.BaseGraph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_base_graph.html",tooltip=" "];
+  Node7 -> Node8 [id="edge7_Node000007_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="graphviz.graphs.Digraph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_digraph.html",tooltip=" "];
+  Node7 -> Node9 [id="edge8_Node000007_Node000009",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="graphviz.graphs.Graph",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1graphs_1_1_graph.html",tooltip=" "];
+  Node6 -> Node10 [id="edge9_Node000006_Node000010",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="graphviz.jupyter_integration.\lJupyterIntegration",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1jupyter__integration_1_1_jupyter_integration.html",tooltip=" "];
+  Node10 -> Node7 [id="edge10_Node000010_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node10 -> Node11 [id="edge11_Node000010_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="graphviz.sources.Source",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1sources_1_1_source.html",tooltip=" "];
+  Node6 -> Node11 [id="edge12_Node000006_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node12 [id="edge13_Node000004_Node000012",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="graphviz.backend.mixins.\lRender",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1backend_1_1mixins_1_1_render.html",tooltip=" "];
+  Node12 -> Node13 [id="edge14_Node000012_Node000013",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="graphviz.rendering.Render",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classgraphviz_1_1rendering_1_1_render.html",tooltip=" "];
+  Node13 -> Node7 [id="edge15_Node000013_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node13 -> Node11 [id="edge16_Node000013_Node000011",dir="back",color="steelblue1",style="solid",tooltip=" "];
+}

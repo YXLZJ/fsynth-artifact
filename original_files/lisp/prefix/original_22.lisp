@@ -1,1 +1,0 @@
-(mulaprakriti (random) (nested

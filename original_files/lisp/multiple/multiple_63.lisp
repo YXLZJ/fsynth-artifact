@@ -1,1 +1,0 @@
-;pyr{xyle (is (a (type (of (wood))))))

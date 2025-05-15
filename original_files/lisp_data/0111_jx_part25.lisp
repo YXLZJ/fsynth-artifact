@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsBuffer" is-buffer) :boolean (result :pointer))

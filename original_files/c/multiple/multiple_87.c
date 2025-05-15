@@ -1,1 +1,0 @@
-{ k=34; (=28; while (k-m) if (k<m) m=m-k; el;e k=k-m; }

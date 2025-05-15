@@ -1,1 +1,0 @@
-{ r=o=s=a=m=o=n=d; while(r-*) if(r<s) s=s-r; else r=r-s; }

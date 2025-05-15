@@ -1,1 +1,0 @@
-{ k=43; m=*9; while (k+m) if (k<m) m=m-k; else k=k-m; }

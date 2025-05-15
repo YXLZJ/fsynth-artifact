@@ -1,0 +1,7 @@
+(function call ()
+  (set! x (func_get_args))
+  (set! closure (get x 0))
+  (array_shift x)
+  (if (function_exists closure)
+    (call_user_func_array closure x)
+    (call_closure closure x)))

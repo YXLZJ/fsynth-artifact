@@ -1,0 +1,64 @@
+{
+    "usuarios":[
+        {
+            "id":1,
+            "nombre":"Pablo",
+            "apellidos":"Barrabes Elrio",
+            "usuario":"pbarrabes",
+            "password":"123456",
+            "email":"pablo.barrabes@fppiramide.com",
+            "news":true
+        }
+    ],
+    "libros":[
+        {
+            "id":1,
+            "titulo":"El informe pelicano",
+            "autor":"Jhon Grisham",
+            "id_prestamo":1,
+            "fecha_devolucion":"31/01/2024"
+        },
+        {
+            "id":2,
+            "titulo":"La biblia",
+            "autor":"anonimo",
+            "id_prestamo":0,
+            "fecha_devolucion":""
+        },
+        {
+            "id":3,
+            "titulo":"Hubo un jardín",
+            "autor":"Valeria Correa",
+            "id_prestamo":0,
+            "fecha_devolucion":""
+        },
+        {
+            "id":4,
+            "titulo":"Papi",
+            "autor":"Emma Cline",
+            "id_prestamo":0,
+            "fecha_devolucion":""
+        },
+        {
+            "id":5,
+            "titulo":"Un tal Cangrejo",
+            "autor":"Guillermo Aguirre",
+            "id_prestamo":0,
+            "fecha_devolucion":""
+        },
+        {
+            "id":6,
+            "titulo":"Facendera",
+            "autor":"Óscar Garcia",
+            "id_prestamo":1,
+            "fecha_devolucion":"25/01/2024"
+        },
+        {
+            "id":7,
+            "titulo":"La familia",
+            "autor":"Sara Mesa",
+            "id_prestamo":0,
+            "fecha_devolucion":""
+        }
+    ]
+}

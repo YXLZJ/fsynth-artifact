@@ -1,0 +1,113 @@
+digraph prolog {
+
+# *************
+# Graph options
+# *************
+
+newrank=true;
+concentrate=true;
+compound=true;
+graph [rankdir=LR,fontname=Helvetica,fontsize=10,ranksep=1.5];#, ranksep=2.5, nodesep=0.2];
+edge  [arrowhead=vee];
+node  [fontname=Helvetica,fontsize=10];
+
+# **********
+# The ebuild
+# **********
+
+subgraph cluster_leftcol {
+color=gray;
+label=<<i>ebuild</i>>;
+id [label="portage://dev-php/PEAR-Image_GraphViz-1.3.0_p20151104", color=red, width=4, href="../dev-php/PEAR-Image_GraphViz-1.3.0_p20151104.svg"];
+}
+
+# ****************
+# The dependencies
+# ****************
+
+subgraph cluster_midcol {
+color=gray;
+label=<<i>dependencies</i>>;
+subgraph cluster_compile {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>compile</i>>;
+subgraph cond29217 {
+dependency136330 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4"><TR><TD ROWSPAN="3" CELLPADDING="10">use_conditional</TD></TR><TR><TD>positive</TD></TR><TR><TD>test</TD></TR></TABLE>>, shape=none, color=red];
+subgraph pack105913 {
+dependency136331 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">no</TD></TR><TR><TD>media-gfx</TD></TR><TR><TD>graphviz</TD></TR><TR><TD>none</TD></TR><TR><TD>[,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+dependency136330:e -> dependency136331:w [weight=20,style="dashed",arrowhead="vee"];
+subgraph pack105914 {
+dependency136332 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">no</TD></TR><TR><TD>dev-php</TD></TR><TR><TD>PEAR-PEAR</TD></TR><TR><TD>none</TD></TR><TR><TD>[,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+dependency136330:e -> dependency136332:w [weight=20,style="dashed",arrowhead="vee"];
+}
+id:e -> dependency136330:w [weight=20,style="solid",arrowhead="vee"];
+}
+subgraph cluster_compileandrun {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>compile and run</i>>;
+}
+subgraph cluster_run {
+fillcolor="#eeeeee";
+style=filled;
+label=<<i>run</i>>;
+subgraph pack105915 {
+dependency136333 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">no</TD></TR><TR><TD>dev-php</TD></TR><TR><TD>pear</TD></TR><TR><TD>greaterequal</TD></TR><TR><TD>[1.8.1,,,1.8.1]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+id:e -> dependency136333:w [weight=20,style="solid",arrowhead="odot"];
+subgraph pack105916 {
+dependency136334 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" WIDTH="220"><TR><TD ROWSPAN="6" CELLPADDING="30">pack_dep</TD></TR><TR><TD WIDTH="110">no</TD></TR><TR><TD>media-gfx</TD></TR><TR><TD>graphviz</TD></TR><TR><TD>none</TD></TR><TR><TD>[,,]</TD></TR></TABLE>>, shape=none, color=blue];
+}
+id:e -> dependency136334:w [weight=20,style="solid",arrowhead="odot"];
+}
+}
+
+# **************
+# The candidates
+# **************
+
+subgraph cluster_choices {
+rank=same;
+color=gray;
+label=<<i>candidates</i>>;
+
+subgraph choice105913 {
+color=black;
+nodesep=1;
+choice1091011001059745103102120471031149711210411810512245494846484649 [label="portage://media-gfx/graphviz-10.0.1", color=red, width=4,href="../media-gfx/graphviz-10.0.1.svg"];
+choice1091011001059745103102120471031149711210411810512245494946484648 [label="portage://media-gfx/graphviz-11.0.0", color=red, width=4,href="../media-gfx/graphviz-11.0.0.svg"];
+choice10910110010597451031021204710311497112104118105122455746484648 [label="portage://media-gfx/graphviz-9.0.0", color=red, width=4,href="../media-gfx/graphviz-9.0.0.svg"];
+dependency136331:e -> choice1091011001059745103102120471031149711210411810512245494846484649:w [style=dotted,weight="100"];
+dependency136331:e -> choice1091011001059745103102120471031149711210411810512245494946484648:w [style=dotted,weight="100"];
+dependency136331:e -> choice10910110010597451031021204710311497112104118105122455746484648:w [style=dotted,weight="100"];
+}
+subgraph choice105914 {
+color=black;
+nodesep=1;
+choice10010111845112104112478069658245806965824549464948464951 [label="portage://dev-php/PEAR-PEAR-1.10.13", color=red, width=4,href="../dev-php/PEAR-PEAR-1.10.13.svg"];
+choice10010111845112104112478069658245806965824549464948464953 [label="portage://dev-php/PEAR-PEAR-1.10.15", color=red, width=4,href="../dev-php/PEAR-PEAR-1.10.15.svg"];
+dependency136332:e -> choice10010111845112104112478069658245806965824549464948464951:w [style=dotted,weight="100"];
+dependency136332:e -> choice10010111845112104112478069658245806965824549464948464953:w [style=dotted,weight="100"];
+}
+subgraph choice105915 {
+color=black;
+nodesep=1;
+choice100101118451121041124711210197114454946494846514511449 [label="portage://dev-php/pear-1.10.3-r1", color=red, width=4,href="../dev-php/pear-1.10.3-r1.svg"];
+dependency136333:e -> choice100101118451121041124711210197114454946494846514511449:w [style=dotted,weight="100"];
+}
+subgraph choice105916 {
+color=black;
+nodesep=1;
+choice1091011001059745103102120471031149711210411810512245494846484649 [label="portage://media-gfx/graphviz-10.0.1", color=red, width=4,href="../media-gfx/graphviz-10.0.1.svg"];
+choice1091011001059745103102120471031149711210411810512245494946484648 [label="portage://media-gfx/graphviz-11.0.0", color=red, width=4,href="../media-gfx/graphviz-11.0.0.svg"];
+choice10910110010597451031021204710311497112104118105122455746484648 [label="portage://media-gfx/graphviz-9.0.0", color=red, width=4,href="../media-gfx/graphviz-9.0.0.svg"];
+dependency136334:e -> choice1091011001059745103102120471031149711210411810512245494846484649:w [style=dotted,weight="100"];
+dependency136334:e -> choice1091011001059745103102120471031149711210411810512245494946484648:w [style=dotted,weight="100"];
+dependency136334:e -> choice10910110010597451031021204710311497112104118105122455746484648:w [style=dotted,weight="100"];
+}
+}
+
+}

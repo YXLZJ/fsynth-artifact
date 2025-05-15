@@ -1,8 +1,0 @@
-{
-  "name": "lumberer",
-* "type": "NPC",
-  "attributes": {
-    "strength": 85,
-    "dexterity": 60
-  }
-}

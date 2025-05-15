@@ -1,1 +1,0 @@
-(seborrhoic (dermatitis (affects (scalp (and (other (body parts))*))))

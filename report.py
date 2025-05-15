@@ -1,785 +1,285 @@
-import sqlite3
-import math
-from typing import Tuple
+#!/usr/bin/env python3
+"""
+metrics_analysis_updated.py
+----------------------------------
+Compute summary tables (Tables 4–8) from the *results* table produced by
+`update_repairs_method.py`.
 
-# Paths to SQLite databases
-DATABASES = ["result1_multiple.db", "result1_prefix.db", "result1.db"]
-DEFAULT_TIMEOUT = 240.0  # Default time (4 minutes) for missing repair times
+The schema expected in each `results` table is:
+    id INTEGER PRIMARY KEY,
+    format TEXT,
+    fid INTEGER,
+    cidx INTEGER,
+    algorithm TEXT,
+    original_text TEXT,
+    broken_text   TEXT,
+    repaired_text TEXT,
+    fixed INTEGER,                      -- 0 | 1
+    iterations INTEGER,
+    repair_time REAL,                   -- seconds
+    correct_runs INTEGER,
+    incorrect_runs INTEGER,
+    incomplete_runs INTEGER,
+    distance_original_broken   INTEGER,
+    distance_broken_repaired   INTEGER,
+    distance_original_repaired INTEGER
 
-def calculate_and_display_detailed_metrics():
-    """
-    Calculate and display detailed metrics in table-like structures for:
-    1. Each database separately.
-    2. Combined results across all databases.
-    """
-    combined_data = {}
-    
-    for db_path in DATABASES:
-        print(f"\nProcessing database: {db_path}")
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        
-        # Query to get all attempts (both successful and unsuccessful repairs)
-        cursor.execute("""
-            SELECT 
-                format,
-                algorithm,
-                distance_original_broken,
-                distance_broken_repaired,
-                distance_original_repaired,
-                fixed = 1 AS is_successful,
-                IFNULL(repair_time, ?) AS repair_time
-            FROM results
-        """, (DEFAULT_TIMEOUT,))
-        
-        # Organize data by format and algorithm
-        data = {}
-        for row in cursor.fetchall():
-            format_, algorithm, dist_ob, dist_br, dist_or, is_successful, repair_time = row
-            key = (format_, algorithm)
-            if key not in data:
-                data[key] = {
-                    "broken_repaired": [],
-                    "original_repaired": [],
-                    "repair_times": [],
-                    "successful_times": [],
-                    "total_attempts": 0,
-                    "successes": 0
-                }
-            data[key]["total_attempts"] += 1
-            data[key]["repair_times"].append(repair_time)
-            if is_successful:
-                data[key]["broken_repaired"].append(dist_br)
-                data[key]["original_repaired"].append(dist_or)
-                data[key]["successful_times"].append(repair_time)
-                data[key]["successes"] += 1
-            
-            # Merge data across databases for combined statistics
-            if key not in combined_data:
-                combined_data[key] = {
-                    "broken_repaired": [],
-                    "original_repaired": [],
-                    "repair_times": [],
-                    "successful_times": [],
-                    "total_attempts": 0,
-                    "successes": 0
-                }
-            combined_data[key]["total_attempts"] += 1
-            combined_data[key]["repair_times"].append(repair_time)
-            if is_successful:
-                combined_data[key]["broken_repaired"].append(dist_br)
-                combined_data[key]["original_repaired"].append(dist_or)
-                combined_data[key]["successful_times"].append(repair_time)
-                combined_data[key]["successes"] += 1
+By default three DBs are analysed (single / double / truncated corruptions).
+Modify `DATABASES` as needed.
+"""
 
-        conn.close()
-        
-        # Display results per database
-        display_metrics(data, f"Metrics for {db_path}")
-    
-    # Display combined results
-    display_metrics(combined_data, "Combined Metrics Across All Databases")
-    
+from __future__ import annotations
+import sqlite3, math, sys
+from pathlib import Path
+from typing import Any, Dict, List, Tuple
 
-def all_distances():
-    data = {}
-    
+# ───────────────────────────────── CONFIG ────────────────────────────────── #
+DATABASES       = ["single.db", "double.db", "truncated.db"]
+DEFAULT_TIMEOUT = 240.0  # seconds for NULL repair_time fallback
+# ─────────────────────────────────────────────────────────────────────────── #
+
+# Helpers ─────────────────────────────────────────────────────────────────── #
+
+def _to_numeric_list(vals: List[Any]) -> List[float]:
+    """Return a list containing *only* numeric values, safely converted to float."""
+    res: List[float] = []
+    for v in vals:
+        if v is None:
+            continue
+        if isinstance(v, (int, float)):
+            res.append(float(v))
+            continue
+        # Handle strings that might represent numbers
+        if isinstance(v, str):
+            try:
+                res.append(float(v.strip()))
+            except ValueError:
+                continue
+    return res
+
+def _stats(vals: List[Any]) -> Tuple[float, float]:
+    """Return (mean, stdev) computed on *numeric* subset of *vals*."""
+    nums = _to_numeric_list(vals)
+    n    = len(nums)
+    if n == 0:
+        return 0.0, 0.0
+    mu   = sum(nums) / n
+    if n == 1:
+        return mu, 0.0
+    return mu, math.sqrt(sum((x - mu) ** 2 for x in nums) / n)
+
+# Levenshtein with op‑counts -------------------------------------------------- #
+
+def edit_distance_with_ops(a: str, b: str) -> Tuple[int, int, int, int]:
+    m, n = len(a), len(b)
+    dp   = [[0] * (n + 1) for _ in range(m + 1)]
+    op   = [["M"] * (n + 1) for _ in range(m + 1)]
+    for i in range(1, m + 1):
+        dp[i][0] = i; op[i][0] = "D"
+    for j in range(1, n + 1):
+        dp[0][j] = j; op[0][j] = "I"
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if a[i - 1] == b[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1]
+            else:
+                d, ins, r = dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + 1
+                best      = min(d, ins, r)
+                dp[i][j]  = best
+                op[i][j]  = "DIR"[[d, ins, r].index(best)]
+    i = m; j = n; dels = ins = reps = 0
+    while i > 0 or j > 0:
+        cur = op[i][j]
+        if cur == "M":
+            i -= 1; j -= 1
+        elif cur == "D":
+            dels += 1; i -= 1
+        elif cur == "I":
+            ins  += 1; j -= 1
+        else:
+            reps += 1; i -= 1; j -= 1
+    return dp[m][n], dels, ins, reps
+
+# DB query helper ------------------------------------------------------------- #
+
+def _q(conn: sqlite3.Connection, sql: str, params: Tuple[Any, ...] = ()):  # noqa: D401
+    cur = conn.cursor(); cur.execute(sql, params); return cur.fetchall()
+
+# Table 4‑5 general ----------------------------------------------------------- #
+
+def table_4_5_general():
+    combined: Dict[Tuple[str, str], Dict[str, Any]] = {}
     for db in DATABASES:
+        if not Path(db).is_file():
+            print(f"[WARN] Skipping missing DB {db}", file=sys.stderr);
+            continue
         conn = sqlite3.connect(db)
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT 
-                algorithm,
-                distance_broken_repaired,
-                distance_original_repaired
-            FROM results
-            WHERE fixed = 1
-        """)
-        
-        for row in cursor.fetchall():
-            algorithm, dist_br, dist_or = row
-            if algorithm not in data:
-                data[algorithm] = {"broken_repaired": [], "original_repaired": []}
-            
-            if dist_br >= 0:
-                data[algorithm]["broken_repaired"].append(dist_br)
-            if dist_or >= 0:
-                data[algorithm]["original_repaired"].append(dist_or)
-        
+        rows = _q(conn, """
+            SELECT format, algorithm, distance_broken_repaired, distance_original_repaired,
+                   fixed, COALESCE(repair_time, ?) AS rt
+            FROM results""", (DEFAULT_TIMEOUT,))
         conn.close()
-    
-    def calculate_stats(values):
-        n = len(values)
-        mean = sum(values) / n if n > 0 else 0
-        stdev = math.sqrt(sum((x - mean) ** 2 for x in values) / n) if n > 1 else 0
-        return mean, stdev
-    
-    print("\nOverall Distance Metrics Across All Databases")
-    print("-" * 80)
-    print(f"{'Algorithm':<15} {'Avg BR':<10} {'Stdev BR':<10} {'Avg OR':<10} {'Stdev OR':<10}")
-    print("-" * 80)
-    
-    for algorithm, metrics in data.items():
-        avg_br, stdev_br = calculate_stats(metrics["broken_repaired"])
-        avg_or, stdev_or = calculate_stats(metrics["original_repaired"])
-        
-        print(f"{algorithm:<15} {avg_br:<10.2f} {stdev_br:<10.2f} {avg_or:<10.2f} {stdev_or:<10.2f}")
-    
-def display_metrics(data, title):
-    """Display formatted results in a table."""
-    print(f"\n{title}")
-    print("-" * 130)
-    print(f"{'Format':<10} {'Algorithm':<10} {'Avg BR':<10} {'Stdev BR':<10} {'Avg OR':<10} {'Stdev OR':<10} {'Avg Time':<12} {'Stdev Time':<12} {'Successes':<10} {'Total':<10}")
-    print("-" * 130)
-    
-    def calculate_stats(values):
-        n = len(values)
-        mean = sum(values) / n if n > 0 else 0
-        stdev = math.sqrt(sum((x - mean) ** 2 for x in values) / n) if n > 1 else 0
-        return mean, stdev
+        print(f"\nMetrics for {db}")
+        _print_metrics(_aggregate(rows))
+        # merge
+        for fmt, alg, dbr, dor, fixed, rt in rows:
+            key = (fmt, alg)
+            bucket = combined.setdefault(key, {"dbr": [], "dor": [], "rt": [], "succ": 0, "tot": 0})
+            bucket["tot"] += 1
+            bucket["rt"].append(rt)
+            if fixed:
+                bucket["succ"] += 1
+                bucket["dbr"].append(dbr)
+                bucket["dor"].append(dor)
+    print("\nCombined Metrics Across All Databases")
+    _print_metrics(combined)
 
-    for (format_, algorithm), metrics in data.items():
-        avg_br, stdev_br = calculate_stats(metrics["broken_repaired"])
-        avg_or, stdev_or = calculate_stats(metrics["original_repaired"])
-        avg_time, stdev_time = calculate_stats(metrics["repair_times"])
-        successes = metrics["successes"]
-        total_attempts = metrics["total_attempts"]
-        
-        print(f"{format_:<10} {algorithm:<10} {avg_br:<10.2f} {stdev_br:<10.2f} {avg_or:<10.2f} {stdev_or:<10.2f} {avg_time:<12.2f} {stdev_time:<12.2f} {successes:<10} {total_attempts:<10}")
 
-def edit_distance_with_ops(strA: str, strB: str) -> Tuple[int, int, int, int]:
-    """
-    Calculate the shortest edit distance from strA to strB and count operations:
-    - Delete, Insert, Replace.
+def _aggregate(rows):
+    data: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for fmt, alg, dbr, dor, fixed, rt in rows:
+        key = (fmt, alg)
+        bucket = data.setdefault(key, {"dbr": [], "dor": [], "rt": [], "succ": 0, "tot": 0})
+        bucket["tot"] += 1
+        bucket["rt"].append(rt)
+        if fixed:
+            bucket["succ"] += 1
+            bucket["dbr"].append(dbr)
+            bucket["dor"].append(dor)
+    return data
 
-    Returns:
-      (dist, del_count, ins_count, rep_count)
-    """
-    m, n = len(strA), len(strB)
-    dp = [[0] * (n + 1) for _ in range(m + 1)]
-    op = [[""] * (n + 1) for _ in range(m + 1)]
 
-    # 初始化dp和op
-    for i in range(1, m + 1):
-        dp[i][0] = i
-        op[i][0] = 'D'
+def _print_metrics(data):
+    hdr = f"{'Format':<8} {'Alg':<8} {'Avg BR':>8} {'σ BR':>8} {'Avg OR':>8} "\
+          f"{'σ OR':>8} {'Avg t':>8} {'σ t':>8} {'Succ':>6} {'Tot':>6}"
+    print("-" * len(hdr))
+    print(hdr)
+    print("-" * len(hdr))
+    for (fmt, alg), b in sorted(data.items()):
+        abr, sbr = _stats(b["dbr"])
+        aor, sor = _stats(b["dor"])
+        art, srt = _stats(b["rt"])
+        print(f"{fmt:<8} {alg:<8} {abr:8.2f} {sbr:8.2f} {aor:8.2f} {sor:8.2f} "\
+              f"{art:8.2f} {srt:8.2f} {b['succ']:6d} {b['tot']:6d}")
 
-    for j in range(1, n + 1):
-        dp[0][j] = j
-        op[0][j] = 'I'
+# 4‑5 distances --------------------------------------------------------------- #
 
-    # 填充dp和op
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            if strA[i - 1] == strB[j - 1]:
-                dp[i][j] = dp[i - 1][j - 1]
-                op[i][j] = 'M'
-            else:
-                del_cost = dp[i - 1][j] + 1
-                ins_cost = dp[i][j - 1] + 1
-                rep_cost = dp[i - 1][j - 1] + 1
-                min_cost = min(del_cost, ins_cost, rep_cost)
-                dp[i][j] = min_cost
-                if min_cost == del_cost:
-                    op[i][j] = 'D'
-                elif min_cost == ins_cost:
-                    op[i][j] = 'I'
-                else:
-                    op[i][j] = 'R'
-
-    dist = dp[m][n]
-    del_count = 0
-    ins_count = 0
-    rep_count = 0
-
-    # 回溯操作
-    i, j = m, n
-    while i > 0 or j > 0:
-        current_op = op[i][j]
-        if current_op == 'M':
-            i -= 1
-            j -= 1
-        elif current_op == 'D':
-            del_count += 1
-            i -= 1
-        elif current_op == 'I':
-            ins_count += 1
-            j -= 1
-        elif current_op == 'R':
-            rep_count += 1
-            i -= 1
-            j -= 1
-
-    return dist, del_count, ins_count, rep_count
-
-def calculate_average_delete_operations():
-    combined_results = {}
-    database_results = {db: {} for db in DATABASES}
-    database_format_results = {db: {} for db in DATABASES}
-
-    def update_results(results_dict, key, distance, del_count):
-        """
-        通用的更新函数，储存并累计编辑距离和删除操作数
-        """
-        if key not in results_dict:
-            results_dict[key] = {
-                "total_distance": 0,
-                "total_deletes": 0,
-                "count": 0
-            }
-        results_dict[key]["total_distance"] += distance
-        results_dict[key]["total_deletes"] += del_count
-        results_dict[key]["count"] += 1
-
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        # 获取 fixed=1 且 repaired_text 不为空的记录
-        cursor.execute("""
-            SELECT format, algorithm, broken_text, repaired_text
-            FROM results
-            WHERE fixed = 1 AND repaired_text IS NOT NULL
-        """)
-
-        rows = cursor.fetchall()
-        conn.close()
-
-        for format_, algorithm, original_text, repaired_text in rows:
-            dist, del_count, _, _ = edit_distance_with_ops(original_text, repaired_text)
-            
-            # 更新当前数据库中的算法统计
-            update_results(database_results[db_path], algorithm, dist, del_count)
-            
-            # 更新总的合并统计
-            update_results(combined_results, algorithm, dist, del_count)
-            
-            # 更新format维度的统计
-            if algorithm not in database_format_results[db_path]:
-                database_format_results[db_path][algorithm] = {}
-            update_results(database_format_results[db_path][algorithm], format_, dist, del_count)
-
-    # --- 输出 1： 组合所有数据库的结果 ---
-    print("Combined Results Across All Databases:")
-    print("-" * 70)
-    print(f"{'Algorithm':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-    print("-" * 70)
-    for algorithm, data in combined_results.items():
-        count = data["count"]
-        avg_dist = data["total_distance"] / count if count > 0 else 0
-        avg_del = data["total_deletes"] / count if count > 0 else 0
-        print(f"{algorithm:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-    # --- 输出 2： 各数据库分别的结果 ---
-    for db_path, results in database_results.items():
-        print(f"\nResults for {db_path}:")
-        print("-" * 70)
-        print(f"{'Algorithm':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 70)
-        for algorithm, data in results.items():
-            count = data["count"]
-            avg_dist = data["total_distance"] / count if count > 0 else 0
-            avg_del = data["total_deletes"] / count if count > 0 else 0
-            print(f"{algorithm:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-        # --- 输出 3： 按格式分类的结果 ---
-        print(f"\nFormat-Specific Results for {db_path}:")
-        print("-" * 80)
-        print(f"{'Algorithm':<15} {'Format':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 80)
-        for algorithm, formats in database_format_results[db_path].items():
-            for format_, data in formats.items():
-                count = data["count"]
-                avg_dist = data["total_distance"] / count if count > 0 else 0
-                avg_del = data["total_deletes"] / count if count > 0 else 0
-                print(f"{algorithm:<15} {format_:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-def get_iterations():
-    def calculate_average_iterations(database):
-        conn = sqlite3.connect(database)
-        cursor = conn.cursor()
-
-        # Ensure the iterations column exists
-        cursor.execute("PRAGMA table_info(results)")
-        columns = [col[1] for col in cursor.fetchall()]
-        if "iterations" not in columns:
-            print(f"[WARNING] 'iterations' column not found in {database}. Skipping.")
-            conn.close()
-            return {}
-
-        # Query to calculate average iterations by algorithm
-        cursor.execute("""
-            SELECT algorithm, COUNT(*), AVG(iterations) 
-            FROM results
-            WHERE iterations > 0
-            GROUP BY algorithm
-        """)
-
-        results = cursor.fetchall()
-        conn.close()
-
-        # Return as a dictionary
-        return {row[0]: (row[1], row[2]) for row in results}
-
-    # Aggregate results from all databases
-    algorithm_stats = {}
-
+def table_4_5_distances():
+    data: Dict[str, Dict[str, List[Any]]] = {}
     for db in DATABASES:
-        db_stats = calculate_average_iterations(db)
-        for algorithm, (count, avg_iterations) in db_stats.items():
-            if algorithm not in algorithm_stats:
-                algorithm_stats[algorithm] = {"total_count": 0, "total_iterations": 0.0}
-            algorithm_stats[algorithm]["total_count"] += count
-            algorithm_stats[algorithm]["total_iterations"] += count * avg_iterations
-
-    # Calculate and display overall average iterations for each algorithm
-    print(f"{'Algorithm':<15}{'Total Count':<15}{'Average Iterations':<20}")
-    print("-" * 50)
-    for algorithm, stats in algorithm_stats.items():
-        total_count = stats["total_count"]
-        avg_iterations = stats["total_iterations"] / total_count if total_count > 0 else 0
-        print(f"{algorithm:<15}{total_count:<15}{avg_iterations:<20.2f}")
-
-def calculate_average_delete_operations():
-    """
-    1. Compute both Broken→Repaired (BR) and Original→Repaired (OR) distances and deletions.
-    2. Aggregate results across:
-       - All three databases combined
-       - Individual databases
-       - Format-specific within each database
-    """
-    combined_results_BR = {}
-    combined_results_OR = {}
-    database_results_BR = {db: {} for db in DATABASES}
-    database_results_OR = {db: {} for db in DATABASES}
-    database_format_results_BR = {db: {} for db in DATABASES}
-    database_format_results_OR = {db: {} for db in DATABASES}
-
-    def update_results(results_dict, key, distance, del_count):
-        if key not in results_dict:
-            results_dict[key] = {
-                "total_distance": 0,
-                "total_deletes": 0,
-                "count": 0
-            }
-        results_dict[key]["total_distance"] += distance
-        results_dict[key]["total_deletes"] += del_count
-        results_dict[key]["count"] += 1
-
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        cursor.execute("""
-            SELECT format, algorithm, broken_text, repaired_text, original_text
-            FROM results
-            WHERE fixed = 1 AND repaired_text IS NOT NULL
-        """)
-
-        rows = cursor.fetchall()
+        if not Path(db).is_file():
+            continue
+        conn = sqlite3.connect(db)
+        rows = _q(conn, "SELECT algorithm, distance_broken_repaired, distance_original_repaired FROM results WHERE fixed=1")
         conn.close()
+        for alg, dbr, dor in rows:
+            bucket = data.setdefault(alg, {"dbr": [], "dor": []})
+            bucket["dbr"].append(dbr); bucket["dor"].append(dor)
+    print("\nOverall Distance Metrics Across All Databases")
+    print(f"{'Alg':<8} {'Avg BR':>8} {'σ BR':>8} {'Avg OR':>8} {'σ OR':>8}")
+    print("-" * 42)
+    for alg, vals in data.items():
+        abr, sbr = _stats(vals["dbr"]); aor, sor = _stats(vals["dor"])
+        print(f"{alg:<8} {abr:8.2f} {sbr:8.2f} {aor:8.2f} {sor:8.2f}")
 
-        for format_, algorithm, broken_text, repaired_text, original_text in rows:
-            # Compute distances for BR (Broken → Repaired) and OR (Original → Repaired)
-            dist_br, del_count_br, _, _ = edit_distance_with_ops(broken_text, repaired_text)
-            dist_or, del_count_or, _, _ = edit_distance_with_ops(original_text, repaired_text)
+# 6: fixed counts ------------------------------------------------------------- #
 
-            # Update per-database and overall statistics
-            update_results(database_results_BR[db_path], algorithm, dist_br, del_count_br)
-            update_results(database_results_OR[db_path], algorithm, dist_or, del_count_or)
-            update_results(combined_results_BR, algorithm, dist_br, del_count_br)
-            update_results(combined_results_OR, algorithm, dist_or, del_count_or)
-
-            # Format-specific
-            if algorithm not in database_format_results_BR[db_path]:
-                database_format_results_BR[db_path][algorithm] = {}
-            update_results(database_format_results_BR[db_path][algorithm], format_, dist_br, del_count_br)
-
-            if algorithm not in database_format_results_OR[db_path]:
-                database_format_results_OR[db_path][algorithm] = {}
-            update_results(database_format_results_OR[db_path][algorithm], format_, dist_or, del_count_or)
-
-    # Print Combined Results
-    def print_table(title, results):
-        print(f"\n{title}:")
-        print("-" * 70)
-        print(f"{'Algorithm':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 70)
-        for algorithm, data in results.items():
-            count = data["count"]
-            avg_dist = data["total_distance"] / count if count > 0 else 0
-            avg_del = data["total_deletes"] / count if count > 0 else 0
-            print(f"{algorithm:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-    print_table("Combined Broken → Repaired (BR) Results", combined_results_BR)
-    print_table("Combined Original → Repaired (OR) Results", combined_results_OR)
-
-    # Print per-database results
-    for db_path in DATABASES:
-        print_table(f"Results for {db_path} (BR)", database_results_BR[db_path])
-        print_table(f"Results for {db_path} (OR)", database_results_OR[db_path])
-
-        # Print format-specific results
-        print(f"\nFormat-Specific Results for {db_path}:")
-        print("-" * 80)
-        print(f"{'Algorithm':<15} {'Format':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 80)
-        for algorithm, formats in database_format_results_BR[db_path].items():
-            for format_, data in formats.items():
-                count = data["count"]
-                avg_dist = data["total_distance"] / count if count > 0 else 0
-                avg_del = data["total_deletes"] / count if count > 0 else 0
-                print(f"{algorithm:<15} {format_:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-def delete_ratio():
-    """
-    1. Compute both Broken→Repaired (BR) and Original→Repaired (OR) distances and deletions.
-    2. Aggregate results across:
-       - All three databases combined
-       - Individual databases
-       - Format-specific within each database
-    """
-    combined_results_BR = {}
-    combined_results_OR = {}
-    database_results_BR = {db: {} for db in DATABASES}
-    database_results_OR = {db: {} for db in DATABASES}
-    database_format_results_BR = {db: {} for db in DATABASES}
-    database_format_results_OR = {db: {} for db in DATABASES}
-
-    def update_results(results_dict, key, distance, del_count):
-        if key not in results_dict:
-            results_dict[key] = {
-                "total_distance": 0,
-                "total_deletes": 0,
-                "count": 0
-            }
-        results_dict[key]["total_distance"] += distance
-        results_dict[key]["total_deletes"] += del_count
-        results_dict[key]["count"] += 1
-
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        cursor.execute("""
-            SELECT format, algorithm, broken_text, repaired_text, original_text
-            FROM results
-            WHERE fixed = 1 AND repaired_text IS NOT NULL
-        """)
-
-        rows = cursor.fetchall()
+def table_6_count_fixed():
+    total: Dict[str, int] = {}
+    for db in DATABASES:
+        if not Path(db).is_file():
+            continue
+        conn = sqlite3.connect(db)
+        rows = _q(conn, "SELECT algorithm, COUNT(*) FROM results WHERE fixed=1 GROUP BY algorithm")
         conn.close()
+        print(f"\nFixed counts for {db}")
+        for alg, cnt in rows:
+            print(f"  {alg:<8} {cnt:6d}"); total[alg] = total.get(alg, 0) + cnt
+    print("\nTotal fixed files across DBs")
+    for alg, cnt in total.items():
+        print(f"  {alg:<8} {cnt:6d}")
 
-        for format_, algorithm, broken_text, repaired_text, original_text in rows:
-            # Compute distances for BR (Broken → Repaired) and OR (Original → Repaired)
-            dist_br, del_count_br, _, _ = edit_distance_with_ops(broken_text, repaired_text)
-            dist_or, del_count_or, _, _ = edit_distance_with_ops(original_text, repaired_text)
+# 7: perfect repairs ---------------------------------------------------------- #
 
-            # Update per-database and overall statistics
-            update_results(database_results_BR[db_path], algorithm, dist_br, del_count_br)
-            update_results(database_results_OR[db_path], algorithm, dist_or, del_count_or)
-            update_results(combined_results_BR, algorithm, dist_br, del_count_br)
-            update_results(combined_results_OR, algorithm, dist_or, del_count_or)
-
-            # Format-specific
-            if algorithm not in database_format_results_BR[db_path]:
-                database_format_results_BR[db_path][algorithm] = {}
-            update_results(database_format_results_BR[db_path][algorithm], format_, dist_br, del_count_br)
-
-            if algorithm not in database_format_results_OR[db_path]:
-                database_format_results_OR[db_path][algorithm] = {}
-            update_results(database_format_results_OR[db_path][algorithm], format_, dist_or, del_count_or)
-
-    # Print Combined Results
-    def print_table(title, results):
-        print(f"\n{title}:")
-        print("-" * 70)
-        print(f"{'Algorithm':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 70)
-        for algorithm, data in results.items():
-            count = data["count"]
-            avg_dist = data["total_distance"] / count if count > 0 else 0
-            avg_del = data["total_deletes"] / count if count > 0 else 0
-            print(f"{algorithm:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-    print_table("Combined Broken → Repaired (BR) Results", combined_results_BR)
-    print_table("Combined Original → Repaired (OR) Results", combined_results_OR)
-
-    # Print per-database results
-    for db_path in DATABASES:
-        print_table(f"Results for {db_path} (BR)", database_results_BR[db_path])
-        print_table(f"Results for {db_path} (OR)", database_results_OR[db_path])
-
-        # Print format-specific results
-        print(f"\nFormat-Specific Results for {db_path}:")
-        print("-" * 80)
-        print(f"{'Algorithm':<15} {'Format':<15} {'Avg Distance':<15} {'Avg Deletes':<15} {'Count':<10}")
-        print("-" * 80)
-        for algorithm, formats in database_format_results_BR[db_path].items():
-            for format_, data in formats.items():
-                count = data["count"]
-                avg_dist = data["total_distance"] / count if count > 0 else 0
-                avg_del = data["total_deletes"] / count if count > 0 else 0
-                print(f"{algorithm:<15} {format_:<15} {avg_dist:<15.2f} {avg_del:<15.2f} {count:<10}")
-
-def count_fixed_files():
-    """
-    Counts the number of successfully repaired files per algorithm across multiple databases.
-    """
-    # Dictionary to store results
-    total_counts = {}
-    database_counts = {db: {} for db in DATABASES}
-
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        # Query to count fixed records per algorithm
-        cursor.execute("""
-            SELECT algorithm, COUNT(*) 
-            FROM results 
-            WHERE fixed = 1 
-            GROUP BY algorithm
-        """)
-
-        for algorithm, count in cursor.fetchall():
-            # Update per-database count
-            database_counts[db_path][algorithm] = count
-
-            # Update total count
-            if algorithm not in total_counts:
-                total_counts[algorithm] = 0
-            total_counts[algorithm] += count
-
+def table_7_perfect():
+    for db in DATABASES:
+        if not Path(db).is_file():
+            continue
+        conn = sqlite3.connect(db)
+        rows = _q(conn, "SELECT format, algorithm, COUNT(*) FROM results WHERE distance_original_repaired=0 GROUP BY format, algorithm")
         conn.close()
-
-    # Print per-database results
-    for db_path, counts in database_counts.items():
-        print(f"\nResults for {db_path}:")
-        print("-" * 40)
-        print(f"{'Algorithm':<15} {'Fixed Count':<15}")
-        print("-" * 40)
-        for algorithm, count in counts.items():
-            print(f"{algorithm:<15} {count:<15}")
-
-    # Print combined results
-    print("\nTotal Fixed Files Across All Databases:")
-    print("-" * 40)
-    print(f"{'Algorithm':<15} {'Fixed Count':<15}")
-    print("-" * 40)
-    for algorithm, count in total_counts.items():
-        print(f"{algorithm:<15} {count:<15}")
-
-def count_perfect_repairs_by_algorithm():
-    """
-    Count the number of perfectly repaired entries in each database by algorithm and format.
-    A perfect repair means the original and repaired texts have a distance of 0.
-    """
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        # Query to count perfect repairs by format and algorithm
-        cursor.execute("""
-            SELECT format, algorithm, COUNT(*)
-            FROM results
-            WHERE distance_original_repaired = 0
-            GROUP BY format, algorithm
-        """)
-
-        results = cursor.fetchall()
-
-        print(f"Perfect Repairs by Algorithm in {db_path}:")
-        if results:
-            for format_, algorithm, count in results:
-                print(f"  Format: {format_}, Algorithm: {algorithm}, Perfect Repairs: {count}")
+        print(f"\nPerfect repairs in {db}")
+        if rows:
+            for fmt, alg, cnt in rows:
+                print(f"  {fmt:<6} {alg:<8} {cnt:5d}")
         else:
-            print("  No perfect repairs found.")
+            print("  None")
 
+# 8: efficiency --------------------------------------------------------------- #
+
+def table_8_efficiency():
+    tot_t: Dict[str, float] = {}; tot_n: Dict[str, int] = {}; iter_tot: Dict[str, float] = {}
+    for db in DATABASES:
+        if not Path(db).is_file():
+            continue
+        conn = sqlite3.connect(db)
+        rt_rows = _q(conn, "SELECT algorithm, AVG(repair_time), COUNT(*) FROM results GROUP BY algorithm")
+        it_rows = _q(conn, "SELECT algorithm, AVG(iterations), COUNT(*) FROM results WHERE iterations>0 GROUP BY algorithm")
         conn.close()
+        print(f"\nAverage runtime in {db}")
+        for alg, avg_rt, cnt in rt_rows:
+            print(f"  {alg:<8} t={avg_rt:6.2f}s (n={cnt})")
+            tot_t[alg] = tot_t.get(alg, 0.0) + avg_rt * cnt; tot_n[alg] = tot_n.get(alg, 0) + cnt
+        for alg, avg_it, cnt in it_rows:
+            iter_tot[alg] = iter_tot.get(alg, 0.0) + avg_it * cnt
+    print("\nOverall average runtime across DBs")
+    for alg in tot_t:
+        avg_rt = tot_t[alg] / tot_n[alg]; avg_it = (iter_tot.get(alg, 0) / tot_n[alg]) if tot_n[alg] else 0
+        print(f"  {alg:<8} t={avg_rt:6.2f}s  iters={avg_it:8.2f} (n={tot_n[alg]})")
 
-def calculate_avg_runtime():
-    """
-    Calculates the average runtime of each algorithm when fixed=1 (successful repair).
-    """
-    total_runtimes = {}  # Store total runtime per algorithm
-    total_counts = {}  # Store count of successful repairs per algorithm
-    database_runtimes = {db: {} for db in DATABASES}  # Store per-database results
+# Surviving‑data ratio -------------------------------------------------------- #
 
-    for db_path in DATABASES:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        # Query to calculate average runtime for fixed=1 cases
-        cursor.execute("""
-            SELECT algorithm, AVG(repair_time), COUNT(*)
-            FROM results 
-            GROUP BY algorithm
-        """)
-
-        for algorithm, avg_runtime, count in cursor.fetchall():
-            # Store per-database statistics
-            database_runtimes[db_path][algorithm] = (avg_runtime, count)
-
-            # Update total statistics
-            if algorithm not in total_runtimes:
-                total_runtimes[algorithm] = 0
-                total_counts[algorithm] = 0
-            total_runtimes[algorithm] += avg_runtime * count  # Accumulate total time
-            total_counts[algorithm] += count  # Accumulate total successful repairs
-
-        conn.close()
-
-    # Print per-database results
-    for db_path, runtimes in database_runtimes.items():
-        print(f"\nAverage Runtime for {db_path} (Successful Repairs Only):")
-        print("-" * 50)
-        print(f"{'Algorithm':<15} {'Avg Time (s)':<15} {'Count':<10}")
-        print("-" * 50)
-        for algorithm, (avg_runtime, count) in runtimes.items():
-            print(f"{algorithm:<15} {avg_runtime:<15.2f} {count:<10}")
-
-    # Print combined results
-    print("\nOverall Average Runtime Across All Databases:")
-    print("-" * 50)
-    print(f"{'Algorithm':<15} {'Avg Time (s)':<15} {'Count':<10}")
-    print("-" * 50)
-    for algorithm in total_runtimes:
-        avg_runtime = total_runtimes[algorithm] / total_counts[algorithm] if total_counts[algorithm] > 0 else 0
-        print(f"{algorithm:<15} {avg_runtime:<15.2f} {total_counts[algorithm]:<10}")
-
-def edit_distance_with_ops(strA: str, strB: str) -> Tuple[int, int, int, int]:
-    """
-    Compute the Levenshtein distance and count delete, insert, and replace operations.
-    
-    Returns:
-      (distance, del_count, ins_count, rep_count)
-    """
-    m, n = len(strA), len(strB)
-    dp = [[0] * (n + 1) for _ in range(m + 1)]
-    op = [[""] * (n + 1) for _ in range(m + 1)]
-
-    for i in range(1, m + 1):
-        dp[i][0] = i
-        op[i][0] = 'D'  # Deletion
-
-    for j in range(1, n + 1):
-        dp[0][j] = j
-        op[0][j] = 'I'  # Insertion
-
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            if strA[i - 1] == strB[j - 1]:
-                dp[i][j] = dp[i - 1][j - 1]
-                op[i][j] = 'M'
-            else:
-                del_cost = dp[i - 1][j] + 1
-                ins_cost = dp[i][j - 1] + 1
-                rep_cost = dp[i - 1][j - 1] + 1
-                dp[i][j] = min(del_cost, ins_cost, rep_cost)
-
-                if dp[i][j] == del_cost:
-                    op[i][j] = 'D'
-                elif dp[i][j] == ins_cost:
-                    op[i][j] = 'I'
-                else:
-                    op[i][j] = 'R'
-
-    dist = dp[m][n]
-    del_count = 0
-    ins_count = 0
-    rep_count = 0
-
-    i, j = m, n
-    while i > 0 or j > 0:
-        if i > 0 and j > 0 and op[i][j] == 'M':
-            i -= 1
-            j -= 1
-        elif i > 0 and op[i][j] == 'D':
-            del_count += 1
-            i -= 1
-        elif j > 0 and op[i][j] == 'I':
-            ins_count += 1
-            j -= 1
-        elif i > 0 and j > 0 and op[i][j] == 'R':
-            rep_count += 1
-            i -= 1
-            j -= 1
-        else:
-            break  # Avoid infinite loops
-
-    return dist, del_count, ins_count, rep_count
-
-def calculate_avg_surviving_data():
-    def update_results(results_dict, key, surviving_ratio):
-        if key not in results_dict:
-            results_dict[key] = {"ratios": [], "total_ratio": 0, "count": 0}
-        results_dict[key]["ratios"].append(surviving_ratio)
-        results_dict[key]["total_ratio"] += surviving_ratio
-        results_dict[key]["count"] += 1
-
-    def calculate_stats(data):
-        count = len(data)
-        mean = sum(data) / count if count > 0 else 0
-        stdev = math.sqrt(sum((x - mean) ** 2 for x in data) / count) if count > 1 else 0
-        return mean, stdev
-
-    for mode, column in [("OR", "original_text"), ("CR", "broken_text")]:
-        results = {}
-        db_results = {db: {} for db in DATABASES}
-
-        for db_path in DATABASES:
-            conn = sqlite3.connect(db_path)
-            cursor = conn.cursor()
-
-            cursor.execute(f"""
-                SELECT algorithm, {column}, repaired_text 
-                FROM results
-                WHERE fixed = 1 AND repaired_text IS NOT NULL
-            """)
-
-            rows = cursor.fetchall()
+def table_surviving_ratio():
+    for mode, src in (("OR", "original_text"), ("CR", "broken_text")):
+        overall: Dict[str, List[float]] = {}
+        for db in DATABASES:
+            if not Path(db).is_file():
+                continue
+            conn = sqlite3.connect(db)
+            rows = _q(conn, f"SELECT algorithm, {src}, repaired_text FROM results WHERE fixed=1 AND repaired_text IS NOT NULL")
             conn.close()
+            print(f"\nSurviving‑data ratio ({mode}) in {db}")
+            per_db: Dict[str, List[float]] = {}
+            for alg, src_txt, rep_txt in rows:
+                _, dels, _, _ = edit_distance_with_ops(src_txt, rep_txt)
+                ratio = (len(src_txt) - dels) / len(src_txt) if src_txt else 0
+                per_db.setdefault(alg, []).append(ratio)
+                overall.setdefault(alg, []).append(ratio)
+            _print_ratio(per_db)
+        print(f"\nOverall surviving‑data ratio ({mode})")
+        _print_ratio(overall)
 
-            for algorithm, original_text, repaired_text in rows:
-                L = len(original_text)
-                _, d, _, _ = edit_distance_with_ops(original_text, repaired_text)
-                surviving_ratio = (L - d) / L if L > 0 else 0
 
-                update_results(db_results[db_path], algorithm, surviving_ratio)
-                update_results(results, algorithm, surviving_ratio)
+def _print_ratio(buckets: Dict[str, List[float]]):
+    if not buckets:
+        print("  (no data)"); return
+    print(f"{'Alg':<8} {'Avg':>10} {'σ':>10} {'n':>6}")
+    for alg, vals in buckets.items():
+        mu, sd = _stats(vals)
+        print(f"{alg:<8} {mu:10.4f} {sd:10.4f} {len(vals):6d}")
 
-        print(f"\n Surviving Data Ratio ({mode})")
-        for db_path, algorithms in db_results.items():
-            print(f"\nResults for {db_path}:")
-            print("-" * 70)
-            print(f"{'Algorithm':<15} {'Avg Surviving Ratio':<20} {'Stdev':<15} {'Count':<10}")
-            print("-" * 70)
-            for algorithm, data in algorithms.items():
-                avg_ratio, stdev = calculate_stats(data["ratios"])
-                print(f"{algorithm:<15} {avg_ratio:<20.4f} {stdev:<15.4f} {data['count']:<10}")
-
-        print(f"\nOverall Results Across All Databases ({mode}):")
-        print("-" * 70)
-        print(f"{'Algorithm':<15} {'Avg Surviving Ratio':<20} {'Stdev':<15} {'Count':<10}")
-        print("-" * 70)
-        for algorithm, data in results.items():
-            avg_ratio, stdev = calculate_stats(data["ratios"])
-            print(f"{algorithm:<15} {avg_ratio:<20.4f} {stdev:<15.4f} {data['count']:<10}")
+# ─────────────────────────────────────────────────────────────────────────── #
 
 if __name__ == "__main__":
-    print("----------------Table 4-5(General)------------------------------------")
-    calculate_and_display_detailed_metrics()
-    print("----------------Table 4-5(Data Survive)-------------------------------")
-    calculate_avg_surviving_data()
-    print("----------------Table 4-5(levenshtein distances)----------------------")
-    all_distances()
-    print("----------------Table 6(Count repaired)-------------------------------")
-    count_fixed_files()
-    print("----------------Table 7(Perfectly repaire)----------------------------")
-    count_perfect_repairs_by_algorithm()
-    print("----------------Table 8(Efficiency)-----------------------------------")
-    calculate_avg_runtime()
-    get_iterations()
-    
+    print("———— Table 4‑5 (general) ———————————————")
+    table_4_5_general()
+    print("———— Table 4‑5 (Levenshtein distances) ————")
+    table_4_5_distances()
+    print("———— Table 4‑5 (data survive) ——————————")
+    table_surviving_ratio()
+    print("———— Table 6 (count repaired) —————————")
+    table_6_count_fixed()
+    print("———— Table 7 (perfect repairs) —————————")
+    table_7_perfect()
+    print("———— Table 8 (efficiency) ———————————")
+    table_8_efficiency()

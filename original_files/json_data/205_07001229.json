@@ -1,0 +1,58 @@
+{
+    "licData": {
+        "licName": "001229",
+        "licId": "07001229",
+        "chName": "皙美白面霜（滋潤型）",
+        "enName": "LIVING WHITE MOISTURIZING CREAM",
+        "packDt": " 玻璃容器裝",
+        "doesId": "",
+        "does": "霜劑",
+        "drugMcId": "0710",
+        "drugMcMa": "其他面霜乳液",
+        "purpose": "淡化黑色素，使皮膚光滑，白嫩",
+        "signId": "DHY00700122909",
+        "efDate": "2002-08-21 00:00:00",
+        "giDate": "1989-08-21 00:00:00",
+        "gtLicDate": "1989-08-21 00:00:00",
+        "exDate": "1998-08-01 00:00:00",
+        "recvId": "",
+        "canMark": "註銷",
+        "lockMemo": "已解鎖",
+        "restrMa": "01 國　產"
+    },
+    "expNmeData": [],
+    "factData": {
+        "factId": "1012105500",
+        "factName": "浩恩國際股份有限公司",
+        "factAddr": "新竹巿中華路五段８８號",
+        "cid": "中華民國"
+    },
+    "presData": {
+        "cresWrap": {
+            "1": {
+                "presId": 1,
+                "oriPresName": "",
+                "presName": "1",
+                "titleNames": [
+                    "含量"
+                ],
+                "datas": []
+            }
+        }
+    },
+    "authorData": {
+        "cauthorListDto": []
+    },
+    "uploadData": {
+        "cuploadFileListDto": []
+    },
+    "modData": {
+        "chModListDto": []
+    },
+    "changeData": null,
+    "appData": {
+        "appId": "",
+        "appName": "浩恩國際股份有限公司",
+        "appAddr": "新竹巿中華路五段８８號"
+    }
+}

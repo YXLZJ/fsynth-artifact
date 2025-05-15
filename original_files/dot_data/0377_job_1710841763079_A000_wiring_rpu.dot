@@ -1,0 +1,29 @@
+#GRAPHVIZ_OUTPUT 
+digraph{ 
+rankdir=LR; 
+splines=ortho; 
+RFP[shape=none,label="RFP"]; 
+GFP[shape=none,label="GFP"]; 
+BFP[shape=none,label="BFP"]; 
+YFP[shape=none,label="YFP"]; 
+fadD[shape=none,label="fadD"]; 
+pLuxStar[shape=none,label="pLuxStar"]; 
+pBAD[shape=none,label="pBAD"]; 
+galEP2[shape=none,label="galEP2"]; 
+B2_BM3R1[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841763079_A000_B2_BM3R1_gate.png"]; 
+E1_BetI[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841763079_A000_E1_BetI_gate.png"]; 
+A1_AmtR[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841763079_A000_A1_AmtR_gate.png"]; 
+P1_PhlF[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841763079_A000_P1_PhlF_gate.png"]; 
+R1_PsrA[fixedsize=true,height=1.0,width=1.0,label="",shape=none,image="job_1710841763079_A000_R1_PsrA_gate.png"]; 
+pBAD ->YFP ; 
+B2_BM3R1 ->BFP ; 
+fadD ->B2_BM3R1 ; 
+A1_AmtR ->B2_BM3R1 ; 
+galEP2 ->A1_AmtR ; 
+E1_BetI ->GFP ; 
+fadD ->E1_BetI ; 
+P1_PhlF ->E1_BetI ; 
+pLuxStar ->P1_PhlF ; 
+R1_PsrA ->RFP ; 
+fadD ->R1_PsrA ; 
+} 

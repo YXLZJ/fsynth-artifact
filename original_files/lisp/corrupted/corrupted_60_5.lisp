@@ -1,1 +1,0 @@
-*geological (formation (layer (rock "granite") (age "500 million years")) (location "Rocky Mountains")))

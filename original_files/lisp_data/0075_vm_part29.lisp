@@ -1,0 +1,1 @@
+(define-vm-fun %%normalize/1 (a) (%normalize a a))

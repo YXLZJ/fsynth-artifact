@@ -1,0 +1,71 @@
+{
+	"associated_units": [
+		"810288:es"
+	],
+	"bfmtMetadata": {
+		"createdAt": "2017-08-11T02:51:16.000Z",
+		"updatedAt": "2020-12-02T09:36:13.000Z"
+	},
+	"desc": "50% Atk (Fire) for all allies, 30% all parameters, negates all status ailments and Atk, Def, Rec reduction & add to BB/SBB (Adds Fire barrier)<br>50% Rec (Fire), 25% Fire elemental damage for all allies & add to SBB (25 combo Fire attack on Earth foes) in Guild Raid",
+	"effects": [
+		{
+			"conditions": [],
+			"params": "62,1&7000&0&100&0,1,2,0,1,1,0",
+			"passive id": "66",
+			"passive target": "self",
+			"trigger on bb": true,
+			"trigger on sbb": true,
+			"triggered effect": [
+				{
+					"effect delay time(ms)/frame": "0.0/0",
+					"elemental barrier absorb dmg%": 100,
+					"elemental barrier def": 0,
+					"elemental barrier element": "fire",
+					"elemental barrier hp": 7000,
+					"proc id": "62",
+					"target area": "aoe",
+					"target type": "party"
+				}
+			]
+		},
+		{
+			"atk% buff": 50,
+			"conditions": [],
+			"elements buffed": [
+				"fire"
+			],
+			"params": "1,0,50,0,0,0,0",
+			"passive id": "2",
+			"passive target": "party"
+		},
+		{
+			"atk down resist%": 100,
+			"conditions": [],
+			"curse resist%": 100,
+			"def down resist%": 100,
+			"injury resist%": 100,
+			"paralysis resist%": 100,
+			"params": "100,100,100,100,100,100,100,100,100",
+			"passive id": "73",
+			"passive target": "self",
+			"poison resist%": 100,
+			"rec down resist%": 100,
+			"sick resist%": 100,
+			"weaken resist%": 100
+		},
+		{
+			"atk% buff": 30,
+			"conditions": [],
+			"def% buff": 30,
+			"hp% buff": 30,
+			"params": "30,30,30,0,30",
+			"passive id": "1",
+			"passive target": "self",
+			"rec% buff": 30
+		}
+	],
+	"id": "810288",
+	"name": "Inexorable March Technique",
+	"rarity": "7",
+	"target": "self"
+}

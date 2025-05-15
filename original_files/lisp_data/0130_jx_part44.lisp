@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_SetNativeMethod" set-native-method) :void (host :pointer) (name :string) (method :pointer))

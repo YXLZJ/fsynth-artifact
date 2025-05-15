@@ -1,1 +1,0 @@
-(Zoophaga (is (an *order (of (insects))))))

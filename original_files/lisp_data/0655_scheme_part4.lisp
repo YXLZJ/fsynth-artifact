@@ -1,0 +1,5 @@
+  (defstate scheme-lexer :multiline-comment ()
+    ("#\\|" :comment.multiline (state :multiline-comment))
+    ("\\|#" :comment.multiline (state :pop!))
+    ("[^|#]+" :comment.multiline)
+    ("[|#]" :comment.multiline))

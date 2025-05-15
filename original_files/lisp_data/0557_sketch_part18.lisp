@@ -1,0 +1,6 @@
+(defmethod act ((this sketch))
+  (loop for mover across (movers this)
+        do (progn (apply-force mover (mult (vec2 0 -0.1) (mass mover)))
+                  (when (is-inside mover (liquid this))
+                    (drag mover (liquid this)))
+                  (update mover))))

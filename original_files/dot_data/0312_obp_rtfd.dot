@@ -1,0 +1,124 @@
+digraph qiniu_rtfd_idx {
+    /*生成命令:
+$ neato -Tjpeg qiniu_rtfd_idx.dot -o qiniu_rtfd_idx.jpg -Tcmapx -o qiniu_rtfd_idx.map
+$ python ../dotools/gen4dot2htm.py --neato -t ../dotools/tpl_idx.htm -i "rtfd* O.B.P index" -d qiniu_rtfd_idx.dot -o qiniu_rtfd_idx.html
+
+    全局设定
+    */
+    graph [label=""
+        ,fontsize=12.0,fontcolor=snow
+        ,labeljust="l",labelloc="b",center=1
+        ,ranksep=0.1,center=1,ratio=compress
+        ,rankdir=BT
+        ,bgcolor="#333333"
+        ];
+
+    node[fontsize=11.0,height=0.3
+        ,style="filled,setlinewidth(0.5)",fillcolor="#333333",color=gray,fontcolor=snow
+        ,shape=plaintext
+        ];
+
+    edge [fontsize=9.0,fontcolor=gray
+        ,color=azure
+        ,arrowsize=0.5,arrowhead=vee,arrowtail=none
+        ,style="setlinewidth(0.5)"
+        ];
+
+    OBP      [label="O.B.P~OpenBookProjects\n开放图书计划",shape=box3d
+        ,URL="http://code.google.com/p/openbookproject/"];
+
+    original  [label="原创",shape=tab];
+    lpybook  [label="爱蠎",shape=folder];
+        lpy   [label="可爱的Python 电子版",shape=note
+            ,URL="http://rtfd.zoomquiet.top/lovelypy/build/html/"];
+        l2py   [label="可爱的Python II",shape=note
+            ,URL="http://rtfd.zoomquiet.top/love2py/build/html/"];
+
+        rwp4l   [label="大蟒本色",shape=note
+            ,URL="http://zoomquiet.bitbucket.org/rwpy4l/"];
+
+
+    translate  [label="翻译",shape=tab];
+    techbook  [label="图书",shape=folder];
+
+        tpipy   [label="TPiPy 中文版",shape=note
+            ,URL="http://rtfd.zoomquiet.top/tpipy/build/html/"];
+
+        hgtip   [label="Hg妙招",shape=note
+            ,URL="http://zoomquiet.github.com/hgtip/"];
+
+        rwiwpyzh   [label="电子设备和Python",shape=note
+            ,URL="https://bitbucket.org/ZoomQuiet/obp.rwiwpyzh"];
+        TAoCzh   [label="社区艺术",shape=note
+            ,URL="http://rtfd.zoomquiet.top/TAoC_zh/_build/html/"];
+
+    pydocs  [label="参考",shape=folder];
+        docspy3   [label="Py3文档",shape=note
+            ,URL="http://rtfd.zoomquiet.top/docs-py3_zh/build/html/"];
+/*
+        docspy2   [label="Py2文档",shape=note
+            ,URL="http://rtfd.zoomquiet.top/docs-py2_zh/build/html/"];
+*/
+        pycoders   [label="蠎周刊",shape=note
+            ,URL="http://weekly.pychina.org/"];
+
+    tools  [label="工具",shape=folder];
+        leodoc   [label="Leo手册\nv4.9rc1",shape=note
+            ,URL="http://zoomquiet.github.com/leo-doc-zh/leo_toc.html"];
+
+        pyblosxom   [label="PyBlosxom手册\nv1.5-rc1",shape=note
+            ,URL="http://rtfd.zoomquiet.top/pyblosxom_zh/_build/html/"];
+
+        sphnix   [label="Sphinx手册",shape=note
+            ,URL="http://rtfd.zoomquiet.top/sphinx_zh/_build/html/"];
+            
+
+    OBP->{original translate};
+
+    chaosbook  [label="42分钟乱入系列",shape=folder
+            ,URL="http://chaos2.zoomquiet.io/"];
+
+    original->{chaosbook lpybook};
+        lpybook->lpy [label="20%",style="setlinewidth(1)"]
+        lpybook->l2py [label="3%",style="setlinewidth(2)"]
+        lpybook->rwp4l [label="",style="dashed,setlinewidth(1)"]
+
+        translate->{techbook tools pydocs};
+
+        techbook->hgtip [label="100%",style="setlinewidth(1)",color=green]
+        techbook->rwiwpyzh [label="100%",style="setlinewidth(2.5)",color=green]
+
+        techbook->tpipy [label="0%",style="dotted,setlinewidth(0.5)"]
+
+        techbook->TAoCzh [label="11%",style="setlinewidth(3)",color=green]
+
+        pydocs->w2pyzh [label="15%",style="dotted,setlinewidth(1)"]
+        pydocs->docspy3 [label="80/424",style="setlinewidth(1)"]
+
+        pydocs->pycoders [label="5%",style="setlinewidth(3)",color=green]
+
+
+        tools->sphnix [label="2%",style="setlinewidth(0.5)"]
+        tools->leodoc [label="0%",style="dotted,setlinewidth(0.5)"]
+        tools->pyblosxom [label="0%",style="dotted,setlinewidth(0.5)"]
+
+
+    title [label="obp.zoomquiet.io 图书索引 \n{gen. by Graphviz}\nTime is unimportant,only life important!"
+        URL="https://bitbucket.org/ZoomQuiet/tangle/src/f7d3402616263fe1ba3b9fd360c623e257349f1d/dot/zoomquiet.org/7niu_rtfd.dot"];
+    
+    ZQ  [label="返回\nzoomquiet.io",shape=ellipse,style="dotted"
+        ,URL="http://zoomquiet.io"];
+    
+    mailme [label="电俺",shape=ellipse,style="filled,dashed,setlinewidth(5)"
+        ,color="#333333",fillcolor=dimgray
+        ,URL="mailto:i@zoomquiet.io?subject=OBP mapping feedback"];
+
+
+    edge [style=invis];
+    title->{mailme ZQ};
+/*
+    title->ZQ;
+    mailme->OBP;
+*/
+
+}

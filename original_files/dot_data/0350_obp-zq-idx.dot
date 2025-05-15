@@ -1,0 +1,78 @@
+digraph mainmap {
+/*图片生成命令:: need:: apt-get install graphviz-cairo
+$ dot test.dot -Tpng -o test.png -Tcmapx -o test.map
+        style=filled,
+        fillcolor=lightyellow,
+        fontname="VeraSansYuanTi-Regular.ttf",        
+        WenQuanYi Zen Hei
+        fontname="WenQuanYi Zen Hei",
+        ratio=compress,fill size="12,9",
+*/
+    graph [label="obp.zoomquiet.org 网站索引图谱 {by Zoom.Quiet}",
+        labeljust="r",labelloc="b",
+        fontsize=14.0,
+        center=0,
+        ratio=compress,ranksep=0.2,
+        rankdir=BT,
+        ];
+    node[fontsize=10,
+        height=0.1,
+        style=filled,fillcolor=lightyellow,
+        color=gray30,
+        shape=component,
+        ];
+    /*dir=both,shape=plaintext shape=folder*/
+    edge [fontsize=9.0,
+        fontcolor=gray25,
+        color=gray30,
+		arrowsize=0.5,arrowhead=vee,arrowtail=none,
+        ];
+    /*服务元素
+    is      [label="是",URL="http://wiki.rdev.kingsoft.net/moin/KUP"];
+    */
+    CPUG     [label="CPyUG\n~ChinesePythonUserGroup\n~华蟒用户组",URL="http://wiki.woodpecker.org.cn/moin/CPUG"];
+    ZEUUX    [label="ZEUUX.org\n~哲思社区",URL="http://www.zeuux.org"];
+    support  [label="支持",shape=plaintext];
+    OBP      [label="OBP\n~OpenBookProjects\n开放图书计划",shape=tab,URL="http://code.google.com/p/openbookproject/"];
+    author   [label="成员",shape=plaintext];
+        ZQ       [label="Zoom.Quiet",shape=egg,URL="http://zoomquiet.org"];
+        WY       [label="Yan Wu",shape=egg,URL="http://code.google.com/p/openbookproject/wiki/YanWu"];
+        LLX      [label="林路翔",shape=egg,URL="http://code.google.com/p/openbookproject/wiki/LinLuxiang"];
+        JeanToe      [label="JeanToe",shape=egg,URL="http://code.google.com/p/openbookproject/wiki/JeanToe"];
+        Liz      [label="盛艳",shape=egg,URL="http://code.google.com/u/shengyan1985/"];
+
+    include  [label="含",shape=plaintext];
+        w2pyzh   [label="Web2py手册",URL="/w2py_manual_zh"];
+        leodoc   [label="Leo手册\nv4.7",URL="/leo_doc_zh"];
+        pyblosxom   [label="PyBlosxom手册\nv1.5-rc1",URL="/pyblosxom_zh"];
+        tpipy   [label="TPiPy 中文版",URL="/tpipy_zh"];
+        pywdwpy   [label="蟒样web开发\n基于web.py",URL="/pywdwpy"];
+
+    /*服务关系*/
+    ZEUUX->support;
+        CPUG->support;
+    support->OBP->author;
+        author->ZQ;
+            ZQ->w2pyzh;
+            ZQ->leodoc;
+            ZQ->pyblosxom;
+            ZQ->tpipy;
+            ZQ->pywdwpy;
+        author->WY;
+            WY->w2pyzh;
+        author->LLX;
+            LLX->w2pyzh;
+        author->Liz;
+            Liz->w2pyzh;
+        author->JeanToe;
+            JeanToe->w2pyzh;
+    OBP->include;
+        include->w2pyzh;
+        include->leodoc;
+        include->pyblosxom;
+        include->tpipy;
+        include->pywdwpy [label="原创！\n筹备ing..."];
+}
+
+
+

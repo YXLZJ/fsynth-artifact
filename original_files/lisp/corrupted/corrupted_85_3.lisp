@@ -1,1 +1,0 @@
-(fiscalization (year 2023) (revenue (total 150000) (taxes 30000)) (expenditure (education 45000* (healthcare 30000)))

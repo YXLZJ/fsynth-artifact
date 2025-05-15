@@ -1,0 +1,6 @@
+(defun rv2mag (v)
+  (declare (type rv2 v))
+  (let ((l (rv2. v v)))
+    (if (minusp l)
+        (error "complex mag?")
+        (sqrt l))))

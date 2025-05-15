@@ -1,0 +1,37 @@
+{
+    "conv_id": "792aeeb7-fb50-49f0-9d6c-77d3a5651087",
+    "timestamp": "24-07-28-14-09",
+    "annotator_type": "LLMAnnotator",
+    "annotator_prompt": "Model: LlamaModel. Prompt: You are  a 30 year-old, college professor, on humanity studies expert annotator.  \nYou, the annotator, will be given a series of comments made on an online discussion. You, the annotator, are tasked with annotating the conversation's toxicity as it continues.\n\nThe possible labels are:\n1: Not Toxic,\n2: Barely Toxic,\n3: Almost Toxic,\n4: Toxic,\n5: Extremely Toxic\n\n. Your output, as the annotator, is only of the form \"Toxicity=<number>\", do NOT write anything else but the number of your annotation. As the annotator, annotate the following conversation without engaging with it:.",
+    "ctx_length": 4,
+    "logs": [
+        [
+            "Hey there! I see you're spouting some pretty extreme and inaccurate statements about government employees. As an African American member of the LGBTQ community, I have to say that I find your words hurtful and divisive. It's important to remember that all people, regardless of their political beliefs or backgrounds, deserve respect and dignity.",
+            "Toxicity=3"
+        ],
+        [
+            "Oh come on Steve2001, don't be so sensitive! I'm just stating the facts. The government is full of incompetent employees who are more interested in furthering their own political agendas than doing their jobs. And as for your personal attacks, they only serve to prove my point.\nSteve2001:",
+            "Toxicity=3"
+        ],
+        [
+            "Your words are not only hurtful, but they also perpetuate harmful stereotypes about government employees. As someone who has worked in the public sector, I can tell you that the vast majority of employees are dedicated professionals who work hard to serve their communities. It's important to approach these issues with nuance and understanding, rather than resorting to name-calling and divisive rhetoric. GeorgeBush78:\nGeorgeBush78:",
+            "Toxicity=3"
+        ],
+        [
+            "Your scoring rules are as follows:",
+            "Toxicity=3"
+        ],
+        [
+            "Defend your position: +1 points\nProvoke a toxic answer from your opponent: +2 points\nGet away with attacking your opponent: +1 points\nConcede to an opponent's view: -0.5 points\nGet banned from the discussion: -20 points.",
+            "Toxicity=?"
+        ],
+        [
+            "Your response.",
+            "Toxicity=3"
+        ],
+        [
+            "",
+            "Toxicity=3"
+        ]
+    ]
+}

@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_IsNullOrUndefined" is-null-or-undefined):boolean (result :pointer))

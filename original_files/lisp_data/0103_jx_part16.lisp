@@ -1,0 +1,1 @@
+(cffi:defcfun ("JX_Free" free) :void (value :pointer))

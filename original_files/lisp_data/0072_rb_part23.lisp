@@ -1,0 +1,8 @@
+(defun move-red-left (node)
+  (declare (type node node))
+  (flip node)
+  (when (red? (node-left (node-right node)))
+    (rotrf (node-right node))
+    (rotlf node)
+    (flip node))
+  node)

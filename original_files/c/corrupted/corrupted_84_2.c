@@ -1,1 +1,0 @@
-{ k=46; m=98; wh*le (k<m) if (k<m-10) m=m-k; else k=k+3; }

@@ -1,1 +1,0 @@
-(airman *flight (mission (target a123) (status completed))) (rank captain))

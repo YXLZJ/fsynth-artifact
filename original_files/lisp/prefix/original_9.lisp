@@ -1,1 +1,0 @@
-(taletelling (once upon (a time)) in (a land

@@ -1,1 +1,0 @@
-;timberman (cut) (move-left) (move-righ/) (jump))

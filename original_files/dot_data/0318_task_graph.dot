@@ -1,0 +1,22 @@
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+      rankdir=LR;
+
+  edge [fontname = "Handlee"];
+  
+     graph [fontsize=10 fontname="Handlee"];
+    node [shape=record fontsize=10 fontname="Handlee"];
+
+  bgcolor=transparent;
+    
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [color=white,style=filled];
+    store -> chunk -> sift -> profile -> upload;
+    label = "Task flow";
+    fontsize = 20;
+  }
+}
+
