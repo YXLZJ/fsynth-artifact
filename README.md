@@ -108,19 +108,17 @@ Once you have been satisfied all steps above, you can also have your own benchma
 
 #### Start evaluation
 
-You can set up your own dataset with data_fetch.py with can automatically download files with specific formats from the Github 
-
 ##### Single mutation
 
-> `python3 benchmark_single.py`
+> `python3 benchmark_single.py --folder <OriginalFilesPath> --validator <ValidatorPath, can be interpreter or parser> --database <The database you want to contain the mutations>`
 
 ##### double mutation
 
-> `python3 benchmark_multiple.py`
+> `python3 benchmark_multiple.py --folder <OriginalFilesPath> --validator <ValidatorPath, can be interpreter or parser> --database <The database you want to contain the mutations>`
 
 ##### Truncation mutation
 
-> `python3 benchmark_prefix.py`
+> `python3 benchmark_prefix.py --folder <OriginalFilesPath> --validator <ValidatorPath, can be interpreter or parser> --database <The database you want to contain the mutations>`
 
 #### Obtain statistical report
 
@@ -402,3 +400,4 @@ DDMaxG         4800           569.04
 erepair        4660           897.31              
 ```
 
+#### You can set up your own dataset with data_fetch.py which automatically download files with specific formats from the Github 
