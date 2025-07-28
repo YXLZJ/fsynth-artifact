@@ -47,9 +47,7 @@ WORKDIR /home/project
 ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Build Project
-RUN mv -v /home/project/bin/testfiles / && \
-    rm -vrf /home/project/bin && \
-    ls -A && \
+RUN rm -vrf /home/project/bin && \
     gradle --version && \
     gradle deployJar --stacktrace --info
 
@@ -61,6 +59,9 @@ RUN printf "#!/bin/bash\n\njava -jar /home/project/bin/erepair.jar \$@\n" > /usr
 RUN apt-get --purge remove -y curl unzip
 
 RUN java --version && erepair --help
+
+# Copy all artifacts into the repairer directory
+COPY artifacts /home/repairer/artifacts
 
 #RUN mv -v /home/project/bin/testfiles /
 

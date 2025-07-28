@@ -55,5 +55,6 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "map": "cpp"
-    }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
