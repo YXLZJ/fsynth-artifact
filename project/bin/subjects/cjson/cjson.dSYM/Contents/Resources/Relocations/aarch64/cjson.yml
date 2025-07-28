@@ -3,11 +3,11 @@ triple:          'arm64-apple-darwin'
 binary-path:     cjson
 relocations:
   - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _getNewTrieNode, symObjAddr: 0x0, symBinAddr: 0x100000EB4, symSize: 0x74 }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _head, symObjAddr: 0xFEA0, symBinAddr: 0x10000C018, symSize: 0x0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _head, symObjAddr: 0xFEA8, symBinAddr: 0x10000C018, symSize: 0x0 }
   - { offsetInCU: 0x8F, offset: 0x8F, size: 0x8, addend: 0x0, symName: _cJSON_Version, symObjAddr: 0x410, symBinAddr: 0x1000012C4, symSize: 0x58 }
-  - { offsetInCU: 0xB4, offset: 0xB4, size: 0x8, addend: 0x0, symName: _cJSON_Version.version, symObjAddr: 0xFEC0, symBinAddr: 0x10000C038, symSize: 0x0 }
-  - { offsetInCU: 0xD7, offset: 0xD7, size: 0x8, addend: 0x0, symName: _v, symObjAddr: 0xFEA8, symBinAddr: 0x10000C020, symSize: 0x0 }
-  - { offsetInCU: 0x2E1, offset: 0x2E1, size: 0x8, addend: 0x0, symName: _global_error, symObjAddr: 0xFEB0, symBinAddr: 0x10000C028, symSize: 0x0 }
+  - { offsetInCU: 0xB4, offset: 0xB4, size: 0x8, addend: 0x0, symName: _cJSON_Version.version, symObjAddr: 0xFEC8, symBinAddr: 0x10000C038, symSize: 0x0 }
+  - { offsetInCU: 0xD7, offset: 0xD7, size: 0x8, addend: 0x0, symName: _v, symObjAddr: 0xFEB0, symBinAddr: 0x10000C020, symSize: 0x0 }
+  - { offsetInCU: 0x2E1, offset: 0x2E1, size: 0x8, addend: 0x0, symName: _global_error, symObjAddr: 0xFEB8, symBinAddr: 0x10000C028, symSize: 0x0 }
   - { offsetInCU: 0x345, offset: 0x345, size: 0x8, addend: 0x0, symName: _global_hooks, symObjAddr: 0x6FB0, symBinAddr: 0x10000C000, symSize: 0x0 }
   - { offsetInCU: 0x3B7, offset: 0x3B7, size: 0x8, addend: 0x0, symName: _print, symObjAddr: 0x1160, symBinAddr: 0x100002014, symSize: 0x264 }
   - { offsetInCU: 0x3DE, offset: 0x3DE, size: 0x8, addend: 0x0, symName: _print.default_buffer_size, symObjAddr: 0x6FC8, symBinAddr: 0x100007EC8, symSize: 0x0 }

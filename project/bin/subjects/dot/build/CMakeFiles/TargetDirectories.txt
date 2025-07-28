@@ -1,0 +1,3 @@
+/Users/jack/fsynth-artifact/dot/build/CMakeFiles/dot_parser.dir
+/Users/jack/fsynth-artifact/dot/build/CMakeFiles/edit_cache.dir
+/Users/jack/fsynth-artifact/dot/build/CMakeFiles/rebuild_cache.dir

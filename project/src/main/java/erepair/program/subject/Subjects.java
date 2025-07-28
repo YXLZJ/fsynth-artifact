@@ -16,6 +16,7 @@ public enum Subjects {
     KAITAIPNG(  "KaitaiPNG",    "kpn", 12),
     KAITAIGIF(  "KaitaiGIF",    "kgf", 13),
     SEXP_PARSER("SExpParser",   "sxp", 14),
+    WAVWFRONTOBJ("WavefrontObj", "obj", 15),
     ;
 
     public int arrayindex;

@@ -13,6 +13,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.input.BOMInputStream;
 
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.*;
@@ -61,7 +62,65 @@ public final class Parsing {
         if (format == InputFormat.SEXP) {
             return parseSexpr(fileToParse, cancelOnAntlrError);
         }
+        if (format == InputFormat.DOT) {
+            return parseDOT(fileToParse, cancelOnAntlrError);
+        }
         throw new IllegalArgumentException("The file " + fileToParse.normalize().toString() + " has an invalid format " + format.toString() + " that cannot be parsed with ANTLR!");
+    }
+
+    /**
+     * Parse a DOT file using ANTLR.
+     *
+     * @param filePath           File path of the file to parse
+     * @param cancelOnAntlrError if true, the parsing is cancelled if an error occurs
+     * @return the AST
+     * @throws IOException if the file could not be read
+     */
+    public static DOTParser.GraphContext parseDOT(Path filePath, boolean cancelOnAntlrError) throws IOException {
+        ByteArrayInputStream fileStream = new ByteArrayInputStream(
+                readStringFromFile(filePath).getBytes(StandardCharsets.UTF_8)
+        );
+        return parseDOT(fileStream, cancelOnAntlrError);
+    }
+
+    /**
+     * Parse a DOT file using ANTLR.
+     *
+     * @param fileToParse File stream of the file to parse
+     * @return the AST
+     */
+    public static DOTParser.GraphContext parseDOT(ByteArrayInputStream fileToParse) {
+        return parseDOT(fileToParse, false);
+    }
+
+    /**
+     * Parse a DOT file using ANTLR.
+     *
+     * @param fileToParse        File stream of the file to parse
+     * @param cancelOnAntlrError if true, the parsing is cancelled if an error occurs
+     * @return the AST
+     */
+    @Nullable
+    public static DOTParser.GraphContext parseDOT(ByteArrayInputStream fileToParse, boolean cancelOnAntlrError) {
+        DOTLexer lexer = null;
+        try {
+            lexer = new DOTLexer(CharStreams.fromStream(fileToParse));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        setupLexer(lexer);
+        CommonTokenStream commonTokenStream = new CommonTokenStream(lexer);
+        DOTParser parser = new DOTParser(commonTokenStream);
+        setupParser(parser);
+
+        DOTParser.GraphContext tree = parser.graph();
+        if (cancelOnAntlrError && myExplicitLexerErrorListener.isErrorOccurred()) {
+            return null;
+        }
+
+        return tree;
     }
 
     /**
@@ -205,7 +264,6 @@ public final class Parsing {
         if (cancelOnANTLRError && myExplicitLexerErrorListener.isErrorOccurred()) return null;
         return tree;
     }
-
 
     /**
      * Parse a TinyC file using ANTLR.

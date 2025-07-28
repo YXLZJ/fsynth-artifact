@@ -89,11 +89,8 @@ task copySourceTree(type: Sync) {
 task copySubjects(type: Sync) {
     from "$projectDir/erepair-subjects"
     into "${deploydir}/subjects"
-    include '**/*.c'
-    include '**/*.h'
-    include '**/*.py'
-    include '**/Makefile'
 }
+
 compileJava {
     options.encoding = "UTF-8"
     options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
