@@ -9,24 +9,26 @@ import random
 # ------------------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------------------
-DATABASE_PATH = "result1.db"  # Name of the new database to create
+DATABASE_PATH = "single.db"  # Name of the new database to create
 REPAIR_OUTPUT_DIR = "repair_results"  # Directory where repair outputs are stored
 os.makedirs(REPAIR_OUTPUT_DIR, exist_ok=True)
 
 # Possible repair algorithms you want to test
 REPAIR_ALGORITHMS = ["DDMax", "erepair", "DDMaxG", "Antlr"]
 
-# Paths to the external format validators (adjust as needed)
 PROJECT_PATHS = {
     "dot": "project/erepair-subjects/dot/build/dot_parser",
     "ini": "project/erepair-subjects/ini/ini",
     "json": "project/erepair-subjects/cjson/cjson",
     "lisp": "project/erepair-subjects/sexp-parser/sexp",
-    "obj": "project/erepair-subjects/obj/build/obj_parser"
+    "obj": "project/erepair-subjects/obj/build/obj_parser",
+    "c": "project/erepair-subjects/tiny/tiny"
 }
 
 # Valid formats/folders to process
 VALID_FORMATS = ["dot", "obj"]
+
+
 MUTATION_TYPES = ["single"]
 
 # Parser timeout (in seconds)
