@@ -1,21 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
 binary-path:     ini
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _ini_parse_stream, symObjAddr: 0x0, symBinAddr: 0x100003278, symSize: 0x4E4 }
-  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _linenos, symObjAddr: 0x28B0, symBinAddr: 0x100008000, symSize: 0x0 }
-  - { offsetInCU: 0x5B, offset: 0x5B, size: 0x8, addend: 0x0, symName: _comment_after_incomplete, symObjAddr: 0x28B4, symBinAddr: 0x100008004, symSize: 0x0 }
-  - { offsetInCU: 0x7F, offset: 0x7F, size: 0x8, addend: 0x0, symName: _v, symObjAddr: 0x28B8, symBinAddr: 0x100008008, symSize: 0x0 }
-  - { offsetInCU: 0x2EC, offset: 0x2EC, size: 0x8, addend: 0x0, symName: _ini_parse_stream, symObjAddr: 0x0, symBinAddr: 0x100003278, symSize: 0x4E4 }
-  - { offsetInCU: 0x3C3, offset: 0x3C3, size: 0x8, addend: 0x0, symName: _lskip, symObjAddr: 0x4E4, symBinAddr: 0x10000375C, symSize: 0x7C }
-  - { offsetInCU: 0x3EB, offset: 0x3EB, size: 0x8, addend: 0x0, symName: _rstrip, symObjAddr: 0x560, symBinAddr: 0x1000037D8, symSize: 0x9C }
-  - { offsetInCU: 0x421, offset: 0x421, size: 0x8, addend: 0x0, symName: _find_chars_or_comment, symObjAddr: 0x5FC, symBinAddr: 0x100003874, symSize: 0x104 }
-  - { offsetInCU: 0x465, offset: 0x465, size: 0x8, addend: 0x0, symName: _strncpy0, symObjAddr: 0x700, symBinAddr: 0x100003978, symSize: 0x54 }
-  - { offsetInCU: 0x4A9, offset: 0x4A9, size: 0x8, addend: 0x0, symName: _ini_parse_file, symObjAddr: 0x754, symBinAddr: 0x1000039CC, symSize: 0x3C }
-  - { offsetInCU: 0x4ED, offset: 0x4ED, size: 0x8, addend: 0x0, symName: _ini_parse, symObjAddr: 0x790, symBinAddr: 0x100003A08, symSize: 0x84 }
-  - { offsetInCU: 0x553, offset: 0x553, size: 0x8, addend: 0x0, symName: _ini_parse_string, symObjAddr: 0x814, symBinAddr: 0x100003A8C, symSize: 0x58 }
-  - { offsetInCU: 0x5AA, offset: 0x5AA, size: 0x8, addend: 0x0, symName: _ini_reader_string, symObjAddr: 0x86C, symBinAddr: 0x100003AE4, symSize: 0x13C }
-  - { offsetInCU: 0x63E, offset: 0x63E, size: 0x8, addend: 0x0, symName: _read_input, symObjAddr: 0x9A8, symBinAddr: 0x100003C20, symSize: 0xC4 }
-  - { offsetInCU: 0x686, offset: 0x686, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xA6C, symBinAddr: 0x100003CE4, symSize: 0x1DC }
-  - { offsetInCU: 0x718, offset: 0x718, size: 0x8, addend: 0x0, symName: _handler, symObjAddr: 0xC48, symBinAddr: 0x100003EC0, symSize: 0x20 }
+relocations:     []
 ...

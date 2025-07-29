@@ -24,11 +24,12 @@ PROJECT_PATHS = {
     "ini": "project/erepair-subjects/ini/ini",
     "json": "project/erepair-subjects/cjson/cjson",
     "lisp": "project/erepair-subjects/sexp-parser/sexp",
-    "obj": "project/erepair-subjects/obj/build/obj_parser"
+    "obj": "project/erepair-subjects/obj/build/obj_parser",
+    "c": "/project/erepair-subjects/tiny/tiny"
 }
 
 # Valid formats/folders to process
-VALID_FORMATS = ["dot", "obj"]
+VALID_FORMATS = ["dot", "obj", "ini", "json", "lisp", "tin"]
 MUTATION_TYPES = ["single", "double", "truncated"]
 
 # Parser timeout (in seconds)

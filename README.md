@@ -6,23 +6,13 @@ This repository is the artifact repository of epsilonRepair.
 
 ***EpsilonRepair is an algorithm we proposed to help users repair corrupted text files, such as JSON, INI, TinyC, etc., even when the exact format is unknown. It ensures high efficiency while minimizing information loss as much as possible.***
 
-## How to build and run the project
-We provide both C and Java versions of epsilonRepair. The C version includes more experimental features, runs faster, and is suitable for personal use, whereas the Java version provides more debugging information and is better suited for commercial use.
+## Prerequirements
+During the experiments, we aimed to minimize dependencies on third-party packages or libraries in the artifacts. For most machines with Java, C++, and Python development toolchains installed, the artifacts should run out of the box. If you have security or other concerns, we also provide a Docker image.
+You can build the Docker image with the following command:
+> `docker build -t erepair .`
+> `docker run -it --rm erepair`
 
-### Install Java version
-Before installing epsilonRepair, please make sure the latest versions of JDK and Gradle are installed properly.
-
-> `cd project`
-> `gradle deployJar --stacktrace --info`
-
-### Install C version
-You should have any C++ compiler(g++, clang++, msvc...) with at least C++17 support installed in your computer. Then, run:
-
-> `g++<or clang++ if use clang> -std=c++17 ./erepair.cpp -o erepair`
-
-Please note that there is another cpp file in the repo called erepair2.cpp, it applies same epsilonRepair algorithm with more aggressive pruning strategy make it excellent at truncation completing task. You can also choose it to compile if needed.
-## Command-Line Arguments
-
+This will start a container with the name `erepair`, all relevant software built and installed, and the working directory set to `/home/repairer`. 
 ### Usage
 
 #### Start with Java version

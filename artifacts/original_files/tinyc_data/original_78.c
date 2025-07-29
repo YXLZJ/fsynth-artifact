@@ -1,0 +1,1 @@
+{ g=45; h=32; while (g-h) if (g<h) h=h-g; else g=g-h; }
