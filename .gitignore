@@ -1,4 +1,4 @@
 /.git.old
 /.git/refs/heads
-/.erepair
-/.erepair2
+artifacts/.erepair
+artifacts/.erepair2
