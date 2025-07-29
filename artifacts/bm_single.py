@@ -5,6 +5,7 @@ import subprocess
 import re
 import time
 import random
+import concurrent.futures
 
 # ------------------------------------------------------------------------------
 # Configuration
@@ -314,8 +315,18 @@ def rerun_repairs_for_selected_formats(db_path: str, selected_formats=None):
     filtered_entries = [row for row in entries if row[1] in selected_formats]
 
     print(f"[INFO] Found {len(filtered_entries)} entries to (re)process.")
-    for row in filtered_entries:
-        repair_and_update_entry(cursor, conn, row)
+
+    def _worker(row):
+        # Each thread uses its own connection to avoid SQLite locking issues
+        thread_conn = sqlite3.connect(db_path, timeout=30)
+        thread_cursor = thread_conn.cursor()
+        try:
+            repair_and_update_entry(thread_cursor, thread_conn, row)
+        finally:
+            thread_conn.close()
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count() or 4) as executor:
+        executor.map(_worker, filtered_entries)
 
     conn.close()
     print("[INFO] Repair process completed!")
