@@ -1,6 +1,7 @@
 #Appendix
 
 ## EpsilonRepair on program inputs defined by ANTLR format
+```
 -------------------------------------------------------------------------------------
 Format   Alg        Avg BR     σ BR   Avg OR     σ OR    Avg t      σ t   Succ    Tot
 -------------------------------------------------------------------------------------
@@ -50,3 +51,4 @@ Overall average runtime across DBs
   DDMax    t=  9.41s  iters=  519.52 (n=2000)
   DDMaxG   t= 19.79s  iters= 1313.52 (n=2000)
   erepair  t=  3.91s  iters=  134.88 (n=2000)
+```
