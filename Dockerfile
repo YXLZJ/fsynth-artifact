@@ -78,7 +78,7 @@ RUN chmod +x /home/repairer/artifacts/build_all.sh && /home/repairer/artifacts/b
 
 # Re-deploy jar and build native erepair at the very end
 RUN cd /home/project && gradle deployJar --stacktrace --info && \
-    g++ -std=c++17 /home/repairer/artifacts/erepair.cpp -o /usr/bin/erepair_cpp
+    g++ -std=c++17 /home/repairer/artifacts/erepair2.cpp -o /usr/bin/erepair
 
 #RUN mv -v /home/project/bin/testfiles /
 

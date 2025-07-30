@@ -27,7 +27,7 @@ PROJECT_PATHS = {
 }
 
 # Valid formats/folders to process
-VALID_FORMATS = ["dot", "ini", "json", "lisp", "obj", "c"]
+VALID_FORMATS = ["ini", "json", "lisp", "c"]
 
 
 MUTATION_TYPES = ["truncation"]
@@ -107,9 +107,16 @@ def insert_test_samples_to_db(db_path: str, format_key: str, test_samples: list)
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
-    # Insert each entry with a placeholder algorithm; we'll run multiple or update later
+    # Insert each entry only if it doesn't already exist (resume capability)
     for (file_id, cindex, orig_text, broken_text) in test_samples:
         for alg in REPAIR_ALGORITHMS:
+            # Skip if this combination already exists (enables resume)
+            cursor.execute(
+                "SELECT 1 FROM results WHERE format=? AND file_id=? AND corrupted_index=? AND algorithm=? LIMIT 1",
+                (format_key, file_id, cindex, alg)
+            )
+            if cursor.fetchone():
+                continue
             cursor.execute("""
                 INSERT INTO results (format, file_id, corrupted_index, algorithm,
                                      original_text, broken_text,
@@ -308,6 +315,7 @@ def rerun_repairs_for_selected_formats(db_path: str, selected_formats=None):
                incomplete_runs, distance_original_broken, distance_broken_repaired,
                distance_original_repaired
         FROM results
+        WHERE fixed = 0
     """)
     entries = cursor.fetchall()
 

@@ -1,10 +1,10 @@
-# Erepair
+# ϵREPAIR
 
 ## Artifact repository
 
-This repository is the artifact repository of epsilonRepair.
+This repository is the artifact repository of ϵREPAIR.
 
-***EpsilonRepair is an algorithm we proposed to help users repair corrupted text files, such as JSON, INI, TinyC, etc., even when the exact format is unknown. It ensures high efficiency while minimizing information loss as much as possible.***
+***ϵREPAIR is an algorithm we proposed to help users repair corrupted text files, such as JSON, INI, TinyC, etc., even when the exact format is unknown. It ensures high efficiency while minimizing information loss as much as possible.***
 
 ## Prerequisites
 During the experiments, we aimed to minimize dependencies on third-party packages or libraries in the artifacts. For most machines with Java, C++, and Python development toolchains installed, the artifacts should run out of the box. If you have security or other concerns, we also provide a Docker image.
@@ -13,30 +13,16 @@ You can build the Docker image with the following command:
 > `docker run -it --rm erepair`
 
 This will start a container with the name `erepair`, all relevant software built and installed, and the working directory set to `/home/repairer`. 
+
 ## Usage
+If you just want to use ϵREPAIR, you can run the `erepair` command directly in the container. The command is as follows:
+> `./erepair <interpreter> <inputfile> <outputfile>`
 
-#### Start with Java version
-###### Repair a file using the given algorithm 
-> `java -jar erepair -r -i <inputfile> [-o <outputdir>] -a <algorithm,use erepair for lauch epsilonRepair process>`
-
-###### Mutate all files in directory
-
-For a list of algorithms, see the CLI help text.
-
-> `java -jar erepair -M -i <inputdir> -o <outputdir> [-t <times>] [-a <algorithm>]`
-
-###### Run a subject program on a given file
-
-> `java -jar erepair -O <subject> -i <inputfile> [-o <outputfile>]`
-
-#### Start with C version
-You can also use the C version of epsilonRepair, which is more efficient than the Java version. The usage is similar to the Java version.
-> `./erepair <PathtoIntepreter> <inputfile> <outputfile>`
-
+Where `<interpreter>` is the path to the validation tool, `<inputfile>` is the file you want to repair, and `<outputfile>` is the file where you want to save the repaired content.
 
 ### Evaluation
 
-Once you have been satisfied all steps above, you can also have your own benchmark, for sure!
+Once you have been installed the docker image and started the container, you can run the evaluation script to reproduce the results in the paper without any additional setup. Please using following commands:
 
 #### Evaluation quick start with the provided dataset
 
@@ -53,7 +39,7 @@ Once you have been satisfied all steps above, you can also have your own benchma
 > `python3 bm_truncation.py`
 
 #### Evaluation with your own dataset
-Custom datasets can also be used to evaluate the performance of epsilonRepair. These datasets may follow any format, such as `JSON`, `INI`, or `TinyC`. The only requirement is the availability of a corresponding validation tool for the selected format; see the section `Build your own ‘interpreter’ as oracle validation tool` for details.
+Custom datasets can also be used to evaluate the performance of ϵREPAIR. These datasets may follow any format, such as `JSON`, `INI`, or `TinyC`. The only requirement is the availability of a corresponding validation tool for the selected format; see the section `Build your own ‘interpreter’ as oracle validation tool` for details.
 
 The `data_fetch.py` script enables automatic downloading of files in specific formats from GitHub, storing them in the `data` directory.
 
@@ -66,7 +52,7 @@ Then you can run the evaluation script as the instruction above!
 
 ##### Build your own "interpreter" as oracle validation tool
 
-All validation tools in this experimentare compiled automatically once you build the docker image. However if you want make epsilonRepair works in more formats, you have to build oracle validation tools by you own. Don't be panic, here is how you should do:
+All validation tools in this experimentare compiled automatically once you build the docker image. However if you want make ϵREPAIR works in more formats, you have to build oracle validation tools by you own. Don't be panic, here is how you should do:
 
 You can repair files whose structure follows regular expression-defined grammar. Using the regex library and the template provided below, you can create a custom validation tool. This python script reads the content of a file and checks it against a given regular expression pattern. It returns 0 if the content fully matches the pattern, -1 for partial matches, and 1 if the content does not match at all.
 
@@ -404,5 +390,3 @@ DDMax          4800           786.73
 DDMaxG         4800           569.04              
 erepair        4660           897.31              
 ```
-
-#### You can set up your own dataset with data_fetch.py which automatically download files with specific formats from the Github 
