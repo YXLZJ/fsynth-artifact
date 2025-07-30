@@ -1,6 +1,6 @@
-#Appendix
+# Appendix
 
-## EpsilonRepair on program inputs defined by ANTLR format
+## ϵREPAIR on program inputs defined by ANTLR format
 ```
 -------------------------------------------------------------------------------------
 Format   Alg        Avg BR     σ BR   Avg OR     σ OR    Avg t      σ t   Succ    Tot
