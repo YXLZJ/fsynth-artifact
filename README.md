@@ -3,6 +3,7 @@
 ## Artifact repository
 
 This repository is the artifact repository of ϵREPAIR.
+Please see the [README.txt](README.txt) for the replication package documentation.
 
 ***ϵREPAIR is an algorithm we proposed to help users repair corrupted text files, such as JSON, INI, TinyC, etc., even when the exact format is unknown. It ensures high efficiency while minimizing information loss as much as possible.***
 
